@@ -3,6 +3,8 @@ import pytextrank
 from sklearn.feature_extraction.text import TfidfVectorizer
 import argparse
 from transformers import T5Tokenizer, T5ForConditionalGeneration
+from rouge_score import rouge_scorer
+from bert_score import score as bert_score
 
 EXTRACTION_BASED_SUMMARY_NAIVE_SCORING = 0x01
 EXTRACTION_BASED_SUMMARY_FIRST_LAST_SCORING = 0x02
@@ -130,6 +132,28 @@ def abstractive_summarization(text):
     return summary
 
 
+def evaluate_summary(generated_summary, reference_summary):
+    """
+    Ocena jakości podsumowania za pomocą metryk ROUGE i BERTScore.
+    """
+    # ROUGE
+    rouge = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
+    rouge_scores = rouge.score(reference_summary, generated_summary)
+
+    # BERTScore
+    P, R, F1 = bert_score([generated_summary], [reference_summary], lang="en")
+
+    evaluation = {
+        'ROUGE': {k: v.fmeasure for k, v in rouge_scores.items()},
+        'BERTScore': {
+            'Precision': P.mean().item(),
+            'Recall': R.mean().item(),
+            'F1': F1.mean().item()
+        }
+    }
+    return evaluation
+
+
 def hex(value):
     try:
         return int(value, 16)
@@ -148,6 +172,7 @@ if __name__ == '__main__':
             \tEXTRACTION_BASED_SUMMARY_TEXT_RANK_SCORING=0x08,\n\
             \tABSTRACT_SUMMARY=0x10")
     parser.add_argument('num_sentences', type=int, help="Number of sentences in the summary.")
+    parser.add_argument('-rs', '--reference_path', type=str, help="(Optional) Path to file containing reference summary.")
     args = parser.parse_args()
 
     with open(args.text_path, 'r', encoding='utf-8') as f:
@@ -160,4 +185,10 @@ if __name__ == '__main__':
         print(extraction_based_summarize(doc, (args.method & 0x0F), args.num_sentences))
 
     if (args.method & ABSTRACT_SUMMARY) > 0:
-        print(abstractive_summarization(text))
+        abstractive_summary = abstractive_summarization(text)
+        print(abstractive_summary)
+        if args.reference_path:
+            with open(args.reference_path, 'r', encoding='utf-8') as f:
+                reference_summary = f.read()
+            eval_abstractive = evaluate_summary(abstractive_summary, reference_summary)
+            print(eval_abstractive)
