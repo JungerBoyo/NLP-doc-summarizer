@@ -154,6 +154,7 @@ if __name__ == '__main__':
         text = f.read()
 
     if (args.method & EXTRACTION_BASED_SUMMARY) > 0:
+        nlp = spacy.load(args.model)
         nlp.add_pipe("textrank")
         doc = nlp(text)
         print(extraction_based_summarize(doc, (args.method & 0x0F), args.num_sentences))
