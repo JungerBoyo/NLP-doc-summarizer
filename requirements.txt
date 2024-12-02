@@ -1,0 +1,6 @@
+bert_score==0.3.13
+pytextrank==3.3.0
+rouge_score==0.1.2
+scikit_learn==1.5.2
+spacy==3.8.2
+transformers[torch]==4.46.3
