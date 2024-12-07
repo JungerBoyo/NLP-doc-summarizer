@@ -184,7 +184,11 @@ if __name__ == '__main__':
         nlp = spacy.load(args.model)
         nlp.add_pipe("textrank")
         doc = nlp(text)
-        print(extraction_based_summarize(doc, (args.method & 0x0F), args.num_sentences))
+        summary = extraction_based_summarize(doc, (args.method & 0x0F), args.num_sentences)
+        print(summary)
+        if args.reference_path:
+            eval_extraction_based = evaluate_summary(summary, reference_summary)
+            print(eval_extraction_based)
 
     if (args.method & ABSTRACT_SUMMARY) > 0:
         abstractive_summary = abstractive_summarization(text)
