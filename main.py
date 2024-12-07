@@ -163,15 +163,15 @@ def hex(value):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('model', type=str, help="Path to model used for text information extraction using spaCy.")
-    parser.add_argument('text_path', type=str, help="Path to file containing text to summarize.")
-    parser.add_argument('method', type=hex, help="Method used to summarize text.\n\
+    parser.add_argument('--model', type=str, help="Path to model used for text information extraction using spaCy.")
+    parser.add_argument('--text_path', type=str, help="Path to file containing text to summarize.")
+    parser.add_argument('--method', type=hex, help="Method used to summarize text.\n\
             \tEXTRACTION_BASED_SUMMARY_NAIVE_SCORING=0x01,\n\
             \tEXTRACTION_BASED_SUMMARY_FIRST_LAST_SCORING=0x02,\n\
             \tEXTRACTION_BASED_SUMMARY_TF_IDF_SCORING=0x04,\n\
             \tEXTRACTION_BASED_SUMMARY_TEXT_RANK_SCORING=0x08,\n\
             \tABSTRACT_SUMMARY=0x10")
-    parser.add_argument('num_sentences', type=int, help="Number of sentences in the summary.")
+    parser.add_argument('--num_sentences', type=int, help="Number of sentences in the summary.")
     parser.add_argument('-rs', '--reference_path', type=str, help="(Optional) Path to file containing reference summary.")
     args = parser.parse_args()
 
