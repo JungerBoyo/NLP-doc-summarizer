@@ -3,6 +3,7 @@ import pytextrank
 from sklearn.feature_extraction.text import TfidfVectorizer
 import argparse
 from transformers import T5Tokenizer, T5ForConditionalGeneration
+from transformers import PegasusTokenizer, PegasusForConditionalGeneration
 from rouge_score import rouge_scorer
 from bert_score import score as bert_score
 
@@ -12,7 +13,9 @@ EXTRACTION_BASED_SUMMARY_TF_IDF_SCORING = 0x04
 EXTRACTION_BASED_SUMMARY_TEXT_RANK_SCORING = 0x08
 EXTRACTION_BASED_SUMMARY = 0x0F
 
-ABSTRACT_SUMMARY = 0x10
+ABSTRACT_SUMMARY_T5 = 0x10
+ABSTRACT_SUMMARY_PEGASUS = 0x20
+ABSTRACT_SUMMARY = 0xF0
 
 
 def extraction_based_summarize_naive_scoring(doc):
@@ -119,17 +122,25 @@ def extraction_based_summarize(doc, method, num_sentences):
         return summary
 
 
-def abstractive_summarization(text):
-    model = T5ForConditionalGeneration.from_pretrained('t5-base')
-    tokenizer = T5Tokenizer.from_pretrained('t5-base')
+def abstractive_summarization(text, method):
+    use_t5 = bool((method & ABSTRACT_SUMMARY_T5) > 0)
+    use_pegasus = bool((method & ABSTRACT_SUMMARY_PEGASUS) > 0)
 
-    input_text = "summarize: " + text
-    input_ids = tokenizer.encode(input_text, return_tensors='pt')
+    if use_pegasus:
+        model = PegasusForConditionalGeneration.from_pretrained("google/pegasus-xsum")
+        tokenizer = PegasusTokenizer.from_pretrained("google/pegasus-xsum")
+        input_ids = tokenizer.encode(text, return_tensors='pt', max_length=512, truncation=True, padding=True)
+        summary_ids = model.generate(input_ids, min_length=28, max_length=28)
+        return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
-    summary_ids = model.generate(input_ids, min_length=30, max_length=120)
-    summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-
-    return summary
+    if use_t5:
+        model = T5ForConditionalGeneration.from_pretrained('t5-base')
+        tokenizer = T5Tokenizer.from_pretrained('t5-base')
+        input_ids = tokenizer.encode(text, return_tensors='pt')
+        summary_ids = model.generate(input_ids, min_length=30, max_length=120)
+        return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    
+    return "Uknown abstract summary method"
 
 
 def evaluate_summary(generated_summary, reference_summary):
@@ -184,14 +195,14 @@ if __name__ == '__main__':
         nlp = spacy.load(args.model)
         nlp.add_pipe("textrank")
         doc = nlp(text)
-        summary = extraction_based_summarize(doc, (args.method & 0x0F), args.num_sentences)
+        summary = extraction_based_summarize(doc, (args.method & EXTRACTION_BASED_SUMMARY), args.num_sentences)
         print(summary)
         if args.reference_path:
             eval_extraction_based = evaluate_summary(summary, reference_summary)
             print(eval_extraction_based)
 
     if (args.method & ABSTRACT_SUMMARY) > 0:
-        abstractive_summary = abstractive_summarization(text)
+        abstractive_summary = abstractive_summarization(text, (args.method & ABSTRACT_SUMMARY))
         print(abstractive_summary)
         if args.reference_path:
             eval_abstractive = evaluate_summary(abstractive_summary, reference_summary)
