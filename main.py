@@ -177,6 +177,8 @@ if __name__ == '__main__':
 
     with open(args.text_path, 'r', encoding='utf-8') as f:
         text = f.read()
+    with open(args.reference_path, 'r', encoding='utf-8') as f:
+        reference_summary = f.read()
 
     if (args.method & EXTRACTION_BASED_SUMMARY) > 0:
         nlp = spacy.load(args.model)
@@ -188,7 +190,5 @@ if __name__ == '__main__':
         abstractive_summary = abstractive_summarization(text)
         print(abstractive_summary)
         if args.reference_path:
-            with open(args.reference_path, 'r', encoding='utf-8') as f:
-                reference_summary = f.read()
             eval_abstractive = evaluate_summary(abstractive_summary, reference_summary)
             print(eval_abstractive)
