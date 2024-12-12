@@ -2,10 +2,18 @@ import spacy
 import pytextrank
 from sklearn.feature_extraction.text import TfidfVectorizer
 import argparse
-from transformers import T5Tokenizer, T5ForConditionalGeneration
-from transformers import PegasusTokenizer, PegasusForConditionalGeneration
+from transformers import (
+    BartForConditionalGeneration,
+    BartTokenizer,
+    PegasusForConditionalGeneration,
+    PegasusTokenizer,
+    T5ForConditionalGeneration,
+    T5Tokenizer
+)
 from rouge_score import rouge_scorer
 from bert_score import score as bert_score
+import json
+import os
 
 EXT_NAIVE_SCORING = 0x01
 EXT_FIRST_LAST_SCORING = 0x02
@@ -15,6 +23,7 @@ EXT_SUMMARY = 0x0F
 
 ABST_T5 = 0x10
 ABST_PEGASUS = 0x20
+ABST_BART = 0x40
 ABST_SUMMARY = 0xF0
 
 METHODS_MAP = dict([
@@ -22,8 +31,9 @@ METHODS_MAP = dict([
     ('EXT_FIRST_LAST', EXT_FIRST_LAST_SCORING),
     ('EXT_IF_IDF', EXT_TF_IDF_SCORING),
     ('EXT_TEXT_RANK', EXT_TEXT_RANK_SCORING),
-    ('ABST_T5', ABS_T5),
-    ('ABST_PEGASUS', ABS_PEGASUS)
+    ('ABST_T5', ABST_T5),
+    ('ABST_PEGASUS', ABST_PEGASUS),
+    ('ABST_BART', ABST_BART)
 ])
 
 
@@ -156,23 +166,30 @@ def extraction_based_summarize(doc, method, num_sentences):
 def abstractive_summarization(text, method):
     use_t5 = is_method_set(method, ABST_T5)
     use_pegasus = is_method_set(method, ABST_PEGASUS)
+    use_bart = is_method_set(method, ABST_BART)
 
     if use_pegasus:
-        model = PegasusForConditionalGeneration.\
-            from_pretrained("google/pegasus-xsum")
+        model = PegasusForConditionalGeneration.from_pretrained("google/pegasus-xsum")
         tokenizer = PegasusTokenizer.from_pretrained("google/pegasus-xsum")
-        input_ids = tokenizer.encode(text, return_tensors='pt', max_length=512,
-                                     truncation=True, padding=True)
+        input_ids = tokenizer.encode(text, return_tensors='pt', max_length=512, truncation=True, padding=True)
         summary_ids = model.generate(input_ids, min_length=28, max_length=28)
         return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
     if use_t5:
         model = T5ForConditionalGeneration.from_pretrained('t5-base')
         tokenizer = T5Tokenizer.from_pretrained('t5-base')
-        input_ids = tokenizer.encode(text, return_tensors='pt')
+        input_ids = tokenizer.encode(text, return_tensors='pt', max_length=512, truncation=True)
         summary_ids = model.generate(input_ids, min_length=30, max_length=120)
         return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-    return "Uknown abstract summary method"
+
+    if use_bart:
+        model = BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn')
+        tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-cnn')
+        input_ids = tokenizer.encode(text, return_tensors='pt', max_length=1024, truncation=True)
+        summary_ids = model.generate(input_ids, min_length=30, max_length=120)
+        return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+
+    return "Unknown abstract summary method"
 
 
 def evaluate_summary(generated_summary, reference_summary):
@@ -209,7 +226,7 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--summary_methods', type=str, help="""
             Methods used, available
             options: EXT_NAIVE|EXT_FIRST_LAST|EXT_IF_IDF|EXT_TEXT_RANK or
-            ABST_T5|ABST_PEGASUS. In the case of ABST_ options, order
+            ABST_T5|ABST_PEGASUS|ABST_BART. In the case of ABST_ options, order
             determines in what order methods are applied.
             """)
     parser.add_argument('-n', '--num_sentences', type=int, help="""
