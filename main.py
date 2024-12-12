@@ -214,6 +214,19 @@ def evaluate_summary(generated_summary, reference_summary):
     }
     return evaluation
 
+def print_evaluation(evaluation):
+    for metric, pairs in evaluation.items():
+        print(f'{metric}:')
+        for key, value in pairs.items():
+            print(f'\t{key} = {value}')
+        print()
+
+def save_result_to_json(args, methods, evaluation, summary):
+    evaluation['summary'] = summary
+    evaluation['methods'] = args.summary_methods
+    with open(f'{os.path.basename(args.text_path)}_{methods}.json', 'w') as json_file:
+        json.dump(evaluation, json_file, indent=4, ensure_ascii=False)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -255,7 +268,8 @@ if __name__ == '__main__':
         if args.reference_path:
             eval_extraction_based = \
                 evaluate_summary(summary, reference_summary)
-            print(eval_extraction_based)
+            print_evaluation(eval_extraction_based)
+        save_result_to_json(args, methods, eval_abstractive, summary)
 
     if is_method_set(methods, ABST_SUMMARY):
         abstractive_summary = abstractive_summarization(text, methods)
@@ -263,4 +277,5 @@ if __name__ == '__main__':
         if args.reference_path:
             eval_abstractive = evaluate_summary(abstractive_summary,
                                                 reference_summary)
-            print(eval_abstractive)
+            print_evaluation(eval_abstractive)
+            save_result_to_json(args, methods, eval_abstractive, abstractive_summary)
