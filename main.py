@@ -281,9 +281,7 @@ if __name__ == '__main__':
         nlp = spacy.load(args.model)
         nlp.add_pipe("textrank")
         doc = nlp(text)
-        summary = extraction_based_summarize(doc, is_method_set(methods,
-                                                                EXT_SUMMARY),
-                                             args.num_sentences)
+        summary = extraction_based_summarize(doc, methods, args.num_sentences)
         print(summary)
         if args.reference_path:
             eval_extraction_based = \

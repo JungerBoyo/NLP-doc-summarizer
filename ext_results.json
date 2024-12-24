@@ -16,44 +16,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.16129032258064516,
+                "rouge1": 0.07100591715976332,
                 "rouge2": 0.0,
-                "rougeL": 0.09677419354838708
+                "rougeL": 0.047337278106508875
             },
             "BERTScore": {
-                "Precision": 0.8229424357414246,
-                "Recall": 0.8023757338523865,
-                "F1": 0.8125289082527161
+                "Precision": 0.8142178654670715,
+                "Recall": 0.8018379807472229,
+                "F1": 0.8079805374145508
             },
-            "summary": "“Two such charming children. The prince bowed to signify his respect and gratitude. The prince was silent and looked indifferent. None. He had just entered, wearing an\nembroidered court uniform, knee breeches, and shoes, and had stars on\nhis breast and a serene expression on his flat face.",
+            "summary": "“Well, Prince, so Genoa and Lucca are now just family estates of the\nBuonapartes.  It shall be on your family’s behalf that I’ll\nstart my apprenticeship as old maid.”",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.16129032258064516,
-                "rouge2": 0.0,
-                "rougeL": 0.09677419354838708
+                "rouge1": 0.20537897310513448,
+                "rouge2": 0.03439803439803439,
+                "rougeL": 0.11246943765281174
             },
             "BERTScore": {
-                "Precision": 0.8229424357414246,
-                "Recall": 0.8023757338523865,
-                "F1": 0.8125289082527161
+                "Precision": 0.7812965512275696,
+                "Recall": 0.829537570476532,
+                "F1": 0.8046947121620178
             },
-            "summary": "“Two such charming children. The prince bowed to signify his respect and gratitude. The prince was silent and looked indifferent. None. He had just entered, wearing an\nembroidered court uniform, knee breeches, and shoes, and had stars on\nhis breast and a serene expression on his flat face.",
+            "summary": "“I often think,” she continued after a short pause, drawing nearer\nto the prince and smiling amiably at him as if to show that political\nand social topics were ended and the time had come for intimate\nconversation—“I often think how unfairly sometimes the joys of life\nare distributed. But, with the womanly and\ncourtierlike quickness and tact habitual to her, Anna Pávlovna\nwished both to rebuke him (for daring to speak as he had done of a man\nrecommended to the Empress) and at the same time to console him, so she\nsaid:\n\n“Now about your family. “But\ntell me,” he added with studied carelessness as if it had only just\noccurred to him, though the question he was about to ask was the chief\nmotive of his visit, “is it true that the Dowager Empress wants\nBaron Funke to be appointed first secretary at Vienna? All her invitations without exception, written in French, and delivered\nby a scarlet-liveried footman that morning, ran as follows:\n\n“If you have nothing better to do, Count (or Prince), and if the\nprospect of spending an evening with a poor invalid is not too terrible,\nI shall be very charmed to see you tonight between 7 and 10—Annette\nSchérer.”\n\n“Heavens! But I warn you, if you don’t tell me that this means war,\nif you still try to defend the infamies and horrors perpetrated by that\nAntichrist—I really believe he is Antichrist—I will have nothing\nmore to do with you and you are no longer my friend, no longer my\n‘faithful slave,’ as you call yourself!",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.16129032258064516,
-                "rouge2": 0.0,
-                "rougeL": 0.09677419354838708
+                "rouge1": 0.2551440329218107,
+                "rouge2": 0.024896265560165977,
+                "rougeL": 0.12345679012345678
             },
             "BERTScore": {
-                "Precision": 0.8229424357414246,
-                "Recall": 0.8023757338523865,
-                "F1": 0.8125289082527161
+                "Precision": 0.8116319179534912,
+                "Recall": 0.8075085878372192,
+                "F1": 0.809565007686615
             },
-            "summary": "“Two such charming children. The prince bowed to signify his respect and gratitude. The prince was silent and looked indifferent. None. He had just entered, wearing an\nembroidered court uniform, knee breeches, and shoes, and had stars on\nhis breast and a serene expression on his flat face.",
+            "summary": "It shall be on your family’s behalf that I’ll\nstart my apprenticeship as old maid.” And with the familiarity and easy grace peculiar to him, he raised the\nmaid of honor’s hand to his lips, kissed it, and swung it to and fro\nas he lay back in his armchair, looking in another direction. “Arrange\nthat affair for me and I shall always be your most devoted slave-slafe\nwith an f, as a village elder of mine writes in his reports. She has a brother; I think you know him, he married Lise Meinen lately. The poor girl is very unhappy.",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -74,44 +74,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.21782178217821785,
-                "rouge2": 0.03,
-                "rougeL": 0.10891089108910892
+                "rouge1": 0.22429906542056074,
+                "rouge2": 0.03809523809523809,
+                "rougeL": 0.14953271028037385
             },
             "BERTScore": {
-                "Precision": 0.8105400204658508,
-                "Recall": 0.8400082588195801,
-                "F1": 0.825011134147644
+                "Precision": 0.8526788949966431,
+                "Recall": 0.8326637148857117,
+                "F1": 0.8425524830818176
             },
-            "summary": "Here the conversation seemed interesting and he stood waiting for an\nopportunity to express his own views, as young people are fond of doing. With his head bent, and his big feet\nspread apart, he began explaining his reasons for thinking the abbé’s\nplan chimerical. One of the next arrivals was a stout, heavily built young man with\nclose-cropped hair, spectacles, the light-colored breeches fashionable\nat that time, a very high ruffle, and a brown dress coat. The young Princess Bolkónskaya had brought some work in a\ngold-embroidered velvet bag. And each visitor,\nthough politeness prevented his showing impatience, left the old woman\nwith a sense of relief at having performed a vexatious duty and did not\nreturn to her the whole evening.",
+            "summary": "Anna Pávlovna’s drawing room was gradually filling.  Here the conversation seemed interesting and he stood waiting for an\nopportunity to express his own views, as young people are fond of doing.",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.21782178217821785,
-                "rouge2": 0.03,
-                "rougeL": 0.10891089108910892
+                "rouge1": 0.13953488372093023,
+                "rouge2": 0.011695906432748539,
+                "rougeL": 0.08720930232558138
             },
             "BERTScore": {
-                "Precision": 0.8105400204658508,
-                "Recall": 0.8400082588195801,
-                "F1": 0.825011134147644
+                "Precision": 0.7878941893577576,
+                "Recall": 0.8294751048088074,
+                "F1": 0.8081501722335815
             },
-            "summary": "Here the conversation seemed interesting and he stood waiting for an\nopportunity to express his own views, as young people are fond of doing. With his head bent, and his big feet\nspread apart, he began explaining his reasons for thinking the abbé’s\nplan chimerical. One of the next arrivals was a stout, heavily built young man with\nclose-cropped hair, spectacles, the light-colored breeches fashionable\nat that time, a very high ruffle, and a brown dress coat. The young Princess Bolkónskaya had brought some work in a\ngold-embroidered velvet bag. And each visitor,\nthough politeness prevented his showing impatience, left the old woman\nwith a sense of relief at having performed a vexatious duty and did not\nreturn to her the whole evening.",
+            "summary": "As\nthe foreman of a spinning mill, when he has set the hands to work, goes\nround and notices here a spindle that has stopped or there one that\ncreaks or makes more noise than it should, and hastens to check the\nmachine or set it in proper motion, so Anna Pávlovna moved about her\ndrawing room, approaching now a silent, now a too-noisy group, and by a\nword or slight rearrangement kept the conversational machine in steady,\nproper, and regular motion. And having got rid of this young man who did not know how to behave, she\nresumed her duties as hostess and continued to listen and watch, ready\nto help at any point where the conversation might happen to flag. Though he was certainly rather bigger than\nthe other men in the room, her anxiety could only have reference to\nthe clever though shy, but observant and natural, expression which\ndistinguished him from everyone else in that drawing room. The little princess went round the table with quick, short, swaying\nsteps, her workbag on her arm, and gaily spreading out her dress sat\ndown on a sofa near the silver samovar, as if all she was doing was a\npleasure to herself and to all around her. and very gravely conducted\nhim or her to a little old lady, wearing large bows of ribbon in her\ncap, who had come sailing in from another room as soon as the guests\nbegan to arrive; and slowly turning her eyes from the visitor to her\naunt, Anna Pávlovna mentioned each one’s name and then left them.",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.21782178217821785,
-                "rouge2": 0.03,
-                "rougeL": 0.10891089108910892
+                "rouge1": 0.16744186046511625,
+                "rouge2": 0.009389671361502348,
+                "rougeL": 0.08372093023255812
             },
             "BERTScore": {
-                "Precision": 0.8105400204658508,
-                "Recall": 0.8400082588195801,
-                "F1": 0.825011134147644
+                "Precision": 0.8150142431259155,
+                "Recall": 0.8264156579971313,
+                "F1": 0.8206753730773926
             },
-            "summary": "Here the conversation seemed interesting and he stood waiting for an\nopportunity to express his own views, as young people are fond of doing. With his head bent, and his big feet\nspread apart, he began explaining his reasons for thinking the abbé’s\nplan chimerical. One of the next arrivals was a stout, heavily built young man with\nclose-cropped hair, spectacles, the light-colored breeches fashionable\nat that time, a very high ruffle, and a brown dress coat. The young Princess Bolkónskaya had brought some work in a\ngold-embroidered velvet bag. And each visitor,\nthough politeness prevented his showing impatience, left the old woman\nwith a sense of relief at having performed a vexatious duty and did not\nreturn to her the whole evening.",
+            "summary": "At last he came up to Morio. Seeing the self-confident\nand refined expression on the faces of those present he was always\nexpecting to hear something very profound. He knew that all\nthe intellectual lights of Petersburg were gathered there and, like a\nchild in a toyshop, did not know which way to look, afraid of missing\nany clever conversation that was to be heard. She kept an anxious watch on him when he approached\nthe group round Mortemart to listen to what was being said there, and\nagain when he passed to another group whose center was the abbé. And having got rid of this young man who did not know how to behave, she\nresumed her duties as hostess and continued to listen and watch, ready\nto help at any point where the conversation might happen to flag.",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -132,44 +132,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.23076923076923075,
-                "rouge2": 0.033333333333333326,
-                "rougeL": 0.14285714285714282
+                "rouge1": 0.2916666666666667,
+                "rouge2": 0.09473684210526316,
+                "rougeL": 0.22916666666666666
             },
             "BERTScore": {
-                "Precision": 0.8257780075073242,
-                "Recall": 0.8169617652893066,
-                "F1": 0.8213462233543396
+                "Precision": 0.829003632068634,
+                "Recall": 0.8311548829078674,
+                "F1": 0.8300778269767761
             },
-            "summary": "His eyes, nose, and\nmouth all seemed puckered into a vacant, wearied grimace, and his arms\nand legs always fell into unnatural positions. The little princess had also left the tea table and followed Hélène. The princess rested her bare round arm on a little table and considered\na reply unnecessary. The princess smiled. The vicomte wished to begin his story and gave a subtle smile.",
+            "summary": "Anna Pávlovna’s reception was in full swing.  “I am so enchanted by the brilliancy of the wit and culture of the\nsociety, more especially of the feminine society, in which I have had\nthe honor of being received, that I have not yet had time to think of\nthe climate,” said he.\n\nNot letting the abbé and Pierre escape, Anna Pávlovna, the more\nconveniently to keep them under observation, brought them into the\nlarger circle.",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.23076923076923075,
-                "rouge2": 0.033333333333333326,
-                "rougeL": 0.14285714285714282
+                "rouge1": 0.24833702882483372,
+                "rouge2": 0.07126948775055679,
+                "rougeL": 0.15077605321507762
             },
             "BERTScore": {
-                "Precision": 0.8257780075073242,
-                "Recall": 0.8169617652893066,
-                "F1": 0.8213462233543396
+                "Precision": 0.7933816313743591,
+                "Recall": 0.8440381288528442,
+                "F1": 0.8179263472557068
             },
-            "summary": "His eyes, nose, and\nmouth all seemed puckered into a vacant, wearied grimace, and his arms\nand legs always fell into unnatural positions. The little princess had also left the tea table and followed Hélène. The princess rested her bare round arm on a little table and considered\na reply unnecessary. The princess smiled. The vicomte wished to begin his story and gave a subtle smile.",
+            "summary": "“I am so enchanted by the brilliancy of the wit and culture of the\nsociety, more especially of the feminine society, in which I have had\nthe honor of being received, that I have not yet had time to think of\nthe climate,” said he.\n\nNot letting the abbé and Pierre escape, Anna Pávlovna, the more\nconveniently to keep them under observation, brought them into the\nlarger circle. The vicomte appreciated this silent praise and smiling gratefully\nprepared to continue, but just then Anna Pávlovna, who had kept a\nwatchful eye on the young man who so alarmed her, noticed that he was\ntalking too loudly and vehemently with the abbé, so she hurried to the\nrescue. It was an anecdote, then current,\nto the effect that the Duc d’Enghien had gone secretly to Paris to\nvisit Mademoiselle George; that at her house he came upon Bonaparte,\nwho also enjoyed the famous actress’ favors, and that in his presence\nNapoleon happened to fall into one of the fainting fits to which he was\nsubject, and was thus at the duc’s mercy. His features were like his\nsister’s, but while in her case everything was lit up by a joyous,\nself-satisfied, youthful, and constant smile of animation, and by the\nwonderful classic beauty of her figure, his face on the contrary\nwas dulled by imbecility and a constant expression of sullen\nself-confidence, while his body was thin and weak. With a slight rustle of her white dress trimmed with moss\nand ivy, with a gleam of white shoulders, glossy hair, and sparkling\ndiamonds, she passed between the men who made way for her, not looking\nat any of them but smiling on all, as if graciously allowing each the\nprivilege of admiring her beautiful figure and shapely shoulders,\nback, and bosom—which in the fashion of those days were very much\nexposed—and she seemed to bring the glamour of a ballroom with her as\nshe moved toward Anna Pávlovna.",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.23076923076923075,
-                "rouge2": 0.033333333333333326,
-                "rougeL": 0.14285714285714282
+                "rouge1": 0.2654028436018957,
+                "rouge2": 0.05741626794258373,
+                "rougeL": 0.16113744075829384
             },
             "BERTScore": {
-                "Precision": 0.8257780075073242,
-                "Recall": 0.8169617652893066,
-                "F1": 0.8213462233543396
+                "Precision": 0.817676305770874,
+                "Recall": 0.8101733922958374,
+                "F1": 0.8139075636863708
             },
-            "summary": "His eyes, nose, and\nmouth all seemed puckered into a vacant, wearied grimace, and his arms\nand legs always fell into unnatural positions. The little princess had also left the tea table and followed Hélène. The princess rested her bare round arm on a little table and considered\na reply unnecessary. The princess smiled. The vicomte wished to begin his story and gave a subtle smile.",
+            "summary": "The Italian’s\nface instantly changed and assumed an offensively affected, sugary\nexpression, evidently habitual to him when conversing with women. Pierre was beginning. “But how are you to get that balance?” “It is only necessary for one\npowerful nation like Russia—barbaric as she is said to be—to place\nherself disinterestedly at the head of an alliance having for its object\nthe maintenance of the balance of power of Europe, and it would save the\nworld!” “The means are ... the balance of power in Europe and the rights of\nthe people,” the abbé was saying.",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -190,44 +190,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.24120603015075376,
-                "rouge2": 0.010152284263959392,
-                "rougeL": 0.09045226130653268
+                "rouge1": 0.1111111111111111,
+                "rouge2": 0.04225352112676056,
+                "rougeL": 0.09722222222222222
             },
             "BERTScore": {
-                "Precision": 0.8219480514526367,
-                "Recall": 0.7990297079086304,
-                "F1": 0.810326874256134
+                "Precision": 0.8611600995063782,
+                "Recall": 0.8104375600814819,
+                "F1": 0.8350292444229126
             },
-            "summary": "But as soon as the prince had gone her face\nresumed its former cold, artificial expression. Apparently she had forgotten her age and by force of habit employed\nall the old feminine arts. This last consideration moved him. Everything about\nhim, from his weary, bored expression to his quiet, measured step,\noffered a most striking contrast to his quiet, little wife. He was a very handsome young\nman, of medium height, with firm, clearcut features.",
+            "summary": "Just then another visitor entered the drawing room: Prince Andrew\nBolkónski, the little princess’ husband.  Her task was\naccomplished.",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.24120603015075376,
-                "rouge2": 0.010152284263959392,
-                "rougeL": 0.09045226130653268
+                "rouge1": 0.2805194805194805,
+                "rouge2": 0.04699738903394256,
+                "rougeL": 0.12467532467532468
             },
             "BERTScore": {
-                "Precision": 0.8219480514526367,
-                "Recall": 0.7990297079086304,
-                "F1": 0.810326874256134
+                "Precision": 0.7983119487762451,
+                "Recall": 0.8415842056274414,
+                "F1": 0.8193771839141846
             },
-            "summary": "But as soon as the prince had gone her face\nresumed its former cold, artificial expression. Apparently she had forgotten her age and by force of habit employed\nall the old feminine arts. This last consideration moved him. Everything about\nhim, from his weary, bored expression to his quiet, measured step,\noffered a most striking contrast to his quiet, little wife. He was a very handsome young\nman, of medium height, with firm, clearcut features.",
+            "summary": "You hear her?”\n\n“Then tomorrow you will speak to the Emperor?”\n\n“Certainly; but about Kutúzov, I don’t promise.”\n\n“Do promise, do promise, Vasíli!” cried Anna Mikháylovna as he\nwent, with the smile of a coquettish girl, which at one time probably\ncame naturally to her, but was now very ill-suited to her careworn face. “My dear Anna Mikháylovna,” said he with his usual familiarity and\nweariness of tone, “it is almost impossible for me to do what you\nask; but to prove my devotion to you and how I respect your father’s\nmemory, I will do the impossible—your son shall be transferred to the\nGuards. Moreover, he could see by her manners that she was one of\nthose women—mostly mothers—who, having once made up their minds,\nwill not rest until they have gained their end, and are prepared if\nnecessary to go on insisting day after day and hour after hour, and even\nto make scenes. “Are you not ashamed to deprive us of your charming wife?”\n\n“André,” said his wife, addressing her husband in the same\ncoquettish manner in which she spoke to other men, “the vicomte has\nbeen telling us such a tale about Mademoiselle George and Buonaparte!”\n\nPrince Andrew screwed up his eyes and turned away. “General Kutúzov,” said Bolkónski, speaking French and stressing\nthe last syllable of the general’s name like a Frenchman, “has been\npleased to take me as an aide-de-camp....”\n\n“And Lise, your wife?”\n\n“She will go to the country.”",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.24120603015075376,
-                "rouge2": 0.010152284263959392,
-                "rougeL": 0.09045226130653268
+                "rouge1": 0.2127659574468085,
+                "rouge2": 0.010752688172043012,
+                "rougeL": 0.11702127659574467
             },
             "BERTScore": {
-                "Precision": 0.8219480514526367,
-                "Recall": 0.7990297079086304,
-                "F1": 0.810326874256134
+                "Precision": 0.8275216221809387,
+                "Recall": 0.8036440014839172,
+                "F1": 0.8154080510139465
             },
-            "summary": "But as soon as the prince had gone her face\nresumed its former cold, artificial expression. Apparently she had forgotten her age and by force of habit employed\nall the old feminine arts. This last consideration moved him. Everything about\nhim, from his weary, bored expression to his quiet, measured step,\noffered a most striking contrast to his quiet, little wife. He was a very handsome young\nman, of medium height, with firm, clearcut features.",
+            "summary": "Her task was\naccomplished. She returned to the\ngroup where the vicomte was still talking, and again pretended to\nlisten, while waiting till it would be time to leave. But as soon as the prince had gone her face\nresumed its former cold, artificial expression. Apparently she had forgotten her age and by force of habit employed\nall the old feminine arts. Good-by!",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -248,44 +248,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.09022556390977443,
-                "rouge2": 0.015267175572519085,
-                "rougeL": 0.07518796992481204
+                "rouge1": 0.22580645161290325,
+                "rouge2": 0.043478260869565216,
+                "rougeL": 0.17204301075268816
             },
             "BERTScore": {
-                "Precision": 0.8399624228477478,
-                "Recall": 0.8139103055000305,
-                "F1": 0.8267311453819275
+                "Precision": 0.8219667673110962,
+                "Recall": 0.82835853099823,
+                "F1": 0.8251502513885498
             },
-            "summary": "Suddenly there was a great wind. Revolution and regicide a grand thing?... The vicomte merely shrugged his shoulders. The princess listened, smiling. Adorable!",
+            "summary": "“And what do you think of this latest comedy, the coronation at\nMilan?” asked Anna Pávlovna, “and of the comedy of the people of\nGenoa and Lucca laying their petitions before Monsieur Buonaparte, and\nMonsieur Buonaparte sitting on a throne and granting the petitions of\nthe nations?  After the anecdote\nthe conversation broke up into insignificant small talk about the last\nand next balls, about theatricals, and who would meet whom, and when and\nwhere.",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.09022556390977443,
-                "rouge2": 0.015267175572519085,
-                "rougeL": 0.07518796992481204
+                "rouge1": 0.22278481012658227,
+                "rouge2": 0.04071246819338423,
+                "rougeL": 0.10632911392405063
             },
             "BERTScore": {
-                "Precision": 0.8399624228477478,
-                "Recall": 0.8139103055000305,
-                "F1": 0.8267311453819275
+                "Precision": 0.7900711297988892,
+                "Recall": 0.8360667824745178,
+                "F1": 0.8124184012413025
             },
-            "summary": "Suddenly there was a great wind. Revolution and regicide a grand thing?... The vicomte merely shrugged his shoulders. The princess listened, smiling. Adorable!",
+            "summary": "She said, ‘Girl,’ to the maid, ‘put on a\nlivery, get up behind the carriage, and come with me while I make some\ncalls.’”\n\nHere Prince Hippolyte spluttered and burst out laughing long before his\naudience, which produced an effect unfavorable to the narrator. “But, my dear Monsieur Pierre,” said she, “how do you explain the\nfact of a great man executing a duc—or even an ordinary man who—is\ninnocent and untried?”\n\n“I should like,” said the vicomte, “to ask how monsieur explains\nthe 18th Brumaire; was not that an imposture? “No,” cried he, becoming more and more eager, “Napoleon is great\nbecause he rose superior to the Revolution, suppressed its abuses,\npreserved all that was good in it—equality of citizenship and freedom\nof speech and of the press—and only for that reason did he obtain\npower.” Pierre wished to\nmake a remark, for the conversation interested him, but Anna Pávlovna,\nwho had him under observation, interrupted:\n\n“The Emperor Alexander,” said she, with the melancholy which\nalways accompanied any reference of hers to the Imperial family, “has\ndeclared that he will leave it to the French people themselves to choose\ntheir own form of government; and I believe that once free from the\nusurper, the whole nation will certainly throw itself into the arms\nof its rightful king,” she concluded, trying to be amiable to the\nroyalist emigrant. “If Buonaparte remains on the throne of France a year longer,” the\nvicomte continued, with the air of a man who, in a matter with which\nhe is better acquainted than anyone else, does not listen to others but\nfollows the current of his own thoughts, “things will have gone too\nfar.",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.09022556390977443,
-                "rouge2": 0.015267175572519085,
-                "rougeL": 0.07518796992481204
+                "rouge1": 0.15642458100558657,
+                "rouge2": 0.022598870056497175,
+                "rougeL": 0.10055865921787709
             },
             "BERTScore": {
-                "Precision": 0.8399624228477478,
-                "Recall": 0.8139103055000305,
-                "F1": 0.8267311453819275
+                "Precision": 0.8112297058105469,
+                "Recall": 0.8100165128707886,
+                "F1": 0.8106226325035095
             },
-            "summary": "Suddenly there was a great wind. Revolution and regicide a grand thing?... The vicomte merely shrugged his shoulders. The princess listened, smiling. Adorable!",
+            "summary": "After the anecdote\nthe conversation broke up into insignificant small talk about the last\nand next balls, about theatricals, and who would meet whom, and when and\nwhere. And so the anecdote ended. Here he could contain himself no\nlonger and went on, between gasps of laughter: “And the whole world\nknew....” The girl lost her hat and\nher long hair came down....” Suddenly there was a great wind.",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -306,44 +306,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.18181818181818182,
-                "rouge2": 0.01149425287356322,
-                "rougeL": 0.13636363636363638
+                "rouge1": 0.14473684210526316,
+                "rouge2": 0.02666666666666667,
+                "rougeL": 0.10526315789473684
             },
             "BERTScore": {
-                "Precision": 0.8276185989379883,
-                "Recall": 0.8148071765899658,
-                "F1": 0.8211628794670105
+                "Precision": 0.8542793393135071,
+                "Recall": 0.823841392993927,
+                "F1": 0.8387842774391174
             },
-            "summary": "I don’t know. Pierre turned his whole body, making the sofa creak. The postilion started, the carriage wheels rattled. Two footmen, the princess’ and his own, stood holding a shawl and\na cloak, waiting for the conversation to finish. “Write to her and let me know how her father looks at the matter.",
+            "summary": "Having thanked Anna Pávlovna for her charming soiree, the guests began\nto take their leave.  “I am going because the life I am leading here does not suit\nme!”",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.18181818181818182,
-                "rouge2": 0.01149425287356322,
-                "rougeL": 0.13636363636363638
+                "rouge1": 0.2915451895043732,
+                "rouge2": 0.046920821114369494,
+                "rougeL": 0.12244897959183673
             },
             "BERTScore": {
-                "Precision": 0.8276185989379883,
-                "Recall": 0.8148071765899658,
-                "F1": 0.8211628794670105
+                "Precision": 0.8014736175537109,
+                "Recall": 0.8346871733665466,
+                "F1": 0.8177433013916016
             },
-            "summary": "I don’t know. Pierre turned his whole body, making the sofa creak. The postilion started, the carriage wheels rattled. Two footmen, the princess’ and his own, stood holding a shawl and\na cloak, waiting for the conversation to finish. “Write to her and let me know how her father looks at the matter.",
+            "summary": "He put on the air of one who finds it impossible to reply to such\nnonsense, but it would in fact have been difficult to give any other\nanswer than the one Prince Andrew gave to this naïve question. If it were a war for\nfreedom I could understand it and should be the first to enter the army;\nbut to help England and Austria against the greatest man in the world is\nnot right.”\n\nPrince Andrew only shrugged his shoulders at Pierre’s childish words. Pierre reaching the house first went into Prince Andrew’s study like\none quite at home, and from habit immediately lay down on the sofa, took\nfrom the shelf the first book that came to his hand (it was Caesar’s\nCommentaries), and resting on his elbow, began reading it in the middle. Anna Pávlovna turned toward\nhim and, with a Christian mildness that expressed forgiveness of his\nindiscretion, nodded and said: “I hope to see you again, but I also\nhope you will change your opinions, my dear Monsieur Pierre.” Stout, about the average height, broad, with huge\nred hands; he did not know, as the saying is, how to enter a drawing\nroom and still less how to leave one; that is, how to say something\nparticularly agreeable before going away.",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.18181818181818182,
-                "rouge2": 0.01149425287356322,
-                "rougeL": 0.13636363636363638
+                "rouge1": 0.05369127516778524,
+                "rouge2": 0.0,
+                "rougeL": 0.04026845637583893
             },
             "BERTScore": {
-                "Precision": 0.8276185989379883,
-                "Recall": 0.8148071765899658,
-                "F1": 0.8211628794670105
+                "Precision": 0.812242865562439,
+                "Recall": 0.8006196022033691,
+                "F1": 0.8063893914222717
             },
-            "summary": "I don’t know. Pierre turned his whole body, making the sofa creak. The postilion started, the carriage wheels rattled. Two footmen, the princess’ and his own, stood holding a shawl and\na cloak, waiting for the conversation to finish. “Write to her and let me know how her father looks at the matter.",
+            "summary": "“I am going because the life I am leading here does not suit\nme!” He\npaused. Besides that I am going....” I must. I don’t know.",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -364,44 +364,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.15602836879432624,
-                "rouge2": 0.0,
-                "rougeL": 0.11347517730496454
+                "rouge1": 0.20833333333333334,
+                "rouge2": 0.02127659574468085,
+                "rougeL": 0.10416666666666667
             },
             "BERTScore": {
-                "Precision": 0.8130097389221191,
-                "Recall": 0.8395046591758728,
-                "F1": 0.8260447382926941
+                "Precision": 0.8521533608436584,
+                "Recall": 0.8550528287887573,
+                "F1": 0.8536006212234497
             },
-            "summary": "Her beautiful eyes\nglanced askance at her husband’s face, and her own assumed the timid,\ndeprecating expression of a dog when it rapidly but feebly wags its\ndrooping tail. Suddenly the angry, squirrel-like expression of the princess’ pretty\nface changed into a winning and piteous look of fear. The princess said nothing, but suddenly her short downy lip quivered. The princess started. The rustle of a woman’s dress was heard in the next room.",
+            "summary": "The rustle of a woman’s dress was heard in the next room.  “Good night, Lise,” said he, rising and courteously kissing her hand\nas he would have done to a stranger.",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.15602836879432624,
+                "rouge1": 0.19327731092436976,
                 "rouge2": 0.0,
-                "rougeL": 0.11347517730496454
+                "rougeL": 0.10084033613445377
             },
             "BERTScore": {
-                "Precision": 0.8130097389221191,
-                "Recall": 0.8395046591758728,
-                "F1": 0.8260447382926941
+                "Precision": 0.8001933693885803,
+                "Recall": 0.8541617393493652,
+                "F1": 0.8262973427772522
             },
-            "summary": "Her beautiful eyes\nglanced askance at her husband’s face, and her own assumed the timid,\ndeprecating expression of a dog when it rapidly but feebly wags its\ndrooping tail. Suddenly the angry, squirrel-like expression of the princess’ pretty\nface changed into a winning and piteous look of fear. The princess said nothing, but suddenly her short downy lip quivered. The princess started. The rustle of a woman’s dress was heard in the next room.",
+            "summary": "Her beautiful eyes\nglanced askance at her husband’s face, and her own assumed the timid,\ndeprecating expression of a dog when it rapidly but feebly wags its\ndrooping tail. Her husband looked at her as if surprised to notice that someone besides\nPierre and himself was in the room, and addressed her in a tone of\nfrigid politeness. I won’t hear it spoken\nof,” said the princess in the same petulantly playful tone in which\nshe had spoken to Hippolyte in the drawing room and which was so plainly\nill-suited to the family circle of which Pierre was almost a member. I can’t understand why he\nwants to go to the war,” replied Pierre, addressing the princess\nwith none of the embarrassment so commonly shown by young men in their\nintercourse with young women. “How is it,” she began, as usual in French, settling down briskly\nand fussily in the easy chair, “how is it Annette never got married?\nHow stupid you men all are not to have married her!",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.15602836879432624,
-                "rouge2": 0.0,
-                "rougeL": 0.11347517730496454
+                "rouge1": 0.22222222222222218,
+                "rouge2": 0.013245033112582781,
+                "rougeL": 0.14379084967320263
             },
             "BERTScore": {
-                "Precision": 0.8130097389221191,
-                "Recall": 0.8395046591758728,
-                "F1": 0.8260447382926941
+                "Precision": 0.8073033690452576,
+                "Recall": 0.842226505279541,
+                "F1": 0.8243952393531799
             },
-            "summary": "Her beautiful eyes\nglanced askance at her husband’s face, and her own assumed the timid,\ndeprecating expression of a dog when it rapidly but feebly wags its\ndrooping tail. Suddenly the angry, squirrel-like expression of the princess’ pretty\nface changed into a winning and piteous look of fear. The princess said nothing, but suddenly her short downy lip quivered. The princess started. The rustle of a woman’s dress was heard in the next room.",
+            "summary": "she muttered, and lifting her dress with one\nhand she went up to her husband and kissed him on the forehead. “Mon Dieu, mon Dieu!” Her beautiful eyes\nglanced askance at her husband’s face, and her own assumed the timid,\ndeprecating expression of a dog when it rapidly but feebly wags its\ndrooping tail. Suddenly the angry, squirrel-like expression of the princess’ pretty\nface changed into a winning and piteous look of fear. “No, he thinks only of himself,” muttered the princess without\nrestraining her angry tears.",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -422,44 +422,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.18032786885245902,
-                "rouge2": 0.0,
-                "rougeL": 0.13114754098360656
+                "rouge1": 0.06060606060606061,
+                "rouge2": 0.03125,
+                "rougeL": 0.06060606060606061
             },
             "BERTScore": {
-                "Precision": 0.8218370079994202,
-                "Recall": 0.8406939506530762,
-                "F1": 0.8311585187911987
+                "Precision": 0.8209919929504395,
+                "Recall": 0.8295602798461914,
+                "F1": 0.8252539038658142
             },
-            "summary": "Every muscle of his\nthin face was now quivering with nervous excitement; his eyes, in which\nthe fire of life had seemed extinguished, now flashed with brilliant\nlight. Pierre took off his spectacles, which made his face seem different and\nthe good-natured expression still more apparent, and gazed at his friend\nin amazement. They entered the elegant, newly decorated, and luxurious dining room. Neither cared to begin talking. The friends were silent.",
+            "summary": "The friends were silent.  “You give me your word of honor not to go?”\n\n“On my honor!”",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.18032786885245902,
-                "rouge2": 0.0,
-                "rougeL": 0.13114754098360656
+                "rouge1": 0.15730337078651685,
+                "rouge2": 0.01509433962264151,
+                "rougeL": 0.11235955056179776
             },
             "BERTScore": {
-                "Precision": 0.8218370079994202,
-                "Recall": 0.8406939506530762,
-                "F1": 0.8311585187911987
+                "Precision": 0.7892991900444031,
+                "Recall": 0.8387230038642883,
+                "F1": 0.8132609128952026
             },
-            "summary": "Every muscle of his\nthin face was now quivering with nervous excitement; his eyes, in which\nthe fire of life had seemed extinguished, now flashed with brilliant\nlight. Pierre took off his spectacles, which made his face seem different and\nthe good-natured expression still more apparent, and gazed at his friend\nin amazement. They entered the elegant, newly decorated, and luxurious dining room. Neither cared to begin talking. The friends were silent.",
+            "summary": "Only I haven’t the least idea what\nI am to do; I wanted to consult you seriously.”\n\nPrince Andrew looked kindly at him, yet his glance—friendly and\naffectionate as it was—expressed a sense of his own superiority. As he said this Prince Andrew was less than ever like that Bolkónski\nwho had lolled in Anna Pávlovna’s easy chairs and with half-closed\neyes had uttered French phrases between his teeth. If you marry\nexpecting anything from yourself in the future, you will feel at every\nstep that for you all is ended, all is closed except the drawing\nroom, where you will be ranged side by side with a court lackey and an\nidiot!... That’s my advice: never marry\ntill you can say to yourself that you have done all you are capable of,\nand until you have ceased to love the woman of your choice and have seen\nher plainly as she is, or else you will make a cruel and irrevocable\nmistake. Halfway through supper Prince Andrew leaned his elbows on the table and,\nwith a look of nervous agitation such as Pierre had never before seen on\nhis face, began to talk—as one who has long had something on his mind\nand suddenly determines to speak out.",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.18032786885245902,
-                "rouge2": 0.0,
-                "rougeL": 0.13114754098360656
+                "rouge1": 0.16363636363636364,
+                "rouge2": 0.018518518518518517,
+                "rougeL": 0.05454545454545454
             },
             "BERTScore": {
-                "Precision": 0.8218370079994202,
-                "Recall": 0.8406939506530762,
-                "F1": 0.8311585187911987
+                "Precision": 0.8215751647949219,
+                "Recall": 0.8412787318229675,
+                "F1": 0.8313102126121521
             },
-            "summary": "Every muscle of his\nthin face was now quivering with nervous excitement; his eyes, in which\nthe fire of life had seemed extinguished, now flashed with brilliant\nlight. Pierre took off his spectacles, which made his face seem different and\nthe good-natured expression still more apparent, and gazed at his friend\nin amazement. They entered the elegant, newly decorated, and luxurious dining room. Neither cared to begin talking. The friends were silent.",
+            "summary": "“You give me your word of honor not to go?”\n\n“On my honor!” He asked me for tonight, but I\nwon’t go.” One’s head\naches, and one spends all one’s money. Leading such\na life I can’t decide or think properly about anything. It suits you so\nbadly—all this debauchery, dissipation, and the rest of it!”",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -480,44 +480,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.09523809523809523,
-                "rouge2": 0.0,
-                "rougeL": 0.07936507936507936
+                "rouge1": 0.16176470588235295,
+                "rouge2": 0.014925373134328358,
+                "rougeL": 0.1323529411764706
             },
             "BERTScore": {
-                "Precision": 0.8310200572013855,
-                "Recall": 0.8178452253341675,
-                "F1": 0.8243800401687622
+                "Precision": 0.8586856126785278,
+                "Recall": 0.8388429284095764,
+                "F1": 0.8486482501029968
             },
-            "summary": "Fine fellow!... Anatole stood erect with staring\neyes. Pierre stood smiling but silent. Listen! Pierre took an open cab intending\nto drive straight home.",
+            "summary": "It was past one o’clock when Pierre left his friend.  And he caught the bear, took it in his arms, lifted it from the ground,\nand began dancing round the room with it.",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.09523809523809523,
-                "rouge2": 0.0,
-                "rougeL": 0.07936507936507936
+                "rouge1": 0.29411764705882354,
+                "rouge2": 0.059171597633136085,
+                "rougeL": 0.14705882352941177
             },
             "BERTScore": {
-                "Precision": 0.8310200572013855,
-                "Recall": 0.8178452253341675,
-                "F1": 0.8243800401687622
+                "Precision": 0.79982590675354,
+                "Recall": 0.858132004737854,
+                "F1": 0.8279536962509155
             },
-            "summary": "Fine fellow!... Anatole stood erect with staring\neyes. Pierre stood smiling but silent. Listen! Pierre took an open cab intending\nto drive straight home.",
+            "summary": "The middle\nof the upper lip formed a sharp wedge and closed firmly on the firm\nlower one, and something like two distinct smiles played continually\nround the two corners of the mouth; this, together with the resolute,\ninsolent intelligence of his eyes, produced an effect which made it\nimpossible not to notice his face. Anatole kept on refilling Pierre’s glass while\nexplaining that Dólokhov was betting with Stevens, an English naval\nofficer, that he would drink a bottle of rum sitting on the outer ledge\nof the third floor window with his legs hanging out. “First of all you must drink!”\n\nPierre drank one glass after another, looking from under his brows at\nthe tipsy guests who were again crowding round the window, and listening\nto their chatter. Another voice, from a man of medium height with clear blue eyes,\nparticularly striking among all these drunken voices by its sober\nring, cried from the window: “Come here; part the bets!” The thought immediately occurred to him that his\npromise to Prince Andrew was of no account, because before he gave it\nhe had already promised Prince Anatole to come to his gathering;\n“besides,” thought he, “all such ‘words of honor’ are\nconventional things with no definite meaning, especially if\none considers that by tomorrow one may be dead, or something so\nextraordinary may happen to one that honor and dishonor will be all the\nsame!”",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.09523809523809523,
-                "rouge2": 0.0,
-                "rougeL": 0.07936507936507936
+                "rouge1": 0.2222222222222222,
+                "rouge2": 0.014084507042253521,
+                "rougeL": 0.125
             },
             "BERTScore": {
-                "Precision": 0.8310200572013855,
-                "Recall": 0.8178452253341675,
-                "F1": 0.8243800401687622
+                "Precision": 0.8335025906562805,
+                "Recall": 0.8278508186340332,
+                "F1": 0.8306671380996704
             },
-            "summary": "Fine fellow!... Anatole stood erect with staring\neyes. Pierre stood smiling but silent. Listen! Pierre took an open cab intending\nto drive straight home.",
+            "summary": "And he caught the bear, took it in his arms, lifted it from the ground,\nand began dancing round the room with it. And we’ll take Bruin\nwith us.” “Come on!... “Wait a\nbit and I’ll get round him.... Listen!",
             "methods": "EXT_TEXT_RANK"
         }
     ],
@@ -538,44 +538,44 @@
         },
         {
             "ROUGE": {
-                "rouge1": 0.242152466367713,
-                "rouge2": 0.01809954751131222,
-                "rougeL": 0.11659192825112107
+                "rouge1": 0.2923976608187135,
+                "rouge2": 0.09467455621301775,
+                "rougeL": 0.21052631578947367
             },
             "BERTScore": {
-                "Precision": 0.8136782646179199,
-                "Recall": 0.7900426387786865,
-                "F1": 0.8016862869262695
+                "Precision": 0.8591303825378418,
+                "Recall": 0.8317039012908936,
+                "F1": 0.8451946973800659
             },
-            "summary": "A tall, stout, and proud-looking woman, with a round-faced smiling\ndaughter, entered the drawing room, their dresses rustling. That’s right! These words he repeated to everyone without exception or variation, and\nwith the same expression on his full, cheerful, clean-shaven face, the\nsame firm pressure of the hand and the same quick, repeated bows. The young\npeople were in one of the inner rooms, not considering it necessary to\ntake part in receiving the visitors. A languor of motion and speech, resulting from weakness, gave her a\ndistinguished air which inspired respect.",
+            "summary": "Prince Vasíli kept the promise he had given to Princess Drubetskáya\nwho had spoken to him on behalf of her only son Borís on the evening of\nAnna Pávlovna’s soiree.  “So do come and dine with us!”\nhe said.",
             "methods": "EXT_FIRST_LAST"
         },
         {
             "ROUGE": {
-                "rouge1": 0.242152466367713,
-                "rouge2": 0.01809954751131222,
-                "rougeL": 0.11659192825112107
+                "rouge1": 0.25830258302583026,
+                "rouge2": 0.07407407407407407,
+                "rougeL": 0.11070110701107011
             },
             "BERTScore": {
-                "Precision": 0.8136782646179199,
-                "Recall": 0.7900426387786865,
-                "F1": 0.8016862869262695
+                "Precision": 0.7885228395462036,
+                "Recall": 0.8386337161064148,
+                "F1": 0.8128066658973694
             },
-            "summary": "A tall, stout, and proud-looking woman, with a round-faced smiling\ndaughter, entered the drawing room, their dresses rustling. That’s right! These words he repeated to everyone without exception or variation, and\nwith the same expression on his full, cheerful, clean-shaven face, the\nsame firm pressure of the hand and the same quick, repeated bows. The young\npeople were in one of the inner rooms, not considering it necessary to\ntake part in receiving the visitors. A languor of motion and speech, resulting from weakness, gave her a\ndistinguished air which inspired respect.",
+            "summary": "“Well, as\nI was saying, Prince Vasíli is the next heir through his wife, but the\ncount is very fond of Pierre, looked after his education, and wrote to\nthe Emperor about him; so that in the case of his death—and he is\nso ill that he may die at any moment, and Dr. Lorrain has come from\nPetersburg—no one knows who will inherit his immense fortune, Pierre\nor Prince Vasíli. Sometimes on his way back from the anteroom he would pass through the\nconservatory and pantry into the large marble dining hall, where tables\nwere being set out for eighty people; and looking at the footmen, who\nwere bringing in silver and china, moving tables, and unfolding damask\ntable linen, he would call Dmítri Vasílevich, a man of good family and\nthe manager of all his affairs, and while looking with pleasure at the\nenormous table would say: “Well, Dmítri, you’ll see that things are\nall as they should be? As\nsoon as he had seen a visitor off he returned to one of those who were\nstill in the drawing room, drew a chair toward him or her, and jauntily\nspreading out his legs and putting his hands on his knees with the air\nof a man who enjoys life and knows how to live, he swayed to and\nfro with dignity, offered surmises about the weather, or touched on\nquestions of health, sometimes in Russian and sometimes in very bad but\nself-confident French; then again, like a man weary but unflinching in\nthe fulfillment of duty, he rose to see some visitors off and, stroking\nhis scanty gray hairs over his bald patch, also asked them to dinner. “I am very, very grateful to you, mon cher,” or “ma chère”—he\ncalled everyone without exception and without the slightest variation\nin his tone, “my dear,” whether they were above or below him in\nrank—“I thank you for myself and for our two dear ones whose name\nday we are keeping. Soon after Anna Pávlovna’s reception Anna Mikháylovna\nreturned to Moscow and went straight to her rich relations, the\nRostóvs, with whom she stayed when in the town and where her darling\nBóry, who had only just entered a regiment of the line and was being\nat once transferred to the Guards as a cornet, had been educated from\nchildhood and lived for years at a time.",
             "methods": "EXT_IF_IDF"
         },
         {
             "ROUGE": {
-                "rouge1": 0.242152466367713,
-                "rouge2": 0.01809954751131222,
-                "rougeL": 0.11659192825112107
+                "rouge1": 0.24434389140271495,
+                "rouge2": 0.0182648401826484,
+                "rougeL": 0.10859728506787329
             },
             "BERTScore": {
-                "Precision": 0.8136782646179199,
-                "Recall": 0.7900426387786865,
-                "F1": 0.8016862869262695
+                "Precision": 0.813184380531311,
+                "Recall": 0.7911273837089539,
+                "F1": 0.8020042777061462
             },
-            "summary": "A tall, stout, and proud-looking woman, with a round-faced smiling\ndaughter, entered the drawing room, their dresses rustling. That’s right! These words he repeated to everyone without exception or variation, and\nwith the same expression on his full, cheerful, clean-shaven face, the\nsame firm pressure of the hand and the same quick, repeated bows. The young\npeople were in one of the inner rooms, not considering it necessary to\ntake part in receiving the visitors. A languor of motion and speech, resulting from weakness, gave her a\ndistinguished air which inspired respect.",
+            "summary": "“So do come and dine with us!”\nhe said. And as he waved his arms to impersonate the policeman, his portly form\nagain shook with a deep ringing laugh, the laugh of one who always eats\nwell and, in particular, drinks well. “But do you know, my dear, that was a capital joke,” said the count;\nand seeing that the elder visitor was not listening, he turned to the\nyoung ladies. “Yes, but between ourselves,” said the princess, “that is a\npretext. I hear he has come on\nsome inspection business,” remarked the visitor.",
             "methods": "EXT_TEXT_RANK"
         }
     ]
