@@ -221,12 +221,28 @@ def print_evaluation(evaluation):
             print(f'\t{key} = {value}')
         print()
 
+def add_value_to_json_array(file_path, key, new_value):
+    if os.path.exists(file_path):
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+    else:
+        data = {}
+
+    if key in data:
+        if isinstance(data[key], list):
+            data[key].append(new_value)
+    else:
+        data[key] = [new_value]
+
+    with open(file_path, 'w') as file:
+        json.dump(data, file, indent=4, ensure_ascii=False)
+
 def save_result_to_json(args, methods, evaluation, summary):
     evaluation['summary'] = summary
     evaluation['methods'] = args.summary_methods
-    with open(f'{os.path.basename(args.text_path)}_{methods}.json', 'w') as json_file:
-        json.dump(evaluation, json_file, indent=4, ensure_ascii=False)
+    base_text_path = os.path.basename(args.text_path)
 
+    add_value_to_json_array(args.json_results_path, base_text_path, evaluation)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -246,11 +262,15 @@ if __name__ == '__main__':
             Number of sentences
             in the summary.
             """)
+    parser.add_argument('-j', '--json_results_path', type=str, help="""
+            Json path to which to save the results.
+            """)
     parser.add_argument('-r', '--reference_path', type=str, help="""
             (Optional) Path to file containing reference summary.
             """)
     args = parser.parse_args()
     methods = parse_method(args.summary_methods)
+    print(methods)
 
     with open(args.text_path, 'r', encoding='utf-8') as f:
         text = f.read()
@@ -269,7 +289,7 @@ if __name__ == '__main__':
             eval_extraction_based = \
                 evaluate_summary(summary, reference_summary)
             print_evaluation(eval_extraction_based)
-        save_result_to_json(args, methods, eval_abstractive, summary)
+            save_result_to_json(args, methods, eval_extraction_based, summary)
 
     if is_method_set(methods, ABST_SUMMARY):
         abstractive_summary = abstractive_summarization(text, methods)

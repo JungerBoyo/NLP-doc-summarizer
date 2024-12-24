@@ -12,29 +12,37 @@ execute_app() {
 	text_path="$1"
 	reference_path="$2"
 	summary_methods="$3"
+	json_path="$4"
 	python main.py \
 		--model "en_core_web_sm" \
 		--text_path "$text_path" \
 		--summary_methods "$summary_methods" \
 		--num_sentences 5 \
+		--json_results_path "$json_path" \
 		--reference_path "$reference_path"
 }
 
-
 for t in $(seq 1 $number_of_texts); do
-	for _1 in $(seq 0 $ext_methods_len); do
-		execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[_1]}"
-		for _2 in $(seq $((_1 + 1)) $ext_methods_len); do
-			execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[_1]}|${ext_methods[_2]}"
-			for _3 in $(seq $(($_2 + 1)) $ext_methods_len); do
-				execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[_1]}|${ext_methods[_2]}|${ext_methods[_3]}"
-				for _4 in $(seq $(($_3 + 1)) $ext_methods_len); do
-					execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[_1]}|${ext_methods[_2]}|${ext_methods[_3]}|${ext_methods[_4]}"
-				done
-			done
-		done
+	for m in $(seq 0 $ext_methods_len); do
+		execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[m]}" "ext_results.json"
 	done
 done
+
+
+#for t in $(seq 1 $number_of_texts); do
+#	for _1 in $(seq 0 $ext_methods_len); do
+#		execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[_1]}"
+#		for _2 in $(seq $((_1 + 1)) $ext_methods_len); do
+#			execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[_1]}|${ext_methods[_2]}"
+#			for _3 in $(seq $(($_2 + 1)) $ext_methods_len); do
+#				execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[_1]}|${ext_methods[_2]}|${ext_methods[_3]}"
+#				for _4 in $(seq $(($_3 + 1)) $ext_methods_len); do
+#					execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[_1]}|${ext_methods[_2]}|${ext_methods[_3]}|${ext_methods[_4]}"
+#				done
+#			done
+#		done
+#	done
+#done
 
 #for t in {0..${number_of_texts}}; do
 #	for _1 in "${abst_methods[@]}"; do
