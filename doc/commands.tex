@@ -1,0 +1,7 @@
+
+\newcounter{ImageCount}
+\newcommand{\image}[1]{\textit{Rys. \arabic{ImageCount} -- #1} \stepcounter{ImageCount}}
+\stepcounter{ImageCount}
+\newcommand{\img}[3][1]{\begin{center}{\includegraphics[scale=#1]{#2}\\ \image{#3}}\end{center}}
+
+

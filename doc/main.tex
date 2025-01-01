@@ -1,0 +1,136 @@
+\documentclass{article}
+
+\input{packages}
+\input{commands}
+
+\begin{document}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+
+\hline 
+		Wydział Informatyki Politechniki Białostockiej & Data: 15.01.2024  \\
+					   								   & Przetwarzanie języka naturalnego \\
+\hline
+		Projekt, Tworzenie podsumowań tekstu & Prowadzący: \\
+		Piotr Zalewski, Kacper Świderek & dr inż. Tomasz Łukaszuk \\
+\hline 
+
+\end{tabular}
+\end{center}
+
+\section{Przedstawienie zadania projektowego}
+Celem projektu było opracowanie prostego narzędzia do tworzenia 
+podsumowań dokumentów tekstowych. Opracowane narzędzie daje możliwość 
+wybrania metod/y użytej do tworzenia podsumowania oraz ew. porównania
+jakości podsumowania na podstawie metryk BERTScore oraz ROUGE.
+\section{Przedstawienie rozszerzenia zadania do oceny 5.0}
+Rozszerzeniem zadania jest dodanie możliwości łączenia metod tworzących 
+podsumowania, gdzie przy metodach ekstrakcyjnych metody łączone są
+przy użyciu sumy ważonej wyników jakie każda metoda przypisuje do zdań
+i następne wybranie N zdań z najwyższym wynikiem, z kolei w przypadku metod
+abstrakcyjnych polega na zawężaniu obszerności podsumowania stopniowo
+każdą kolejną metodą (kolejność podawana jest przez użytkownika). Przykładowo,
+najpierw z tekstu A tworzone jest podsumowanie metodą X o wielkości 20\% tekstu 
+pierwotnego, następnie wykorzystywana jest metoda Y, która na podstawie tekstu podsumowania
+stworzonego za pomocą metody X, tworzy podsumowanie podsumowania obszerności 25\%
+tego podsumowania. 
+\section{Wprowadzenie teoretyczne (naukowe) do zagadnienia}
+Przetwarzanie języka naturalnego to dziedzina skupiająca wiedzę z zakresu
+językoznastwa oraz informatyki zajmująca się automatyzacją analizy, rozumienia,
+tłumaczenia i generowania tekstu/języka naturalnego.
+Podsumowanie tekstu polega na streszczeniu znaczenia tego tekstu, używając
+innego tekstu, o mniejszym rozmiarze. Wtórnym do zagadnienia tworzenia podsumowań
+jest zagadnienie analizy tekstu, czyli sposobu pozyskiwania i kodowania informacji o tekście
+tj. występujące w nim słowa i semantyka. Wykorzystując metody kodowania informacji o tekście
+można projektować algorytmy, które na podstawie tych reprezentacji generują podsumowania.
+Wyróżnia się dwie grupy metod służących do tworzenia podsumowań, metody ekstrakcyjne,
+polegające na wybraniu najbardziej znaczących zdań z tekstu oraz metody abstrakcyjne,
+polegające na tworzeniu nowych zdań na podstawie tekstu. Z reguły, z racji na większą złożoność,
+metody abstrakcyjne tworzą lepsze podsumowania, aczkolwiek ze względu na to, że tworzone
+podsumowania to całkowicie nowy tekst, mogą zaistnieć w nim przekłamania tekstu pierwotnego. Przy metodach
+ekstrakcyjnych wybierane są jedynie zdania kluczowe z tekstu, przez co są one w tym kontekście bezpieczniejsze.
+
+\subsection{Metody ekstrakcyjne}
+\subsubsection{Wybór na podstawie długości zdania}
+Naiwną metodą typowania zdań do podsumowania jest tworzenie rankingu na podstawie
+ilości słów w zdaniu (nie biorąc pod uwagę \textit{stop words} oraz różnych morfologii 
+tych samych słów). Należy zauważyć, że przy tej metodzie ekstrakcyjnej podsumowanie
+będzie zawsze możliwie nadłuższe.
+\subsubsection{Wybór pierwszego i ostatniego zdania}
+Kolejną naiwną metodą jest wybór pierwszego i ostatniego zdania bazując na założeniu, że
+są one w większości przypadków podsumowywujące.
+\subsubsection{TF-IDF}
+TF-IDF to metoda reprezentacji tekstu oparta na bag-of-words. Przy tej metodzie tekst 
+reprezentowany jest jako macierz której każdy wiesz odpowiada danemu zdaniu z tekstu, a 
+każda kolumna odpowiada danemu słowu. Wartości macierzy wyliczane są za pomocą wzoru (1).
+
+\begin{center}
+	\begin{equation}
+		w_{ij} = tf_{ij} \cdot log(\frac{N}{df_i})
+	\end{equation}
+\end{center}
+
+Gdzie w przypadku opisywanego rozwiązania $tf_{ij}$ oznacza ilość wystąpień słowa
+$i$ w zdaniu $j$, N oznacza ilość zdań, a $df_i$ oznacza ilość zdań zawierających
+słowo $i$. 
+Przy tworzeniu podsumowania tworzony jest ranking w którym dla każdego zdania sumowane
+są otrzymane wartości $w_{ij}$ zgodnie ze wzorem (2). Następnie wybierane jest $K$ 
+zdań z najwyższym wynikiem.
+
+\begin{center}
+	\begin{equation}
+		S_{j} = \sum_{i = 0}^{M} w_{ij}
+	\end{equation}
+\end{center}
+
+\subsubsection{TextRank}
+TextRank to algorytm bazujący na algorytmie PageRank opublikowany w 2004 roku \cite{mihalcea2004textrank}.
+W algorytmie tworzony jest graf którego wierzchołki to, jak w opisywanym rozwiązaniu, zdania, słowa
+kluczowe lub inne jednostki tekstu. W przypadku zdań krawędzie pomiędzy wierzchołkami reprezentują 
+podobieństwo pomiędzy zdaniami. Podobieństwo może być określane chociażby za pomocą ilości wspólnych
+słów/tokenów bądź przy użyciu podobieństwa wektorów wziętych np. z macierzy stworzonej za pomocą
+algorytmu TF-IDF. Następnie przechodząc po grafie wylicza się wynik każdego wierzchołka według wzoru (3) \cite{mihalcea2004textrank}.
+
+\begin{center}
+	\begin{equation}
+		WS(V_i) = 0.15 + 0.85 \cdot \sum_{V_j\in In(V_i)}^{} \frac{w_{ij}}{\sum_{V_k\in Out(V_j)}^{} w_{jk}} \cdot WS(V_j)
+	\end{equation}
+\end{center}
+
+Jak w algorytmie PageRank we wzorze (3) dany wierzchołek otrzymuje tym wyższy wynik im więcej
+wierzchołków nań wskazuje. Co więcej, wynik więrzchołków wskazujących na ten wierzchołek również
+ma wpływ na wynik tego wierzchołka. We wzorze (3) dodatkowo dochodzą wspomniane wagi krawędzi, 
+im wyższa waga tym większe podobieństwo pomiędzy tymi wierzchołkami tym większa kontrybucja 
+do końcowego wyniku. Sortując wartości wierzchołków otrzymuje się listę zdań uporządkowaną malejąco
+według stopnia ich reprezentatywności całego tekstu.
+
+\subsection{Metody abstrakcyjne}
+
+\subsubsection{T5}
+\subsubsection{BART}
+\subsubsection{Pegasus}
+
+\section{Opis realizacji technicznej (wykorzystane biblioteki, dane treningowe)}
+\subsection{Biblioteki}
+Do wykonania zadania skorzystano z następujących bibliotek:
+\begin{itemize}
+	\item spacy - segmentacja tekstu, TextRank
+	\item sklearn - TF-IDF
+	\item transformers - abstrakcyjne podsumowania, BART, Pegasus, T5
+	\item rouge\_score - wyliczanie rouge\_score podsumowania.
+	\item bert\_score - wyliczanie bert\_score podsumowania.
+\end{itemize}
+\subsection{Dane treningowe}
+Dane treningowe wytworzono korzystając z biblioteki gutenberg \cite{gutenberg}
+zawierającej w pełni darmowe cyfrowe kopie książek tj. \textit{War and peace}, którym
+posłużono się do tworzenia podsumowań. Podsumowania wzorcowe tworzono w większości przy pomocy
+\textit{ChatGPT} ale również ręcznie.
+
+\section{Instrukcja korzystania z programu}
+\section{Przykłady użycia programu (dane wejściowe i otrzymane wyniki)}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{mihalcea2004textrank}
+Rada Mihalcea and Paul Tarau.
+\newblock Textrank: Bringing order into texts.
+\newblock In {\em Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing (EMNLP)}, pages 404--411, Barcelona, Spain, 2004. University of North Texas, Association for Computational Linguistics.
+
+\bibitem{gutenberg}
+{Project Gutenberg}.
+\newblock Project gutenberg: Free ebooks.
+\newblock \url{https://www.gutenberg.org}, 2025.
+\newblock Accessed: 2025-01-04.
+
+\end{thebibliography}
