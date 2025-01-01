@@ -112,6 +112,22 @@ według stopnia reprezentatywności przez nie całego tekstu.
 \subsubsection{BART}
 \subsubsection{Pegasus}
 
+\subsection{Ocena jakości podsumowań}
+Najbardziej popularnymi metodami oceny jakości podsumowań jest \textit{ROUGE score} oraz
+\textit{BARTScore}. Jakość metryki oceniana jest na podstawie jej korelacji z oceną
+subiektywną (oceną przez człowieka). Najlepszą metodą oceny podsumowania jest ocena subiektywna
+ale ze względu na to, że ręczne tworzenie podsumowań jest pracochłonne oraz że
+ocena jest niestabilna (ciężko porównać dwa podsumowania i określić które z nich jest lepsze
+i o ile), dąży się do wypracowania technik jak te wspomniane wyżej.
+
+\subsubsection{ROUGE score}
+ROUGE score to metoda zaproponowana po raz pierwszy w 2004 roku \cite{lin2004rouge}.
+
+\subsubsection{BARTscore}
+BERTScore to metryka zaproponowana w 2019 roku \cite{zhang2020bertscoreevaluatingtextgeneration}. 
+W metodzie tej używa się modelu BART do oceny podsumowania wygenerowanego na podstawie podsumowania
+referencyjnego.
+
 \section{Opis realizacji technicznej (wykorzystane biblioteki, dane treningowe)}
 \subsection{Biblioteki}
 Do wykonania zadania skorzystano z następujących bibliotek:
