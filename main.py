@@ -2,6 +2,8 @@ import spacy
 import pytextrank
 from sklearn.feature_extraction.text import TfidfVectorizer
 import argparse
+import torch
+import math
 from transformers import (
     BartForConditionalGeneration,
     BartTokenizer,
@@ -163,17 +165,27 @@ def extraction_based_summarize(doc, method, num_sentences):
         return summary
 
 
-def abstractive_summarization(text, method):
+def abstractive_summarization(text, method, num_of_words):
     use_t5 = is_method_set(method, ABST_T5)
     use_pegasus = is_method_set(method, ABST_PEGASUS)
     use_bart = is_method_set(method, ABST_BART)
+    chunk_size = 512
+    chunks = int(math.ceil(num_of_words / chunk_size))
+    min_words = int(num_of_words / chunks)
 
     if use_pegasus:
-        model = PegasusForConditionalGeneration.from_pretrained("google/pegasus-xsum")
-        tokenizer = PegasusTokenizer.from_pretrained("google/pegasus-xsum")
-        input_ids = tokenizer.encode(text, return_tensors='pt', max_length=512, truncation=True, padding=True)
-        summary_ids = model.generate(input_ids, min_length=28, max_length=28)
-        return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+        model_name = "google/pegasus-xsum"
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        tokenizer = PegasusTokenizer.from_pretrained(model_name)
+        model = PegasusForConditionalGeneration.from_pretrained(model_name).to(device)
+        summary = []
+        for i in range(chunks):
+            chunk = text[i * chunk_size: (i + 1) * chunk_size]
+            batch = tokenizer(chunk, max_length=chunk_size, truncation=True, padding="longest", return_tensors="pt").to(device)
+            translated = model.generate(min_length=min_words, max_length=min_words, **batch)
+            tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
+            summary.append(tgt_text[0])
+        return ".".join(summary)
 
     if use_t5:
         model = T5ForConditionalGeneration.from_pretrained('t5-base')
@@ -268,6 +280,9 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--reference_path', type=str, help="""
             (Optional) Path to file containing reference summary.
             """)
+    parser.add_argument('-p', '--percentage', type=int, help="""
+                Percentage of sentences in the summary.
+                """)
     args = parser.parse_args()
     methods = parse_method(args.summary_methods)
     print(methods)
@@ -277,10 +292,11 @@ if __name__ == '__main__':
     with open(args.reference_path, 'r', encoding='utf-8') as f:
         reference_summary = f.read()
 
+    nlp = spacy.load(args.model)
+    nlp.add_pipe("textrank")
+    doc = nlp(text)
+
     if is_method_set(methods, EXT_SUMMARY):
-        nlp = spacy.load(args.model)
-        nlp.add_pipe("textrank")
-        doc = nlp(text)
         summary = extraction_based_summarize(doc, methods, args.num_sentences)
         print(summary)
         if args.reference_path:
@@ -290,7 +306,12 @@ if __name__ == '__main__':
             save_result_to_json(args, methods, eval_extraction_based, summary)
 
     if is_method_set(methods, ABST_SUMMARY):
-        abstractive_summary = abstractive_summarization(text, methods)
+        num_of_words = 0
+        if args.percentage:
+            num_of_words = int(len(doc) * int(args.percentage) / 100)
+        else:
+            num_of_words = args.num_sentences * 30
+        abstractive_summary = abstractive_summarization(text, methods, num_of_words)
         print(abstractive_summary)
         if args.reference_path:
             eval_abstractive = evaluate_summary(abstractive_summary,
