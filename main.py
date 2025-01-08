@@ -165,27 +165,28 @@ def extraction_based_summarize(doc, method, num_sentences):
         return summary
 
 
-def abstractive_summarization(text, method, num_of_words):
+def abstractive_summarization(text, method, num_of_tokens, doc):
     use_t5 = is_method_set(method, ABST_T5)
     use_pegasus = is_method_set(method, ABST_PEGASUS)
     use_bart = is_method_set(method, ABST_BART)
-    chunk_size = 512
-    chunks = int(math.ceil(num_of_words / chunk_size))
-    min_words = int(num_of_words / chunks)
 
     if use_pegasus:
         model_name = "google/pegasus-xsum"
         device = "cuda" if torch.cuda.is_available() else "cpu"
         tokenizer = PegasusTokenizer.from_pretrained(model_name)
         model = PegasusForConditionalGeneration.from_pretrained(model_name).to(device)
-        summary = []
-        for i in range(chunks):
-            chunk = text[i * chunk_size: (i + 1) * chunk_size]
-            batch = tokenizer(chunk, max_length=chunk_size, truncation=True, padding="longest", return_tensors="pt").to(device)
-            translated = model.generate(min_length=min_words, max_length=min_words, **batch)
+
+        max_chunk_length = tokenizer.model_max_length
+        chunks = [doc[i:i + max_chunk_length].text for i in range(0, len(doc), max_chunk_length)]
+        length_per_chunk = int(num_of_tokens / len(chunks))
+
+        summaries = []
+        for chunk in chunks:
+            batch = tokenizer(chunk, max_length=max_chunk_length, padding=True, truncation=True, return_tensors="pt").to(device)
+            translated = model.generate(min_length=length_per_chunk, max_length=length_per_chunk, **batch)
             tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
-            summary.append(tgt_text[0])
-        return ".".join(summary)
+            summaries.append(tgt_text[0])
+        return " ".join(summaries)
 
     if use_t5:
         model = T5ForConditionalGeneration.from_pretrained('t5-base')
@@ -311,7 +312,7 @@ if __name__ == '__main__':
             num_of_words = int(len(doc) * int(args.percentage) / 100)
         else:
             num_of_words = args.num_sentences * 30
-        abstractive_summary = abstractive_summarization(text, methods, num_of_words)
+        abstractive_summary = abstractive_summarization(text, methods, num_of_words, doc)
         print(abstractive_summary)
         if args.reference_path:
             eval_abstractive = evaluate_summary(abstractive_summary,
