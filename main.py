@@ -164,43 +164,46 @@ def extraction_based_summarize(doc, method, num_sentences):
     else:
         return summary
 
+def generate_abstract_summary(tokenizer, model, num_of_tokens, doc, device, addPrefix=False):
+    max_chunk_length = 512
+    chunks = [doc[i:i + max_chunk_length].text for i in range(0, len(doc), max_chunk_length)]
+    length_per_chunk = int(num_of_tokens / len(chunks))
+    if addPrefix:
+        prefix = "summarize: "
+        chunks = [prefix + doc for doc in chunks]
+
+    summaries = []
+    for chunk in chunks:
+        batch = tokenizer(chunk, max_length=max_chunk_length, padding=True, truncation=True, return_tensors="pt").to(
+            device)
+        translated = model.generate(min_length=length_per_chunk, max_length=length_per_chunk, **batch)
+        tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
+        summaries.append(tgt_text[0])
+    return " ".join(summaries)
 
 def abstractive_summarization(text, method, num_of_tokens, doc):
     use_t5 = is_method_set(method, ABST_T5)
     use_pegasus = is_method_set(method, ABST_PEGASUS)
     use_bart = is_method_set(method, ABST_BART)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
 
     if use_pegasus:
         model_name = "google/pegasus-xsum"
-        device = "cuda" if torch.cuda.is_available() else "cpu"
         tokenizer = PegasusTokenizer.from_pretrained(model_name)
         model = PegasusForConditionalGeneration.from_pretrained(model_name).to(device)
-
-        max_chunk_length = tokenizer.model_max_length
-        chunks = [doc[i:i + max_chunk_length].text for i in range(0, len(doc), max_chunk_length)]
-        length_per_chunk = int(num_of_tokens / len(chunks))
-
-        summaries = []
-        for chunk in chunks:
-            batch = tokenizer(chunk, max_length=max_chunk_length, padding=True, truncation=True, return_tensors="pt").to(device)
-            translated = model.generate(min_length=length_per_chunk, max_length=length_per_chunk, **batch)
-            tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
-            summaries.append(tgt_text[0])
-        return " ".join(summaries)
+        return generate_abstract_summary(tokenizer, model, num_of_tokens, doc, device)
 
     if use_t5:
-        model = T5ForConditionalGeneration.from_pretrained('t5-base')
-        tokenizer = T5Tokenizer.from_pretrained('t5-base')
-        input_ids = tokenizer.encode(text, return_tensors='pt', max_length=512, truncation=True)
-        summary_ids = model.generate(input_ids, min_length=30, max_length=120)
-        return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+        model_name = "t5-base"
+        tokenizer = T5Tokenizer.from_pretrained(model_name)
+        model = T5ForConditionalGeneration.from_pretrained(model_name).to(device)
+        return generate_abstract_summary(tokenizer, model, num_of_tokens, doc, device, True)
 
     if use_bart:
-        model = BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn')
-        tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-cnn')
-        input_ids = tokenizer.encode(text, return_tensors='pt', max_length=1024, truncation=True)
-        summary_ids = model.generate(input_ids, min_length=30, max_length=120)
-        return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+        model_name = "facebook/bart-large-cnn"
+        tokenizer = BartTokenizer.from_pretrained(model_name)
+        model = BartForConditionalGeneration.from_pretrained(model_name).to(device)
+        return generate_abstract_summary(tokenizer, model, num_of_tokens, doc, device)
 
     return "Unknown abstract summary method"
 
