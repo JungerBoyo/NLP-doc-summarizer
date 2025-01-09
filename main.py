@@ -181,32 +181,37 @@ def generate_abstract_summary(tokenizer, model, num_of_tokens, doc, device, addP
         summaries.append(tgt_text[0])
     return " ".join(summaries)
 
-def abstractive_summarization(text, method, num_of_tokens, doc):
-    use_t5 = is_method_set(method, ABST_T5)
-    use_pegasus = is_method_set(method, ABST_PEGASUS)
-    use_bart = is_method_set(method, ABST_BART)
+def abstractive_summarization(text, methods_list, num_of_tokens_list, doc, nlp):
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    summary = doc
 
-    if use_pegasus:
-        model_name = "google/pegasus-xsum"
-        tokenizer = PegasusTokenizer.from_pretrained(model_name)
-        model = PegasusForConditionalGeneration.from_pretrained(model_name).to(device)
-        return generate_abstract_summary(tokenizer, model, num_of_tokens, doc, device)
+    for idx in range(len(methods_list)):
+        method = parse_method(methods_list[idx])
+        use_t5 = is_method_set(method, ABST_T5)
+        use_pegasus = is_method_set(method, ABST_PEGASUS)
+        use_bart = is_method_set(method, ABST_BART)
+        num_of_tokens = num_of_tokens_list[idx]
 
-    if use_t5:
-        model_name = "t5-base"
-        tokenizer = T5Tokenizer.from_pretrained(model_name)
-        model = T5ForConditionalGeneration.from_pretrained(model_name).to(device)
-        return generate_abstract_summary(tokenizer, model, num_of_tokens, doc, device, True)
+        if use_pegasus:
+            model_name = "google/pegasus-xsum"
+            tokenizer = PegasusTokenizer.from_pretrained(model_name)
+            model = PegasusForConditionalGeneration.from_pretrained(model_name).to(device)
+            summary = nlp(generate_abstract_summary(tokenizer, model, num_of_tokens, summary, device))
 
-    if use_bart:
-        model_name = "facebook/bart-large-cnn"
-        tokenizer = BartTokenizer.from_pretrained(model_name)
-        model = BartForConditionalGeneration.from_pretrained(model_name).to(device)
-        return generate_abstract_summary(tokenizer, model, num_of_tokens, doc, device)
+        if use_t5:
+            model_name = "t5-base"
+            tokenizer = T5Tokenizer.from_pretrained(model_name)
+            model = T5ForConditionalGeneration.from_pretrained(model_name).to(device)
+            summary = nlp(generate_abstract_summary(tokenizer, model, num_of_tokens, summary, device, True))
 
-    return "Unknown abstract summary method"
+        if use_bart:
+            model_name = "facebook/bart-large-cnn"
+            tokenizer = BartTokenizer.from_pretrained(model_name)
+            model = BartForConditionalGeneration.from_pretrained(model_name).to(device)
+            summary = nlp(generate_abstract_summary(tokenizer, model, num_of_tokens, summary, device))
+        print(summary)
 
+    return summary.text
 
 def evaluate_summary(generated_summary, reference_summary):
     """
@@ -284,8 +289,9 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--reference_path', type=str, help="""
             (Optional) Path to file containing reference summary.
             """)
-    parser.add_argument('-p', '--percentage', type=int, help="""
-                Percentage of sentences in the summary.
+    parser.add_argument('-p', '--percentage', type=str, help="""
+                Percentage of sentences in the summary. Integer numbers seperated by |. In the case of ABST_ methods, 
+                order determines in what order percentages are applied. E.g. 25|10|5
                 """)
     args = parser.parse_args()
     methods = parse_method(args.summary_methods)
@@ -310,12 +316,12 @@ if __name__ == '__main__':
             save_result_to_json(args, methods, eval_extraction_based, summary)
 
     if is_method_set(methods, ABST_SUMMARY):
-        num_of_words = 0
-        if args.percentage:
-            num_of_words = int(len(doc) * int(args.percentage) / 100)
-        else:
-            num_of_words = args.num_sentences * 30
-        abstractive_summary = abstractive_summarization(text, methods, num_of_words, doc)
+        methods_list = args.summary_methods.split('|')
+        percentages_list = args.percentage.split('|')
+        if not args.percentage or len(percentages_list) != len(methods_list):
+            raise Exception("No percentages parameter or different methods and percentages sizes!")
+        num_of_tokens_list = [int(len(doc) * int(per) / 100) for per in percentages_list]
+        abstractive_summary = abstractive_summarization(text, methods_list, num_of_tokens_list, doc, nlp)
         print(abstractive_summary)
         if args.reference_path:
             eval_abstractive = evaluate_summary(abstractive_summary,
