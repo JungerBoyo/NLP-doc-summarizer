@@ -115,13 +115,46 @@ według stopnia reprezentatywności przez nie całego tekstu.
 \subsection{Ocena jakości podsumowań}
 Najbardziej popularnymi metodami oceny jakości podsumowań jest \textit{ROUGE score} oraz
 \textit{BARTScore}. Jakość metryki oceniana jest na podstawie jej korelacji z oceną
-subiektywną (oceną przez człowieka). Najlepszą metodą oceny podsumowania jest ocena subiektywna
-ale ze względu na to, że ręczne tworzenie podsumowań jest pracochłonne oraz że
+subiektywną (oceną dokonaną przez człowieka). Najlepszą metodą oceny podsumowania jest 
+ocena subiektywna ale ze względu na to, że ręczne tworzenie podsumowań jest pracochłonne oraz że
 ocena jest niestabilna (ciężko porównać dwa podsumowania i określić które z nich jest lepsze
-i o ile), dąży się do wypracowania technik jak te wspomniane wyżej.
+i o ile), dąży się do wypracowania technik jak te wspomniane wyżej. 
 
 \subsubsection{ROUGE score}
-ROUGE score to metoda zaproponowana po raz pierwszy w 2004 roku \cite{lin2004rouge}.
+ROUGE score to metoda zaproponowana po raz pierwszy w 2004 roku \cite{lin2004rouge}. Jak już wspomniano,
+przy ocenie jakości, podsumowanie dokonane ręcznie przez człowieka jest brane jako podsumowanie
+wzorcowe. \textit{ROUGE score} opiera się na zliczaniu nakładających się jednostek tekstu takich jak
+słowa, zdania czy n-gramy podsumowania wygenerowanego z podsumowaniem wzorcowym. Praca \cite{lin2004rouge}
+wprowadza trzy miary \textit{ROUGE score}
+\begin{itemize}
+	\item \textit{ROUGE-N} - stosunek liczby n-gramów występujących zarówno w wygenerowanym podsumowaniu jak i w 
+		podsumowaniach wzorcowych do sumy n-gramów z podsumowań wzorcowych.
+	\item \textit{ROUGE-L} - na podstawie sumy najdłuższych wspólnych sekwencji wyliczanie 3 miar, 
+		\textit{recall}, \textit{precision} i \textit{F}. Gdzie każda najdłuższa wspólna sekwencja jest
+		wyliczana z danego zdania podsumowania referencyjnego i wszystkimi zdaniami z podsumowania wygenerowanego.
+		Miary \textit{recall} i \textit{precision} to wspomniana suma podzielona przez kolejno długość podsumowania
+		referencyjnego i wygenerowanego. Miarę \textit{F} określa się wzorem (4), gdzie $\beta$ to zmienna 
+		kontrolująca czy \textit{recall} ($\beta > 1$) czy \textit{precision} ($\beta < 1$) jest bardziej 
+		istotne w obliczonej wartości.
+		\begin{center}
+			\begin{equation}
+				F = \frac{(1 + \beta^2) \cdot recall\cdot precision}{recall + \beta^2 \cdot precision}
+			\end{equation}
+		\end{center}
+	\item \textit{ROUGE-W} - Ważona wersja \textit{ROUGE-L} biorąca pod uwagę
+		ciągłość wspólnych sekwencji. Tym większa waga wspólnej sekwencji im większa jest jej ciągłość (\textit{ROUGE-L} ignoruje tą właściwość przez co dwie
+		wykryte wspólne sekwencje, jedna ciągła a druga nie, mogą zostać ocenione
+		tak samo mimo, że oczywistym jest, że ciągła sekwencja jest bardziej
+		porządana).
+	\item \textit{ROUGE-S} - Wyliczana jest liczba nakładających się \textit{skip-bigrams} 
+		czyli par słów o dowolnej odległości w zdaniu ale występujących po sobie. Na podstawie tej 
+		liczby podobnie jak w przypadku \textit{ROUGE-N} i \textit{ROUGE-L} wyliczane są
+		\textit{recall}, \textit{precision} i \textit{F}.
+\end{itemize}
+Warto zaznaczyć, że miara ROUGE może negatywnie ocenić podsumowanie wygenerowane,
+nawet gdy jest ono dobrej jakości, np. gdy zawiera ono podobną treść
+co w podsumowaniu wzorcowym ale napisaną w inny sposób, używając innych słów itd.
+
 
 \subsubsection{BARTscore}
 BERTScore to metryka zaproponowana w 2019 roku \cite{zhang2020bertscoreevaluatingtextgeneration}. 
