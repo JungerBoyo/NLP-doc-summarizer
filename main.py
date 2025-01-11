@@ -31,7 +31,7 @@ ABST_SUMMARY = 0xF0
 METHODS_MAP = dict([
     ('EXT_NAIVE', EXT_NAIVE_SCORING),
     ('EXT_FIRST_LAST', EXT_FIRST_LAST_SCORING),
-    ('EXT_IF_IDF', EXT_TF_IDF_SCORING),
+    ('EXT_TF_IDF', EXT_TF_IDF_SCORING),
     ('EXT_TEXT_RANK', EXT_TEXT_RANK_SCORING),
     ('ABST_T5', ABST_T5),
     ('ABST_PEGASUS', ABST_PEGASUS),
@@ -279,17 +279,13 @@ if __name__ == '__main__':
             ABST_T5|ABST_PEGASUS|ABST_BART. In the case of ABST_ options, order
             determines in what order methods are applied.
             """)
-    parser.add_argument('-n', '--num_sentences', type=int, help="""
-            Number of sentences
-            in the summary.
-            """)
     parser.add_argument('-j', '--json_results_path', type=str, help="""
             Json path to which to save the results.
             """)
     parser.add_argument('-r', '--reference_path', type=str, help="""
             (Optional) Path to file containing reference summary.
             """)
-    parser.add_argument('-p', '--percentage', type=str, help="""
+    parser.add_argument('-p', '--percentage', type=float, help="""
                 Percentage of sentences in the summary. Integer numbers seperated by |. In the case of ABST_ methods, 
                 order determines in what order percentages are applied. E.g. 25|10|5
                 """)
@@ -307,7 +303,7 @@ if __name__ == '__main__':
     doc = nlp(text)
 
     if is_method_set(methods, EXT_SUMMARY):
-        summary = extraction_based_summarize(doc, methods, args.num_sentences)
+        summary = extraction_based_summarize(doc, methods, int(math.ceil((args.percentage/100.0)*float(len(list(doc.sents))))))
         print(summary)
         if args.reference_path:
             eval_extraction_based = \
