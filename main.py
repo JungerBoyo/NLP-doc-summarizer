@@ -267,7 +267,7 @@ def save_result_to_json(args, methods, evaluation, summary):
 
     add_value_to_json_array(args.json_results_path, base_text_path, evaluation)
 
-def remove_abstractive_method():
+def add_method():
     summary_type = summary_type_var.get()
     if summary_type == "extractive":
         add_extractive_method()
