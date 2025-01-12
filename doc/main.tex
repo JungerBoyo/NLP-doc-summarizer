@@ -109,8 +109,28 @@ według stopnia reprezentatywności przez nie całego tekstu.
 \subsection{Metody abstrakcyjne}
 
 \subsubsection{T5}
+T5 to model transformatorowy opracowany przez Google, który został zaprojektowany do obsługi szerokiego zakresu zadań NLP (przetwarzania języka naturalnego) w jednolity sposób.
+Kluczową ideą T5 jest potraktowanie wszystkich zadań NLP jako zadań tekst-do-tekstu. Oznacza to, że zarówno zadania klasyfikacji, jak i generowania tekstu są formułowane jako zadania, w których model przyjmuje tekst wejściowy i generuje tekst wyjściowy.
+Aby to osiągnąć, T5 wykorzystuje specjalne "prefiksowe" tokeny (np. "tłumaczenie na język niemiecki:", "streszczenie:") do odróżniania różnych zadań.
+T5 bazuje na architekturze transformatora z enkoderem i dekoderem.
+Wykorzystuje mechanizm uwagi (attention) i trenowany jest na ogromnym zbiorze danych tekstowych.
+Model posiada różne warianty rozmiarowe, co pozwala na dostosowanie go do dostępnych zasobów obliczeniowych i konkretnych zadań \cite{DBLP:journals/corr/abs-1910-10683}.
+
 \subsubsection{BART}
+BART (Bidirectional and Auto-Regressive Transformers) to model zaproponowany przez Facebook AI w 2019 roku.
+BART to model sekwencyjny do sekwencji (seq2seq), który został zaprojektowany do zadań wymagających zarówno kodowania kontekstu (rozumienia), jak i generowania tekstu.
+Jest on często stosowany w zadaniach takich jak streszczanie tekstu, generowanie dialogów i tłumaczenie maszynowe. 
+BART łączy cechy dwukierunkowego kodera (podobnego do BERT) z autoregresyjnym dekoderem (podobnym do modeli GPT).
+BART składa się z kodera transformatorowego i dekodera transformatorowego. 
+Koder jest dwukierunkowy i służy do kodowania kontekstu wejściowego. 
+Dekoder jest autoregresyjny i generuje tekst wyjściowy token po tokenie, na podstawie zakodowanego kontekstu \cite{DBLP:journals/corr/abs-1910-13461}.
+
 \subsubsection{Pegasus}
+Pegasus (Pre-training with Extracted Gap-sentences for Abstractive Summarization) to model zaproponowany przez Google Research w 2020 roku. 
+Pegasus to model pre-treningowy, który jest specjalnie zaprojektowany do streszczania abstrakcyjnego. 
+Jego unikalna metoda pre-treningu opiera się na "maskowaniu" całych zdań z dokumentu i uczeniu się ich odtwarzania na podstawie pozostałego tekstu. 
+Celem tego podejścia jest nauczenie modelu generowania streszczeń poprzez wyodrębnianie najważniejszych informacji i ich ponowne przedstawianie w skróconej formie.
+Pegasus bazuje na architekturze transformatora sekwencja-do-sekwencji. Posiada enkoder i dekoder, podobnie jak BART, ale jego pre-trening jest dostosowany do streszczania \cite{DBLP:journals/corr/abs-1912-08777}.
 
 \subsection{Ocena jakości podsumowań}
 Najbardziej popularnymi metodami oceny jakości podsumowań jest \textit{ROUGE score} oraz
