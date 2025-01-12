@@ -198,6 +198,51 @@ posłużono się do tworzenia podsumowań. Podsumowania wzorcowe tworzono w wię
 \textit{ChatGPT} ale również ręcznie.
 
 \section{Instrukcja korzystania z programu}
+Program do tworzenia podsumowań tekstu można uruchomić w trybie GUI lub w trybie konsolowym. Poniżej znajdują się instrukcje dla obu trybów.
+
+\subsection{Tryb GUI}
+Aby uruchomić program w trybie GUI, należy użyć flagi \texttt{-g} podczas uruchamiania skryptu \texttt{main.py}. Przykład:
+\begin{verbatim}
+python main.py -g
+\end{verbatim}
+
+Po uruchomieniu programu w trybie GUI, użytkownik zobaczy okno aplikacji, w którym można wprowadzić następujące informacje:
+\begin{itemize}
+    \item Ścieżka do pliku tekstowego: Wprowadź ścieżkę do pliku tekstowego, który ma zostać podsumowany.
+    \item Typ podsumowania: Wybierz typ podsumowania (ekstrakcyjne lub abstrakcyjne).
+    \item Metoda: Wybierz metodę podsumowania z listy dostępnych metod.
+    \item Procent: Wprowadź liczbę określającą jaki procent całego teksu będzie stanowić podsumowanie(liczba całkowita np. 10). W przypadku podsumowania abstrakcyjnego, wartość ta może być inna dla każdej metody.
+    \item Ścieżka do pliku referencyjnego (opcjonalne): Wprowadź ścieżkę do pliku zawierającego podsumowanie referencyjne.
+    \item Katalog wyjściowy JSON (opcjonalne): Wprowadź ścieżkę do katalogu, w którym mają zostać zapisane wyniki w formacie JSON.
+\end{itemize}
+
+Po wprowadzeniu wszystkich wymaganych informacji, kliknij przycisk "Summarize", aby uruchomić proces tworzenia podsumowania. Wynik zostanie wyświetlony w oknie aplikacji.
+
+\subsection{Tryb konsolowy}
+Aby uruchomić program w trybie konsolowym, należy użyć następującej składni:
+\begin{verbatim}
+python main.py -t <ścieżka_do_pliku_tekstowego> -m <ścieżka_do_modelu> -s <metoda> -p <procent> [-r <ścieżka_do_pliku_referencyjnego>] [-j <katalog_wyjściowy_JSON>]
+do wyświetlenia pomocy można użyć: python main.py -h
+\end{verbatim}
+
+Gdzie:
+\begin{itemize}
+    \item \texttt{-t <ścieżka\_do\_pliku\_tekstowego>}: Ścieżka do pliku tekstowego, który ma zostać podsumowany.
+    \item \texttt{-m <ścieżka\_do\_modelu>}: Ścieżka do modelu używanego przez spaCy.
+    \item \texttt{-s <metoda>}: Metody podsumowania.
+    \item \texttt{-p <procent>}: Liczba określająca jaki procent całego teksu będzie stanowić podsumowanie.
+    \item \texttt{[-r <ścieżka\_do\_pliku\_referencyjnego>]}: (Opcjonalne) Ścieżka do pliku zawierającego podsumowanie referencyjne.
+    \item \texttt{[-j <katalog\_wyjściowy\_JSON>]}: (Opcjonalne) Ścieżka do katalogu, w którym mają zostać zapisane wyniki w formacie JSON.
+\end{itemize}
+
+
+Przykład:
+\begin{verbatim}
+python main.py -t tekst.txt -m model -s EXT_IF_IDF -p 20 -r referencja.txt -o wyniki.json
+\end{verbatim}
+
+Po uruchomieniu programu w trybie konsolowym, wyniki zostaną wyświetlone w konsoli oraz zapisane w katalogu wyjściowym (jeśli podano).
+
 \section{Przykłady użycia programu (dane wejściowe i otrzymane wyniki)}
 
 \bibliographystyle{plain}
