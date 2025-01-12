@@ -268,6 +268,27 @@ def save_result_to_json(args, methods, evaluation, summary):
     add_value_to_json_array(args.json_results_path, base_text_path, evaluation)
 
 def remove_abstractive_method():
+    summary_type = summary_type_var.get()
+    if summary_type == "extractive":
+        add_extractive_method()
+    else:
+        add_abstractive_method()
+
+def remove_method():
+    summary_type = summary_type_var.get()
+    if summary_type == "extractive":
+        remove_extractive_method()
+    else:
+        remove_abstractive_method()
+
+def add_extractive_method():
+    method = method_var.get()
+    if not method:
+        messagebox.showerror("Error", "Please fill in both method and percentage fields.")
+        return
+    methods_listbox.insert(tk.END, method)
+
+def remove_extractive_method():
     selected_indices = methods_listbox.curselection()
     for index in selected_indices[::-1]:
         methods_listbox.delete(index)
@@ -276,8 +297,10 @@ def update_method_options():
     summary_type = summary_type_var.get()
     if summary_type == "extractive":
         method_options = ["EXT_NAIVE", "EXT_FIRST_LAST", "EXT_TF_IDF", "EXT_TEXT_RANK"]
+        methods_listbox.delete(0, tk.END)
     else:
         method_options = ["ABST_T5", "ABST_PEGASUS", "ABST_BART"]
+        methods_listbox.delete(0, tk.END)
     method_var.set(method_options[0])
     method_menu['menu'].delete(0, 'end')
     for option in method_options:
@@ -291,6 +314,11 @@ def add_abstractive_method():
         return
     methods_listbox.insert(tk.END, f"{method}|{percentage}")
     percentage_entry.delete(0, tk.END)
+
+def remove_abstractive_method():
+    selected_indices = methods_listbox.curselection()
+    for index in selected_indices[::-1]:
+        methods_listbox.delete(index)
 
 def browse_json_directory():
     directory = filedialog.askdirectory()
@@ -316,12 +344,11 @@ def summarize():
         return
 
     if summary_type == "extractive":
-        method = method_var.get()
+        methods = "|".join([item for item in methods_listbox.get(0, tk.END)])
         percentage = percentage_entry.get()
-        if not method or not percentage:
-            messagebox.showerror("Error", "Please fill in both method and percentage fields.")
+        if not methods:
+            messagebox.showerror("Error", "Please add at least one method.")
             return
-        methods = method
         percentages = percentage
     else:
         methods = "|".join([item.split("|")[0] for item in methods_listbox.get(0, tk.END)])
@@ -425,9 +452,17 @@ if __name__ == '__main__':
         abstractive_frame.grid(row=4, column=0, columnspan=3, pady=10)
         abstractive_frame.grid_remove()
 
-        tk.Button(abstractive_frame, text="Add Method", command=add_abstractive_method).grid(row=0, column=0, padx=5, pady=5)
-        tk.Button(abstractive_frame, text="Remove Selected Method", command=remove_abstractive_method).grid(row=0, column=1, padx=5, pady=5)
+        tk.Button(abstractive_frame, text="Add Method", command=add_method).grid(row=0, column=0, padx=5, pady=5)
+        tk.Button(abstractive_frame, text="Remove Selected Method", command=remove_method).grid(row=0, column=1, padx=5, pady=5)
         methods_listbox = tk.Listbox(abstractive_frame, width=50, height=5)
+        methods_listbox.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
+
+        extractive_frame = tk.Frame(root)
+        extractive_frame.grid(row=4, column=0, columnspan=3, pady=10)
+
+        tk.Button(extractive_frame, text="Add Method", command=add_method).grid(row=0, column=0, padx=5, pady=5)
+        tk.Button(extractive_frame, text="Remove Selected Method", command=remove_method).grid(row=0, column=1, padx=5, pady=5)
+        methods_listbox = tk.Listbox(extractive_frame, width=50, height=5)
         methods_listbox.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
 
         tk.Label(root, text="Path to reference summary (optional):").grid(row=5, column=0, sticky=tk.W)
