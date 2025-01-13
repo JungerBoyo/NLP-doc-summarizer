@@ -65,4 +65,3 @@ if __name__ == '__main__':
                                                     reference_summary)
                 print_evaluation(eval_abstractive)
                 save_result_to_json(args, methods, eval_abstractive, abstractive_summary)
-# ...existing code...
