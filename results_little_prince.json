@@ -1,0 +1,1202 @@
+{
+    "ch1.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.08771929824561403,
+                "rouge2": 0.017857142857142856,
+                "rougeL": 0.08771929824561403
+            },
+            "BERTScore": {
+                "Precision": 0.859531819820404,
+                "Recall": 0.8165879249572754,
+                "F1": 0.8375097513198853
+            },
+            "summary": "I have lived a great deal among grown-ups. They always need to have things explained.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.24817518248175185,
+                "rouge2": 0.029629629629629634,
+                "rougeL": 0.16058394160583941
+            },
+            "BERTScore": {
+                "Precision": 0.8376182317733765,
+                "Recall": 0.8236470222473145,
+                "F1": 0.8305738568305969
+            },
+            "summary": "Once when I was six years old I saw a magnificent picture in a book, called True Stories from Nature,\nabout the primeval forest. And the\ngrown-up would be greatly pleased to have met such a sensible man",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3176470588235294,
+                "rouge2": 0.023809523809523808,
+                "rougeL": 0.15294117647058825
+            },
+            "BERTScore": {
+                "Precision": 0.8475974202156067,
+                "Recall": 0.8537147641181946,
+                "F1": 0.8506450653076172
+            },
+            "summary": "Whenever I met one of them who seemed to me at all clear-sighted, I tried the experiment of showing him\nmy Drawing Number One, which I have always kept. My\nDrawing Number Two looked like this:\nThe grown-ups' response, this time, was to advise me to lay aside my drawings of boa constrictors, whether\nfrom the inside or the outside, and devote myself instead to geography, history, arithmetic, and grammar.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.12698412698412698,
+                "rouge2": 0.0,
+                "rougeL": 0.11111111111111112
+            },
+            "BERTScore": {
+                "Precision": 0.8274285793304443,
+                "Recall": 0.8179242610931396,
+                "F1": 0.8226489424705505
+            },
+            "summary": "And the\ngrown-up would be greatly pleased to have met such a sensible man I would talk to him about bridge, and golf, and politics, and neckties.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.08695652173913045,
+                "rouge2": 0.0,
+                "rougeL": 0.06956521739130435
+            },
+            "BERTScore": {
+                "Precision": 0.8391292095184326,
+                "Recall": 0.8161134123802185,
+                "F1": 0.8274612426757812
+            },
+            "summary": "bob greene: when he was six, he saw bob greene: whoever it was, he would always say",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.16393442622950824,
+                "rouge2": 0.0,
+                "rougeL": 0.13114754098360654
+            },
+            "BERTScore": {
+                "Precision": 0.8279582858085632,
+                "Recall": 0.8133215308189392,
+                "F1": 0.8205746412277222
+            },
+            "summary": "In our series of letters from African journalists, film-maker and columnist When I was a child, my father would always say to me:",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.19672131147540983,
+                "rouge2": 0.016666666666666666,
+                "rougeL": 0.11475409836065571
+            },
+            "BERTScore": {
+                "Precision": 0.848220705986023,
+                "Recall": 0.8161045908927917,
+                "F1": 0.8318528532981873
+            },
+            "summary": "Once when he was six years old he saw a magnificent picture in at all clear-sighted, I tried the experiment of showing him",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch2.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.24137931034482757,
+                "rouge2": 0.017543859649122806,
+                "rougeL": 0.17241379310344826
+            },
+            "BERTScore": {
+                "Precision": 0.8482047319412231,
+                "Recall": 0.8574492931365967,
+                "F1": 0.8528019189834595
+            },
+            "summary": "I want a sheep that will live a long time. It has horns. And I saw a most extraordinary small person, who stood there examining me with great seriousness. It was a question of life\nor death for me: I had scarcely enough drinking water to last a week.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3486238532110092,
+                "rouge2": 0.07476635514018691,
+                "rougeL": 0.2018348623853211
+            },
+            "BERTScore": {
+                "Precision": 0.8715859651565552,
+                "Recall": 0.8677869439125061,
+                "F1": 0.8696823120117188
+            },
+            "summary": "So I lived my life alone, without anyone that I could really talk to, until I had an accident with my plane in\nthe Desert of Sahara, six years ago.  \"\nAnd that is how I made the acquaintance of the little prince.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3076923076923077,
+                "rouge2": 0.062176165803108814,
+                "rougeL": 0.15384615384615385
+            },
+            "BERTScore": {
+                "Precision": 0.8239917755126953,
+                "Recall": 0.8776660561561584,
+                "F1": 0.8499824404716492
+            },
+            "summary": "But then I remembered how my studies had been concentrated on geography, history,\narithmetic and grammar, and I told the little chap (a little crossly, too) that I did not know how to draw. Absurd as it might seem to me, a thousand\nmiles from any human habitation and in danger of death, I took out of my pocket a sheet of paper and my\nfountain-pen. \"But--what are you doing here?\"\nAnd in answer he repeated, very slowly, as if he were speaking of a matter of great consequence:\n\"If you please--draw me a sheep . . . So I lived my life alone, without anyone that I could really talk to, until I had an accident with my plane in\nthe Desert of Sahara, six years ago.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.27083333333333337,
+                "rouge2": 0.0425531914893617,
+                "rougeL": 0.14583333333333331
+            },
+            "BERTScore": {
+                "Precision": 0.8229852914810181,
+                "Recall": 0.8530681133270264,
+                "F1": 0.8377566933631897
+            },
+            "summary": "\"\nAnd that is how I made the acquaintance of the little prince. He has gone to sleep . . . \"Not so small that--Look! \"\nHe bent his head over the drawing.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.26804123711340205,
+                "rouge2": 0.02105263157894737,
+                "rougeL": 0.16494845360824742
+            },
+            "BERTScore": {
+                "Precision": 0.8503215909004211,
+                "Recall": 0.8509035110473633,
+                "F1": 0.850612461566925
+            },
+            "summary": "a plane accident in the desert of Sahara left a young man with no one to talk to . a boa constrictor is a dangerous creature, and an elephant is cumbersome .",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.39252336448598135,
+                "rouge2": 0.09523809523809525,
+                "rougeL": 0.24299065420560745
+            },
+            "BERTScore": {
+                "Precision": 0.8708837032318115,
+                "Recall": 0.8730763792991638,
+                "F1": 0.8719785809516907
+            },
+            "summary": "When I was a little boy, my father told me that if I ever wanted to become a painter, I My friend asked me to draw a sheep for him, and I did not know what to make of it.",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3137254901960784,
+                "rouge2": 0.08,
+                "rougeL": 0.1764705882352941
+            },
+            "BERTScore": {
+                "Precision": 0.8519748449325562,
+                "Recall": 0.8557515144348145,
+                "F1": 0.853859007358551
+            },
+            "summary": "\"If you please--draw me a sheep!\" said an odd little voice. \"What!\" said the A young judge asked his friend to draw him a sheep. The boy's studies had been concentrated on geography",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch3.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.26,
+                "rouge2": 0.06122448979591836,
+                "rougeL": 0.16
+            },
+            "BERTScore": {
+                "Precision": 0.8648223876953125,
+                "Recall": 0.847207248210907,
+                "F1": 0.855924129486084
+            },
+            "summary": "The little prince, who asked me so many questions,\nnever seemed to hear the ones I asked him. It took me a long time to learn where he came from.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1219512195121951,
+                "rouge2": 0.0,
+                "rougeL": 0.07317073170731707
+            },
+            "BERTScore": {
+                "Precision": 0.8532384634017944,
+                "Recall": 0.8308543562889099,
+                "F1": 0.8418976664543152
+            },
+            "summary": "It took me a long time to learn where he came from. \"",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2589928057553956,
+                "rouge2": 0.014598540145985403,
+                "rougeL": 0.1294964028776978
+            },
+            "BERTScore": {
+                "Precision": 0.8256134390830994,
+                "Recall": 0.8563923239707947,
+                "F1": 0.8407212495803833
+            },
+            "summary": "Where do you\nwant to take your sheep?\"\nAfter a reflective silence he answered:\n10\n\"The thing that is so good about the box you have given me is that at night he can use it as his house.\"\n\"That is so. He tossed his head gently, without taking his eyes from my plane:\n\"It is true that on that you can't have come from very far away . . .",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.07792207792207792,
+                "rouge2": 0.0,
+                "rougeL": 0.051948051948051945
+            },
+            "BERTScore": {
+                "Precision": 0.8298253417015076,
+                "Recall": 0.8200122117996216,
+                "F1": 0.824889600276947
+            },
+            "summary": "Where I live, everything is so small!\" \"",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.024390243902439022,
+                "rouge2": 0.0,
+                "rougeL": 0.024390243902439022
+            },
+            "BERTScore": {
+                "Precision": 0.7494394779205322,
+                "Recall": 0.8031722903251648,
+                "F1": 0.77537602186203
+            },
+            "summary": "cnn's alan mccart cnn's ireport boot camp challenges readers to",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.21978021978021975,
+                "rouge2": 0.02247191011235955,
+                "rougeL": 0.10989010989010987
+            },
+            "BERTScore": {
+                "Precision": 0.8154119253158569,
+                "Recall": 0.8187978863716125,
+                "F1": 0.8171013593673706
+            },
+            "summary": "\"My little prince,\" I once said to him, \"you A friend of mine was talking to a little prince, and he",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.17582417582417584,
+                "rouge2": 0.0,
+                "rougeL": 0.08791208791208792
+            },
+            "BERTScore": {
+                "Precision": 0.8225487470626831,
+                "Recall": 0.8275274634361267,
+                "F1": 0.8250306844711304
+            },
+            "summary": "It took me a long time to learn where he came from But if you don't tie him,\" I said, \"",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch4.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.12,
+                "rouge2": 0.0,
+                "rougeL": 0.08
+            },
+            "BERTScore": {
+                "Precision": 0.8187577128410339,
+                "Recall": 0.8168866038322449,
+                "F1": 0.8178210854530334
+            },
+            "summary": "To forget a friend is sad. Children should always show great forbearance\ntoward grown-up people. How much money does his father make?\" How many\nbrothers has he?",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2285714285714286,
+                "rouge2": 0.07766990291262135,
+                "rougeL": 0.13333333333333333
+            },
+            "BERTScore": {
+                "Precision": 0.8215160965919495,
+                "Recall": 0.8324294090270996,
+                "F1": 0.8269367814064026
+            },
+            "summary": "I had thus learned a second fact of great importance: this was that the planet the little prince came from was\nscarcely any larger than a house!  I have\nhad to grow old.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.20600858369098712,
+                "rouge2": 0.025974025974025972,
+                "rougeL": 0.12017167381974247
+            },
+            "BERTScore": {
+                "Precision": 0.7957516312599182,
+                "Recall": 0.8323659896850586,
+                "F1": 0.8136471509933472
+            },
+            "summary": "It is hard to take up\ndrawing again at my age, when I have never made any pictures except those of the boa constrictor from the\noutside and the boa constrictor from the inside, since I was six. I should have like to say: \"Once upon a time there was a little\nprince who lived on a planet that was scarcely any bigger than himself, and who had need of a sheep . . . If you were to say to the grown-ups: \"I saw a beautiful house made of rosy brick, with geraniums in the\nwindows and doves on the roof,\" they would not be able to get any idea of that house at all. I knew very well that in addition to the great planets--such as the\nEarth, Jupiter, Mars, Venus--to which we have given names, there are also hundreds of others, some of\nwhich are so small that one has a hard time seeing them through the telescope.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.21568627450980393,
+                "rouge2": 0.039999999999999994,
+                "rougeL": 0.09803921568627451
+            },
+            "BERTScore": {
+                "Precision": 0.8635987639427185,
+                "Recall": 0.8243546485900879,
+                "F1": 0.8435205221176147
+            },
+            "summary": "I have\nhad to grow old. Perhaps I am a little like the grown-ups. He thought, perhaps, that I was like himself. My friend never explained anything to me.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1923076923076923,
+                "rouge2": 0.0392156862745098,
+                "rougeL": 0.15384615384615383
+            },
+            "BERTScore": {
+                "Precision": 0.8116443157196045,
+                "Recall": 0.8210351467132568,
+                "F1": 0.8163127303123474
+            },
+            "summary": "asteroid known as B-612 has only been seen through telescope once . bob greene: a little prince lived on a planet that was scarce bob greene: i hope generally fair-to-middling,",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.26890756302521013,
+                "rouge2": 0.017094017094017092,
+                "rougeL": 0.1680672268907563
+            },
+            "BERTScore": {
+                "Precision": 0.8283852338790894,
+                "Recall": 0.8285211324691772,
+                "F1": 0.8284531831741333
+            },
+            "summary": "When I heard that a little prince had come from an asteroid, and that he If you were to tell your children that there was a little prince who lived on My friend gave me a box of sheep and told me to open it and see",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3090909090909091,
+                "rouge2": 0.07407407407407407,
+                "rougeL": 0.16363636363636364
+            },
+            "BERTScore": {
+                "Precision": 0.8086610436439514,
+                "Recall": 0.8298391103744507,
+                "F1": 0.8191131353378296
+            },
+            "summary": "I have serious reason to believe that the planet from which the little prince came \"For us who understand life, figures are a matter of indifference,\" says I hope generally fair-to-middling. In certain more important details",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch5.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.2608695652173913,
+                "rouge2": 0.044444444444444446,
+                "rougeL": 0.13043478260869565
+            },
+            "BERTScore": {
+                "Precision": 0.8622516989707947,
+                "Recall": 0.840463399887085,
+                "F1": 0.8512181043624878
+            },
+            "summary": "It spreads over the entire planet. In consequence, there were good seeds from good plants, and bad seeds from bad plants. The idea of the herd of elephants made the little prince laugh.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.29411764705882354,
+                "rouge2": 0.08,
+                "rougeL": 0.19607843137254904
+            },
+            "BERTScore": {
+                "Precision": 0.8588206768035889,
+                "Recall": 0.8580530881881714,
+                "F1": 0.8584367036819458
+            },
+            "summary": "As each day passed I would learn, in our talk, something about the little prince's planet, his departure from\nit, his journey.  When I made the drawing\nof the baobabs I was carried beyond myself by the inspiring force of urgent necessity.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2352941176470588,
+                "rouge2": 0.043243243243243246,
+                "rougeL": 0.1497326203208556
+            },
+            "BERTScore": {
+                "Precision": 0.8163425922393799,
+                "Recall": 0.8502088189125061,
+                "F1": 0.832931637763977
+            },
+            "summary": "But the danger of the baobabs is so little understood, and such considerable risks\nwould be run by anyone who might get lost on an asteroid, that for once I am breaking through my reserve. You must\nsee to it that you pull up regularly all the baobabs, at the very first moment when they can be distinguished\nfrom the rosebushes which they resemble so closely in their earliest youth. But the little prince added:\n\"Then it follows that they also eat baobabs?\"\nI pointed out to the little prince that baobabs were not little bushes, but, on the contrary, trees as big as\ncastles; and that even if he took a whole herd of elephants away with him, the herd would not eat up one\nsingle baobab.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1978021978021978,
+                "rouge2": 0.02247191011235955,
+                "rougeL": 0.13186813186813187
+            },
+            "BERTScore": {
+                "Precision": 0.8625282645225525,
+                "Recall": 0.8446053266525269,
+                "F1": 0.8534727096557617
+            },
+            "summary": "When I made the drawing\nof the baobabs I was carried beyond myself by the inspiring force of urgent necessity. But with the others I have not been successful. I have tried.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.20224719101123598,
+                "rouge2": 0.06896551724137931,
+                "rougeL": 0.1797752808988764
+            },
+            "BERTScore": {
+                "Precision": 0.8400863409042358,
+                "Recall": 0.8348872065544128,
+                "F1": 0.8374786972999573
+            },
+            "summary": "a little prince asked if sheep eat little bushes, but sheep a baobab is something you will never, never be able to aaron carroll: drawing of baobabs was carried beyond",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.26804123711340205,
+                "rouge2": 0.042105263157894736,
+                "rougeL": 0.18556701030927836
+            },
+            "BERTScore": {
+                "Precision": 0.8600723147392273,
+                "Recall": 0.8479623794555664,
+                "F1": 0.8539744019508362
+            },
+            "summary": "When I went to meet the little prince, I had to thank the sheep There was a little prince, who lived on a planet, and he was I have been trying to draw baobabs for a long time.",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1263157894736842,
+                "rouge2": 0.0,
+                "rougeL": 0.08421052631578949
+            },
+            "BERTScore": {
+                "Precision": 0.8434423804283142,
+                "Recall": 0.8359627723693848,
+                "F1": 0.83968585729599
+            },
+            "summary": "As each day passed I would learn, in our talk, something about A baobab is something you will never be able to get rid simple. I have tried. But with the others I have not been",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch6.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.15384615384615383,
+                "rouge2": 0.06349206349206349,
+                "rougeL": 0.12307692307692307
+            },
+            "BERTScore": {
+                "Precision": 0.8606082201004028,
+                "Recall": 0.8443257212638855,
+                "F1": 0.8523892760276794
+            },
+            "summary": "But the little prince made no reply. Bit by bit I came to understand the secrets of your sad little life . . .",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.11111111111111109,
+                "rouge2": 0.07692307692307693,
+                "rougeL": 0.11111111111111109
+            },
+            "BERTScore": {
+                "Precision": 0.8549445271492004,
+                "Recall": 0.8266273140907288,
+                "F1": 0.8405474424362183
+            },
+            "summary": "Oh, little prince! But the little prince made no reply.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.18604651162790697,
+                "rouge2": 0.0,
+                "rougeL": 0.09302325581395349
+            },
+            "BERTScore": {
+                "Precision": 0.8498430848121643,
+                "Recall": 0.8617798089981079,
+                "F1": 0.8557697534561157
+            },
+            "summary": "I learned that new detail\non the morning of the fourth day, when you said to me:\n\"I am very fond of sunsets. For a long time you\nhad found your only entertainment in the quiet pleasure of looking at the sunset.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.23728813559322037,
+                "rouge2": 0.07017543859649122,
+                "rougeL": 0.13559322033898305
+            },
+            "BERTScore": {
+                "Precision": 0.8526657819747925,
+                "Recall": 0.8563960790634155,
+                "F1": 0.8545268774032593
+            },
+            "summary": "I asked, \"on the day of the forty-four sunsets?\" \"\n\"Were you so sad, then?\"",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.22222222222222218,
+                "rouge2": 0.038461538461538464,
+                "rougeL": 0.18518518518518517
+            },
+            "BERTScore": {
+                "Precision": 0.848060131072998,
+                "Recall": 0.8413800001144409,
+                "F1": 0.8447068929672241
+            },
+            "summary": "little prince scott: \"one loves the sunset, when one is",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.06896551724137931,
+                "rouge2": 0.0,
+                "rougeL": 0.06896551724137931
+            },
+            "BERTScore": {
+                "Precision": 0.8465321063995361,
+                "Recall": 0.829905092716217,
+                "F1": 0.8381361365318298
+            },
+            "summary": "It is the fourth day of the week and I am writing to you",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.03636363636363636,
+                "rouge2": 0.0,
+                "rougeL": 0.03636363636363636
+            },
+            "BERTScore": {
+                "Precision": 0.841486930847168,
+                "Recall": 0.8302574753761292,
+                "F1": 0.8358345627784729
+            },
+            "summary": "\"I am always thinking that I am at home!\" says the",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch7.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.14545454545454548,
+                "rouge2": 0.0,
+                "rougeL": 0.07272727272727274
+            },
+            "BERTScore": {
+                "Precision": 0.8321194648742676,
+                "Recall": 0.827312707901001,
+                "F1": 0.8297091722488403
+            },
+            "summary": "I felt awkward and blundering. Is this not of more consequence than a fat red-faced gentleman's sums? \"I know a planet where there is a certain red-faced gentleman. Flowers are weak creatures.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.29090909090909095,
+                "rouge2": 0.07407407407407408,
+                "rougeL": 0.18181818181818182
+            },
+            "BERTScore": {
+                "Precision": 0.8461595773696899,
+                "Recall": 0.8355082273483276,
+                "F1": 0.8408002257347107
+            },
+            "summary": "On the fifth day--again, as always, it was thanks to the sheep--the secret of the little prince's life was\nrevealed to me.  It is such a secret place, the land of tears.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2689075630252101,
+                "rouge2": 0.01694915254237288,
+                "rougeL": 0.11764705882352941
+            },
+            "BERTScore": {
+                "Precision": 0.8024535179138184,
+                "Recall": 0.839570939540863,
+                "F1": 0.8205927014350891
+            },
+            "summary": "His face turned from white to red as he continued:\n\"If some one loves a flower, of which just one single blossom grows in all the millions and millions of\nstars, it is enough to make him happy just to look at the stars. And if I\nknow--I, myself--one flower which is unique in the world, which grows nowhere but on my planet, but\nwhich one little sheep can destroy in a single bite some morning, without even noticing what he is doing--\nOh! He looked at me there, with my hammer in my hand, my fingers black with engine-grease, bending down\nover an object which seemed to him extremely ugly . . Abruptly, without anything to lead up to it, and as if the question had been born of long and\nsilent meditation on his problem, he demanded:\n\"A sheep--if it eats little bushes, does it eat flowers, too?\"\n\"A sheep,\" I answered, \"eats anything it finds in its reach.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.16,
+                "rouge2": 0.0,
+                "rougeL": 0.11200000000000002
+            },
+            "BERTScore": {
+                "Precision": 0.827753484249115,
+                "Recall": 0.8245672583580017,
+                "F1": 0.8261573314666748
+            },
+            "summary": "It is such a secret place, the land of tears. I did not know how I could reach him,\nwhere I could overtake him and go on hand in hand with him once more. I felt awkward and blundering. I will--\"\nI did not know what to say to him.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2385321100917431,
+                "rouge2": 0.056074766355140186,
+                "rougeL": 0.16513761467889906
+            },
+            "BERTScore": {
+                "Precision": 0.8487799167633057,
+                "Recall": 0.8279932141304016,
+                "F1": 0.8382577300071716
+            },
+            "summary": "a little prince asked a sheep if it eats bushes, a little prince on a planet with a red-faced man says a secret place, the land of tears, is where a woman's",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.14814814814814817,
+                "rouge2": 0.018867924528301886,
+                "rougeL": 0.09259259259259259
+            },
+            "BERTScore": {
+                "Precision": 0.7996402382850647,
+                "Recall": 0.8211992383003235,
+                "F1": 0.8102763295173645
+            },
+            "summary": "In our series of letters from African journalists, novelist and writer Ngugi wa Thi I was talking to a little prince, and he said to me: \"You \"I will--\" I will--\" I will--\"",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.16216216216216217,
+                "rouge2": 0.03669724770642202,
+                "rougeL": 0.10810810810810811
+            },
+            "BERTScore": {
+                "Precision": 0.826359748840332,
+                "Recall": 0.8294287919998169,
+                "F1": 0.8278914093971252
+            },
+            "summary": "The little prince never let go of a question, once he had asked it \"You mix everything up together . . . You confuse everything . . you love is not in danger. I will draw you a muzzle for your",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch8.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.3384615384615385,
+                "rouge2": 0.03125,
+                "rougeL": 0.13846153846153847
+            },
+            "BERTScore": {
+                "Precision": 0.8349462747573853,
+                "Recall": 0.8457947969436646,
+                "F1": 0.840335488319397
+            },
+            "summary": "And her mysterious adornment lasted for days and days. She chose her colors with the greatest care. The little prince, who was\npresent at the first appearance of a huge bud, felt at once that some sort of miraculous apparition must\nemerge from it. The shrub soon stopped growing, and began to get ready to produce a flower.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.049999999999999996,
+                "rouge2": 0.0,
+                "rougeL": 0.024999999999999998
+            },
+            "BERTScore": {
+                "Precision": 0.8532326221466064,
+                "Recall": 0.8268435001373291,
+                "F1": 0.8398308157920837
+            },
+            "summary": "I soon learned to know this flower better.  \"",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.25806451612903225,
+                "rouge2": 0.08372093023255814,
+                "rougeL": 0.17511520737327194
+            },
+            "BERTScore": {
+                "Precision": 0.8162655234336853,
+                "Recall": 0.8485826849937439,
+                "F1": 0.8321104645729065
+            },
+            "summary": "Embarrassed over having let herself be caught on the verge of such a naïve\nuntruth, she coughed two or three times, in order to put the little prince in the wrong. I suppose you wouldn't have a\nscreen for me?\"\n\"A horror of drafts--that is bad luck, for a plant,\" remarked the little prince, and added to himself, \"This\nflower is a very complex creature . . . One day, for instance, when she was speaking of her four thorns, she said to the little\nprince:\n\"Let the tigers come with their claws!\"\n\"There are no tigers on my planet,\" the little prince objected. But one day,\nfrom a seed blown from no one knew where, a new flower had come up; and the little prince had watched\nvery closely over this small sprout which was not like any other small sprouts on his planet.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.25742574257425743,
+                "rouge2": 0.060606060606060594,
+                "rougeL": 0.1386138613861386
+            },
+            "BERTScore": {
+                "Precision": 0.8349002599716187,
+                "Recall": 0.8416906595230103,
+                "F1": 0.8382816910743713
+            },
+            "summary": "But I was too young to know how to love her . . . I ought never to have run away from her . . . She cast her fragrance and her radiance over me. \"",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.28571428571428575,
+                "rouge2": 0.07766990291262135,
+                "rougeL": 0.2285714285714286
+            },
+            "BERTScore": {
+                "Precision": 0.8547171354293823,
+                "Recall": 0.8484352827072144,
+                "F1": 0.8515645861625671
+            },
+            "summary": "a small sprout of flowers appeared on a little prince's planet a seed tries to put a flower under a glass globe \"I was too young to know how to love her . .",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2702702702702703,
+                "rouge2": 0.07339449541284403,
+                "rougeL": 0.1981981981981982
+            },
+            "BERTScore": {
+                "Precision": 0.849229097366333,
+                "Recall": 0.8434433341026306,
+                "F1": 0.8463263511657715
+            },
+            "summary": "When I first met the little prince, I did not know much about flowers The story goes like this: a flower came to meet the little prince. \"She's the most beautiful woman I've ever met in my",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2962962962962963,
+                "rouge2": 0.09433962264150943,
+                "rougeL": 0.25925925925925924
+            },
+            "BERTScore": {
+                "Precision": 0.8476486802101135,
+                "Recall": 0.849940299987793,
+                "F1": 0.8487929701805115
+            },
+            "summary": "I soon learned to know this flower better. On the little prince's when she was speaking of her four thorns, she said to the But I was too young to know how to love her . . .\"",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch9.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.16666666666666669,
+                "rouge2": 0.04878048780487805,
+                "rougeL": 0.14285714285714288
+            },
+            "BERTScore": {
+                "Precision": 0.8419560194015503,
+                "Recall": 0.8386123180389404,
+                "F1": 0.8402808904647827
+            },
+            "summary": "The cool night air will do me good. He stood there all bewildered, the glass globe held arrested\nin mid-air. The flower coughed.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.17948717948717952,
+                "rouge2": 0.05263157894736842,
+                "rougeL": 0.15384615384615383
+            },
+            "BERTScore": {
+                "Precision": 0.8561856150627136,
+                "Recall": 0.8356343507766724,
+                "F1": 0.8457852005958557
+            },
+            "summary": "I believe that for his escape he took advantage of the migration of a flock of wild birds.  .",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.32061068702290074,
+                "rouge2": 0.031007751937984496,
+                "rougeL": 0.18320610687022904
+            },
+            "BERTScore": {
+                "Precision": 0.8347033262252808,
+                "Recall": 0.8530212044715881,
+                "F1": 0.8437628149986267
+            },
+            "summary": "\"But the animals--\"\n\"Well, I must endure the presence of two or three caterpillars if I wish to become acquainted with the\nbutterflies. And when he watered the flower for the last time, and prepared to place her under the\nshelter of her glass globe, he realized that he was very close to tears. He possessed\ntwo active volcanoes; and they were very convenient for heating his breakfast in the morning.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.15789473684210528,
+                "rouge2": 0.02702702702702703,
+                "rougeL": 0.15789473684210528
+            },
+            "BERTScore": {
+                "Precision": 0.8632727265357971,
+                "Recall": 0.8402060270309448,
+                "F1": 0.8515831828117371
+            },
+            "summary": ". She was such a proud flower . . For she did not want him to see her crying.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.21333333333333335,
+                "rouge2": 0.0273972602739726,
+                "rougeL": 0.16000000000000003
+            },
+            "BERTScore": {
+                "Precision": 0.8578110337257385,
+                "Recall": 0.8356204628944397,
+                "F1": 0.8465703725814819
+            },
+            "summary": "a prince escaped from his volcanoes by cleaning out flower was so proud of her . . .",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.175,
+                "rouge2": 0.05128205128205128,
+                "rougeL": 0.125
+            },
+            "BERTScore": {
+                "Precision": 0.8326707482337952,
+                "Recall": 0.8232693672180176,
+                "F1": 0.8279433846473694
+            },
+            "summary": "The little prince pulled up, with a certain sense of de She said: \"I am a flower, and I am",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.15,
+                "rouge2": 0.05128205128205128,
+                "rougeL": 0.125
+            },
+            "BERTScore": {
+                "Precision": 0.8171534538269043,
+                "Recall": 0.8266155123710632,
+                "F1": 0.821857213973999
+            },
+            "summary": "I believe that for his escape he took advantage of the . As for the large animals--I am not at",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch10.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.43609022556390975,
+                "rouge2": 0.18320610687022904,
+                "rougeL": 0.3007518796992481
+            },
+            "BERTScore": {
+                "Precision": 0.857896089553833,
+                "Recall": 0.8634287714958191,
+                "F1": 0.8606535196304321
+            },
+            "summary": "He had a magnificent air of authority. \"\nAs the king made no answer, the little prince hesitated a moment. He was regretting his lost sunset. The little prince yawned. I have the right to require obedience because my orders are\nreasonable. The little prince looked everywhere to find a place to sit down; but the entire planet was crammed and\nobstructed by the king's magnificent ermine robe.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3434343434343435,
+                "rouge2": 0.08247422680412371,
+                "rougeL": 0.20202020202020204
+            },
+            "BERTScore": {
+                "Precision": 0.8516621589660645,
+                "Recall": 0.8561285138130188,
+                "F1": 0.853889524936676
+            },
+            "summary": "He found himself in the neighborhood of the asteroids 325, 326, 327, 328, 329, and 330.  \"The grown-ups are very strange,\" the little prince said to himself, as he continued on his journey.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.25641025641025644,
+                "rouge2": 0.08856088560885608,
+                "rougeL": 0.1684981684981685
+            },
+            "BERTScore": {
+                "Precision": 0.8027024865150452,
+                "Recall": 0.8535336256027222,
+                "F1": 0.8273380398750305
+            },
+            "summary": "\"\n\"Oh, but I have looked already!\" said the little prince, turning around to give one more glance to the other\nside of the planet. \"\n\"If I ordered a general to fly from one flower to another like a butterfly, or to write a tragic drama, or to\nchange himself into a sea bird, and if the general did not carry out the order that he had received, which one\nof us would be in the wrong?\" the king demanded. And because he felt a bit sad as\nhe remembered his little planet which he had forsaken, he plucked up his courage to ask the king a favor:\n\"I should like to see a sunset . . . If he had been master of such complete authority,\nhe would have been able to watch the sunset, not forty-four times in one day, but seventy-two, or even a\nhundred, or even two hundred times, without ever having to move his chair. The little prince looked everywhere to find a place to sit down; but the entire planet was crammed and\nobstructed by the king's magnificent ermine robe. \"Approach, so that I may see you better,\" said the king, who felt consumingly proud of being at last a king\nover somebody.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.20588235294117646,
+                "rouge2": 0.02985074626865672,
+                "rougeL": 0.14705882352941177
+            },
+            "BERTScore": {
+                "Precision": 0.828740119934082,
+                "Recall": 0.8376373648643494,
+                "F1": 0.8331649899482727
+            },
+            "summary": "He had a magnificent air of authority. \"I make you my Ambassador,\" the king called out, hastily. Then, with a sigh, he took his leave. It seems to me that\nconditions are favorable . . . He should be able, for example, to order me to be gone by the end of one minute. \"If Your Majesty wishes to be promptly obeyed,\" he said, \"he should be able to give me a reasonable order.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.37606837606837606,
+                "rouge2": 0.034782608695652174,
+                "rougeL": 0.23931623931623933
+            },
+            "BERTScore": {
+                "Precision": 0.824515163898468,
+                "Recall": 0.8417008519172668,
+                "F1": 0.8330193758010864
+            },
+            "summary": "king of the asteroids: \"ah! here is a subject,\" exclaimed king gathered in fold of his ermine mantle to ask little prince a little prince says he will have his sunset this evening . king says he will make little prince says he will leave the old monarch . king calls out: \"the grown",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.37209302325581395,
+                "rouge2": 0.11023622047244093,
+                "rougeL": 0.26356589147286824
+            },
+            "BERTScore": {
+                "Precision": 0.8362870216369629,
+                "Recall": 0.8495841026306152,
+                "F1": 0.8428831696510315
+            },
+            "summary": "There was a little prince who went on a long journey, and found himself on a planet which \"Sire,\" said the king to the little prince, \"I have forgotten to sit down The king looked at the little prince and said, with a smile, \"I have to say The king called out to the little prince, \"Your Majesty, I have to tell you that",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.4426229508196722,
+                "rouge2": 0.18333333333333335,
+                "rougeL": 0.3278688524590164
+            },
+            "BERTScore": {
+                "Precision": 0.8551725149154663,
+                "Recall": 0.8620411157608032,
+                "F1": 0.8585931062698364
+            },
+            "summary": "The little prince visited the asteroids 325, 326, 327, 328, 329, and 330 The little prince asked the king, \"Over what do you rule?\" \"Over everything,\" The little prince asked the king for his sunset. The king said he would wait until conditions \"I do not like to condemn anyone to death,\" said the little prince. \"I",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch11.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.18181818181818185,
+                "rouge2": 0.10666666666666667,
+                "rougeL": 0.18181818181818185
+            },
+            "BERTScore": {
+                "Precision": 0.8778656721115112,
+                "Recall": 0.8316940665245056,
+                "F1": 0.8541563749313354
+            },
+            "summary": "The little prince clapped his hands. \"Good morning,\" said the little prince.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.28571428571428575,
+                "rouge2": 0.0449438202247191,
+                "rougeL": 0.17582417582417584
+            },
+            "BERTScore": {
+                "Precision": 0.8730741739273071,
+                "Recall": 0.8457796573638916,
+                "F1": 0.859210193157196
+            },
+            "summary": "The second planet was inhabited by a conceited man. \"The grown-ups are certainly very odd,\" he said to himself, as he continued on his journey",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.24999999999999994,
+                "rouge2": 0.03389830508474576,
+                "rougeL": 0.18333333333333335
+            },
+            "BERTScore": {
+                "Precision": 0.8022619485855103,
+                "Recall": 0.8396081328392029,
+                "F1": 0.8205103278160095
+            },
+            "summary": "Admire me just the same.\"\n\"I admire you,\" said the little prince, shrugging his shoulders slightly, \"but what is there in that to interest\nyou so much? \"What does that mean--'admire'?\"\n\"To admire means that you regard me as the handsomest, the best-dressed, the richest, and the most\nintelligent man on this planet.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.25263157894736843,
+                "rouge2": 0.04301075268817204,
+                "rougeL": 0.16842105263157894
+            },
+            "BERTScore": {
+                "Precision": 0.8436828851699829,
+                "Recall": 0.8409950137138367,
+                "F1": 0.8423368334770203
+            },
+            "summary": "\"The grown-ups are certainly very odd,\" he said to himself, as he continued on his journey \"\n\"But you are the only man on your planet!\"\n\"Do me this kindness.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.10126582278481013,
+                "rouge2": 0.0,
+                "rougeL": 0.10126582278481013
+            },
+            "BERTScore": {
+                "Precision": 0.8138740062713623,
+                "Recall": 0.8131131529808044,
+                "F1": 0.8134933710098267
+            },
+            "summary": "conceited men never hear anything but praise . \"you are the only man on your",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.21951219512195122,
+                "rouge2": 0.05,
+                "rougeL": 0.14634146341463414
+            },
+            "BERTScore": {
+                "Precision": 0.8933693170547485,
+                "Recall": 0.8463088870048523,
+                "F1": 0.8692026138305664
+            },
+            "summary": "A little prince was on his way to the king when he came across a conceited man.",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.12658227848101267,
+                "rouge2": 0.0,
+                "rougeL": 0.10126582278481013
+            },
+            "BERTScore": {
+                "Precision": 0.8406803607940674,
+                "Recall": 0.8217105269432068,
+                "F1": 0.8310871720314026
+            },
+            "summary": "The second planet was inhabited by a conceited man. To conceited men, all other",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch13.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.18556701030927836,
+                "rouge2": 0.021052631578947364,
+                "rougeL": 0.1443298969072165
+            },
+            "BERTScore": {
+                "Precision": 0.8480760455131531,
+                "Recall": 0.8265126943588257,
+                "F1": 0.8371555805206299
+            },
+            "summary": "Little golden objects that set lazy men to idle dreaming. Little glittering objects. I have so much to do! Good morning. The fourth planet belonged to a businessman.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3578947368421053,
+                "rouge2": 0.12903225806451613,
+                "rougeL": 0.2736842105263158
+            },
+            "BERTScore": {
+                "Precision": 0.8695704936981201,
+                "Recall": 0.839267909526825,
+                "F1": 0.8541504740715027
+            },
+            "summary": "The fourth planet belonged to a businessman.  \"The grown-ups are certainly altogether extraordinary,\" he said simply, talking to himself as he continued\non his journey.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3846153846153846,
+                "rouge2": 0.09999999999999999,
+                "rougeL": 0.1978021978021978
+            },
+            "BERTScore": {
+                "Precision": 0.8162616491317749,
+                "Recall": 0.8476797938346863,
+                "F1": 0.8316741585731506
+            },
+            "summary": "To nobody.\"\n\"Then they belong to me, because I was the first person to think of it.\"\n\"Is that all that is necessary?\"\n\"Certainly. \"And what good does it do you to be rich?\"\n\"It makes it possible for me to buy more stars, if any are discovered. The businessman suddenly realized that there was no hope of being left in peace until he answered this\nquestion. \"\n\"Five-hundred-and-one million what?\" repeated the little prince, who never in his life had let go of a\nquestion once he had asked it. This man was so much occupied that he did not even raise his\nhead at the little prince's arrival.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.5038167938931298,
+                "rouge2": 0.10852713178294575,
+                "rougeL": 0.183206106870229
+            },
+            "BERTScore": {
+                "Precision": 0.8448105454444885,
+                "Recall": 0.8530299663543701,
+                "F1": 0.8489003777503967
+            },
+            "summary": "\"The grown-ups are certainly altogether extraordinary,\" he said simply, talking to himself as he continued\non his journey. The businessman opened his mouth, but he found nothing to say in answer. But you are\nof no use to the stars . . . It is of some use to my volcanoes, and it is of some use to my flower, that I own them. \"",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3454545454545454,
+                "rouge2": 0.05555555555555556,
+                "rougeL": 0.2363636363636364
+            },
+            "BERTScore": {
+                "Precision": 0.8462881445884705,
+                "Recall": 0.8499135971069336,
+                "F1": 0.8480969667434692
+            },
+            "summary": "a little prince asked a question about the fourth planet . he said he had \"i own the stars,\" says the little prince . \"it does me the good of making little prince says he owns a flower, three volcanoes, and a flower",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3418803418803419,
+                "rouge2": 0.08695652173913043,
+                "rougeL": 0.188034188034188
+            },
+            "BERTScore": {
+                "Precision": 0.8370633125305176,
+                "Recall": 0.8468576073646545,
+                "F1": 0.8419319987297058
+            },
+            "summary": "A little prince arrived on the fourth planet. Then that makes five-hundred-and-one \"I own the stars,\" said the businessman, \"because nobody else before me ever thought of A little prince was on his way home from school when he met a businessman, and the little",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.27522935779816515,
+                "rouge2": 0.037383177570093455,
+                "rougeL": 0.1651376146788991
+            },
+            "BERTScore": {
+                "Precision": 0.8317535519599915,
+                "Recall": 0.8332533836364746,
+                "F1": 0.8325028419494629
+            },
+            "summary": "The fourth planet belonged to a businessman. This man was so much occupied that he did not \"Yes, that's it. The stars.\" \"What do you do with them?\" cannot pluck the stars from heaven . . .\" \"No. But I can put",
+            "methods": "ABST_BART"
+        }
+    ]
+}

@@ -1,0 +1,802 @@
+{
+    "ch1.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.25,
+                "rouge2": 0.013333333333333334,
+                "rougeL": 0.10526315789473684
+            },
+            "BERTScore": {
+                "Precision": 0.8001847863197327,
+                "Recall": 0.8117733001708984,
+                "F1": 0.8059374094009399
+            },
+            "summary": "I love to sail forbidden seas, and\nland on barbarous coasts. Deep into distant woodlands\nwinds a mazy way, reaching to overlapping spurs of mountains bathed in\ntheir hill-side blue. Strange! What do\nyou see?—Posted like silent sentinels all around the town, stand\nthousands upon thousands of mortal men fixed in ocean reveries. Circumambulate the city of a dreamy Sabbath afternoon.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.25806451612903225,
+                "rouge2": 0.026143790849673207,
+                "rougeL": 0.14193548387096774
+            },
+            "BERTScore": {
+                "Precision": 0.8106092810630798,
+                "Recall": 0.8262637853622437,
+                "F1": 0.8183616995811462
+            },
+            "summary": "Call me Ishmael.  By reason of these things, then, the whaling voyage was welcome; the\ngreat flood-gates of the wonder-world swung open, and in the wild\nconceits that swayed me to my purpose, two and two there floated into\nmy inmost soul, endless processions of the whale, and, mid most of them\nall, one grand hooded phantom, like a snow hill in the air.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1494949494949495,
+                "rouge2": 0.02839756592292089,
+                "rougeL": 0.08888888888888889
+            },
+            "BERTScore": {
+                "Precision": 0.7670000195503235,
+                "Recall": 0.8272761106491089,
+                "F1": 0.7959985733032227
+            },
+            "summary": "By reason of these things, then, the whaling voyage was welcome; the\ngreat flood-gates of the wonder-world swung open, and in the wild\nconceits that swayed me to my purpose, two and two there floated into\nmy inmost soul, endless processions of the whale, and, mid most of them\nall, one grand hooded phantom, like a snow hill in the air. Though I cannot tell why it was exactly that those stage managers, the\nFates, put me down for this shabby part of a whaling voyage, when\nothers were set down for magnificent parts in high tragedies, and short\nand easy parts in genteel comedies, and jolly parts in farces—though I\ncannot tell why this was exactly; yet, now that I recall all the\ncircumstances, I think I can see a little into the springs and motives\nwhich being cunningly presented to me under various disguises, induced\nme to set about performing the part I did, besides cajoling me into the\ndelusion that it was a choice resulting from my own unbiased freewill\nand discriminating judgment. But\nwherefore it was that after having repeatedly smelt the sea as a\nmerchant sailor, I should now take it into my head to go on a whaling\nvoyage; this the invisible police officer of the Fates, who has the\nconstant surveillance of me, and secretly dogs me, and influences me in\nsome unaccountable way—he can better answer than any one else. Well, then, however the old sea-captains may\norder me about—however they may thump and punch me about, I have the\nsatisfaction of knowing that it is all right; that everybody else is\none way or other served in much the same way—either in a physical or\nmetaphysical point of view, that is; and so the universal thump is\npassed round, and all hands should rub each other’s shoulder-blades,\nand be content. Whenever I find myself growing grim about\nthe mouth; whenever it is a damp, drizzly November in my soul; whenever\nI find myself involuntarily pausing before coffin warehouses, and\nbringing up the rear of every funeral I meet; and especially whenever\nmy hypos get such an upper hand of me, that it requires a strong moral\nprinciple to prevent me from deliberately stepping into the street, and\nmethodically knocking people’s hats off—then, I account it high time to\nget to sea as soon as I can.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.22568093385214008,
+                "rouge2": 0.00784313725490196,
+                "rougeL": 0.1245136186770428
+            },
+            "BERTScore": {
+                "Precision": 0.7916247248649597,
+                "Recall": 0.8154757022857666,
+                "F1": 0.8033732175827026
+            },
+            "summary": "By reason of these things, then, the whaling voyage was welcome; the\ngreat flood-gates of the wonder-world swung open, and in the wild\nconceits that swayed me to my purpose, two and two there floated into\nmy inmost soul, endless processions of the whale, and, mid most of them\nall, one grand hooded phantom, like a snow hill in the air. Not ignoring what is good, I am quick to\nperceive a horror, and could still be social with it—would they let\nme—since it is but well to be on friendly terms with all the inmates of\nthe place one lodges in. Then the wild and distant seas where he rolled his island\nbulk; the undeliverable, nameless perils of the whale; these, with all\nthe attending marvels of a thousand Patagonian sights and sounds,\nhelped to sway me to my wish. Such a portentous and mysterious monster roused all my\ncuriosity. Chief among these motives was the overwhelming idea of the great whale\nhimself.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.24203821656050958,
+                "rouge2": 0.06451612903225806,
+                "rougeL": 0.2038216560509554
+            },
+            "BERTScore": {
+                "Precision": 0.8136540651321411,
+                "Recall": 0.8159894943237305,
+                "F1": 0.8148201107978821
+            },
+            "summary": "bob greene: ishmael sailor decided to sail around a man in the desert wants to paint you the dreamiest, shadiest, quiet bob greene: why is almost every robust healthy boy crazy to go to sea? he says sailor john saunders says he always goes to sea as a sailor john saunders is a sailor who always goes to a sailor, a patagonian, has an everlasting itch for things",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.25,
+                "rouge2": 0.03157894736842105,
+                "rougeL": 0.13541666666666669
+            },
+            "BERTScore": {
+                "Precision": 0.7997411489486694,
+                "Recall": 0.8148313164710999,
+                "F1": 0.807215690612793
+            },
+            "summary": "In our series of letters from British journalists, film-maker and columnist John Humphrys reflects on If you ever want to see the sea, go to the Isles of Scilly, to the Isles of Why do we go to sea so often, so often, so often, so often, so often? I always go to sea as a sailor, because they make a point of paying me for my trouble, My dear readers, I would like to tell you a little bit about the Fates, and how they The whaling voyage was welcome; the great flood-gates of the wonder-world swung open, and",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.28248587570621464,
+                "rouge2": 0.01142857142857143,
+                "rougeL": 0.13559322033898302
+            },
+            "BERTScore": {
+                "Precision": 0.8064711689949036,
+                "Recall": 0.8247641921043396,
+                "F1": 0.8155151009559631
+            },
+            "summary": "Ishmael is a man who loves to sail. He says it is a way of driving the land; loitering under the shady lee of yonderwarehouses will not suffice. Pedestrian: Why is almost every robust healthy boy with a robust healthy soul in him, at houses the pyramids. The transition is a keen one, I assure you, from the country school ills, and that on no account can a monied man enter heaven. Ah! how cheerfully These, with all                the attending marvels of a thousand Patagonian sights and sounds,                ",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch2.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.11428571428571428,
+                "rouge2": 0.0,
+                "rougeL": 0.05714285714285714
+            },
+            "BERTScore": {
+                "Precision": 0.803706169128418,
+                "Recall": 0.8096958994865417,
+                "F1": 0.8066899180412292
+            },
+            "summary": "Let them talk of their\noriental summer climes of everlasting conservatories; give me the\nprivilege of making my own summer with my own coals. Coffin?—Spouter?—Rather ominous in that particular connexion, thought\nI. Such dreary streets!",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2040816326530612,
+                "rouge2": 0.08275862068965517,
+                "rougeL": 0.14965986394557823
+            },
+            "BERTScore": {
+                "Precision": 0.8436486721038818,
+                "Recall": 0.8293063640594482,
+                "F1": 0.8364160060882568
+            },
+            "summary": "I stuffed a shirt or two into my old carpet-bag, tucked it under my\narm, and started for Cape Horn and the Pacific.  Let us scrape the ice from our frosted\nfeet, and see what sort of a place this “Spouter” may be.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.24169184290030216,
+                "rouge2": 0.0182370820668693,
+                "rougeL": 0.13897280966767372
+            },
+            "BERTScore": {
+                "Precision": 0.788652777671814,
+                "Recall": 0.8340273499488831,
+                "F1": 0.8107056617736816
+            },
+            "summary": "Ha, Ishmael, muttered I, backing\nout, Wretched entertainment at the sign of “The Trap!”\n\nMoving on, I at last came to a dim sort of light not far from the\ndocks, and heard a forlorn creaking in the air; and looking up, saw a\nswinging sign over the door with a white painting upon it, faintly\nrepresenting a tall straight jet of misty spray, and these words\nunderneath—“The Spouter-Inn:—Peter Coffin.” Further\non, from the bright red windows of the “Sword-Fish Inn,” there came\nsuch fervent rays, that it seemed to have melted the packed snow and\nice from before the house, for everywhere else the congealed frost lay\nten inches thick in a hard, asphaltic pavement,—rather weary for me,\nwhen I struck my foot against the flinty projections, because from\nhard, remorseless service the soles of my boots were in a most\nmiserable plight. With anxious grapnels I had\nsounded my pocket, and only brought up a few pieces of silver,—So,\nwherever you go, Ishmael, said I to myself, as I stood in the middle of\na dreary street shouldering my bag, and comparing the gloom towards the\nnorth with the darkness towards the south—wherever in your wisdom you\nmay conclude to lodge for the night, my dear Ishmael, be sure to\ninquire the price, and don’t be too particular.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.21468926553672316,
+                "rouge2": 0.022857142857142857,
+                "rougeL": 0.13559322033898305
+            },
+            "BERTScore": {
+                "Precision": 0.8134607672691345,
+                "Recall": 0.8203373551368713,
+                "F1": 0.8168845772743225
+            },
+            "summary": "Let us scrape the ice from our frosted\nfeet, and see what sort of a place this “Spouter” may be. But no more of this blubbering now, we are going a-whaling, and there\nis plenty of that yet to come. Yet Dives himself, he too lives like a\nCzar in an ice palace made of frozen sighs, and being a president of a\ntemperance society, he only drinks the tepid tears of orphans.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.16551724137931034,
+                "rouge2": 0.0,
+                "rougeL": 0.09655172413793103
+            },
+            "BERTScore": {
+                "Precision": 0.8066438436508179,
+                "Recall": 0.8069769144058228,
+                "F1": 0.8068103790283203
+            },
+            "summary": "a new book, \"the saga of the sailor,\" is out now a smoky light emanated from a low, wide building, invitingly a gable-ended old house, palsied as it was, was a que icebergs are moored to the equator, but lazarus is",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.23952095808383234,
+                "rouge2": 0.0,
+                "rougeL": 0.13173652694610777
+            },
+            "BERTScore": {
+                "Precision": 0.8020822405815125,
+                "Recall": 0.8122165203094482,
+                "F1": 0.8071175813674927
+            },
+            "summary": "In our series of letters from African-American journalists, film-maker and columnist Paul Auster reflects From the bright red windows of the “Sword-Fish Inn,” there came such fervent rays, A few days ago I went to sleep in a little house in the middle of the street, and Lazarus says to Dives, in his red silken wrapper—(he had a redder one",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.22368421052631582,
+                "rouge2": 0.0,
+                "rougeL": 0.15789473684210525
+            },
+            "BERTScore": {
+                "Precision": 0.8009600043296814,
+                "Recall": 0.8215314149856567,
+                "F1": 0.8111153244972229
+            },
+            "summary": "Ishmael was born in Manhatto, New York, and grew up in New too expensive and jolly there. Further on, from the bright red windows of the “ sort of light not far from the Disordersdocks, and heard a forlorn creaking Euroclydon! says old Dives, in his red silken wrapper—(he",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch3.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.18230563002680963,
+                "rouge2": 0.0,
+                "rougeL": 0.10723860589812331
+            },
+            "BERTScore": {
+                "Precision": 0.7912407517433167,
+                "Recall": 0.8001465797424316,
+                "F1": 0.7956687211990356
+            },
+            "summary": "It’s dangerous. it;—didn’t Angels! Coffin! getting into a towering rage. dumplings for supper! We were fain to button up our monkey jackets, and hold\nto our lips cups of scalding tea with our half frozen fingers. Supper?—you want supper? Upon entering the place I found a number of young seamen gathered about\na table, examining by a dim light divers specimens of _skrimshander_. Parallel meridians\nrudely pecked into the glass, surround these footpads’ goblets. On one side stood a long, low, shelf-like\ntable covered with cracked glass cases, filled with dusty rarities\ngathered from this wide world’s remotest nooks. Mixed with these were rusty old whaling lances\nand harpoons all broken and deformed. A boggy, soggy, squitchy picture truly, enough to drive\na nervous man distracted.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1,
+                "rouge2": 0.007194244604316546,
+                "rougeL": 0.07142857142857142
+            },
+            "BERTScore": {
+                "Precision": 0.821404755115509,
+                "Recall": 0.7895411252975464,
+                "F1": 0.8051577806472778
+            },
+            "summary": "Entering that gable-ended Spouter-Inn, you found yourself in a wide,\nlow, straggling entry with old-fashioned wainscots, reminding one of\nthe bulwarks of some condemned old craft.  I turned in, and never slept better in my life.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2417582417582418,
+                "rouge2": 0.05321100917431193,
+                "rougeL": 0.11538461538461539
+            },
+            "BERTScore": {
+                "Precision": 0.7896003723144531,
+                "Recall": 0.8167019486427307,
+                "F1": 0.8029225468635559
+            },
+            "summary": "All these queer proceedings increased my uncomfortableness, and seeing\nhim now exhibiting strong symptoms of concluding his business\noperations, and jumping into bed with me, I thought it was high time,\nnow or never, before the light was put out, to break the spell into\nwhich I had so long been bound. Holding a light in one hand, and that identical New\nZealand head in the other, the stranger entered the room, and without\nlooking towards the bed, placed his candle a good way off from me on\nthe floor in one corner, and then began working away at the knotted\ncords of the large bag I before spoke of as being in the room. But beginning to feel very cold now,\nhalf undressed as I was, and remembering what the landlord said about\nthe harpooneer’s not coming home at all that night, it being so very\nlate, I made no more ado, but jumped out of my pantaloons and boots,\nand then blowing out the light tumbled into bed, and commended myself\nto the care of heaven. But I stood irresolute; when looking at a\nclock in the corner, he exclaimed “I vum it’s Sunday—you won’t see that\nharpooneer to-night; he’s come to anchor somewhere—come along then;\n_do_ come; _won’t_ ye come?”\n\nI considered the matter a moment, and then up stairs we went, and I was\nushered into a small room, cold as a clam, and furnished, sure enough,\nwith a prodigious bed, almost big enough indeed for any four\nharpooneers to sleep abreast. This account cleared up the otherwise unaccountable mystery, and showed\nthat the landlord, after all, had had no idea of fooling me—but at the\nsame time what could I think of a harpooneer who stayed out a Saturday\nnight clean into the holy Sabbath, engaged in such a cannibal business\nas selling the heads of dead idolators? But be easy, be\neasy, this here harpooneer I have been tellin’ you of has just arrived\nfrom the south seas, where he bought up a lot of ’balmed New Zealand\nheads (great curios, you know), and he’s sold all on ’em but one, and\nthat one he’s trying to sell to-night, cause to-morrow’s “Do you pretend to say,\nlandlord, that this harpooneer is actually engaged this blessed\nSaturday night, or rather Sunday morning, in peddling his head around\nthis town?”\n\n“That’s precisely it,” said the landlord, “and I told him he couldn’t\nsell it here, the market’s overstocked.”\n\n“With what?” shouted I.\n\n“With heads to be sure; ain’t there too many heads in the world?”\n\n“I tell you what it is, landlord,” said I, quite calmly, “you’d better\nstop spinning that yarn to me—I’m not green.” “No,” he\nanswered, “generally he’s an early bird—airley to bed and airley to\nrise—yes, he’s the bird what catches the worm.—But to-night he went out\na peddling, you see, and I don’t see what on airth keeps him so late,\nunless, may be, he can’t sell his head.”\n\n“Can’t sell his head?—What sort of a bamboozingly story is this you are\ntelling me?” But I\nsoon found that there came such a draught of cold air over me from\nunder the sill of the window, that this plan would never do at all,\nespecially as another current from the rickety door met the one from\nthe window, and both together formed a series of small whirlwinds in\nthe immediate vicinity of the spot where I had thought to spend the\nnight. One complained of a bad cold in his head, upon\nwhich Jonah mixed him a pitch-like potion of gin and molasses, which he\nswore was a sovereign cure for all colds and catarrhs whatsoever, never\nmind of how long standing, or whether caught off the coast of Labrador,\nor on the weather side of an ice-island. I told him that I never liked to sleep two in a bed; that if I should\never do so, it would depend upon who the harpooneer might be, and that\nif he (the landlord) really had no other place for me, and the\nharpooneer was not decidedly objectionable, why rather than wander\nfurther about a strange town on so bitter a night, I would put up with\nthe half of any decent man’s blanket. Within are shabby shelves, ranged round with old\ndecanters, bottles, flasks; and in those jaws of swift destruction,\nlike another cursed Jonah (by which name indeed they called him),\nbustles a little withered old man, who, for their money, dearly sells\nthe sailors deliriums and death. On one side hung a very large\noil-painting so thoroughly besmoked, and every way defaced, that in the\nunequal cross-lights by which you viewed it, it was only by diligent\nstudy and a series of systematic visits to it, and careful inquiry of\nthe neighbors, that you could any way arrive at an understanding of its\npurpose.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.28571428571428564,
+                "rouge2": 0.0462962962962963,
+                "rougeL": 0.10599078341013825
+            },
+            "BERTScore": {
+                "Precision": 0.8015319108963013,
+                "Recall": 0.8124699592590332,
+                "F1": 0.8069639205932617
+            },
+            "summary": "I turned in, and never slept better in my life. Besides, I aint insured.” It’s dangerous. “Landlord,” said I, “tell him to stash his tomahawk there, or pipe, or\nwhatever you call it; tell him to stop smoking, in short, and I will\nturn in with him. Better sleep\nwith a sober cannibal than a drunken Christian. What’s all this fuss I have been making about,\nthought I to myself—the man’s a human being just as I am: he has just\nas much reason to fear me, as I have to be afraid of him. For all his tattooings he was on the whole a clean, comely\nlooking cannibal. I stood looking at him a\nmoment. He really did this in not only a\ncivil but a really kind and charitable way. “You gettee in,” he added, motioning to me with his tomahawk, and\nthrowing the clothes to one side. Queequeg, look here—you\nsabbee me, I sabbee you—this man sleepe you—you sabbee?”—\n\n“Me sabbee plenty”—grunted I tell ye, he was peddlin’ heads around\ntown?—but turn flukes again and go to sleep. it;—didn’t",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3445190156599552,
+                "rouge2": 0.058426966292134834,
+                "rougeL": 0.16554809843400448
+            },
+            "BERTScore": {
+                "Precision": 0.7968261241912842,
+                "Recall": 0.803712010383606,
+                "F1": 0.800254225730896
+            },
+            "summary": "a long, limber, portentous, black mass of something hovering in the centre of the picture a harpoon flung in the Javan seas, and run away with by a whale avast skrimshander was a seamen who ate in a room with a rioting noise was heard without the Grampus's crew . the ship is a three- a man from the sea was a favorite with his shipmates, and they cried out \"where’s a carpenter's plane is in the bar, and he'll make ye snug enough a harpooneer is a harpooneer who keeps late hours, says landlord tells rayther a story about selling his head, and he can't sell it a harpooneer is trying to sell human heads about the streets when folks is going to churches a harpooneer paraded the streets of any Christian town in a door mat . a man in a whaleman's womb was found in a womb in a a man in the south seas has been tanned into a purplish yellow . a savage is a peddler of heads, perhaps the heads of his own brothers . a devotee who was praying in a sing-song or singing some pagan psalm a cannibal snatches a sleeping harpooneer from his bed",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.32684824902723736,
+                "rouge2": 0.05078125,
+                "rougeL": 0.1828793774319066
+            },
+            "BERTScore": {
+                "Precision": 0.7923138737678528,
+                "Recall": 0.8160731792449951,
+                "F1": 0.8040180802345276
+            },
+            "summary": "This is the story of how I came to understand the meaning of a painting on the wall of my uncle’s You enter a corner-anchored old ark, a corner-anchored old ark, a corner-anchored It was a coldnywayanydaynywayanydaynywayanydaynywayanydaynywayanyday.com afternoon when I arrived at my new home in Iceland, and It was a Friday night, and I was sitting in a bar-room with a group of friends, when, It was about eight o’clock in the evening, and I was asleep in my bed, when a group of It is said that the best way to sleep is to lie on your back, with your back against the wall, The door to the room where I was to spend the night was creaky and creaky and creaky, and “Broke,” said I, going up to him as cool as Mt. Hecla in a snow storm, “That harpooneer to-night,” said the landlord, “is trying to sell two heads of human heads In our series of letters from African journalists, novelist and writer Colm Tibn looks at the mysterious This is the story of my encounter with the harpooneer, the infernal head-peddler, in the The stranger stood between me and the door, and at last showed his chest and arms, and at last showed his The first thing that struck me about this little negro was the peculiar shape of his hands and feet, and the The landlord came into the room with a lighted tomahawk in his hand, and held it up to the lamp “Landlord,” said I to Queequeg, “you’d better go to sleep, or I’ll",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3368869936034115,
+                "rouge2": 0.059957173447537475,
+                "rougeL": 0.1492537313432836
+            },
+            "BERTScore": {
+                "Precision": 0.8007073402404785,
+                "Recall": 0.8141934275627136,
+                "F1": 0.8073940277099609
+            },
+            "summary": "A large oil-painting hung in a gable-ended Spouter-Inn. It was so himself upon the three mast-heads. The opposite wall of this entry was hung all over with a heat When I asked to be accommodated with a room, I received for answer that his house was full. “My boy,” said the landlord, “you’ll have the nightmare to a from sea, and they begancapering about most obstreperously. One of them held somewhat aloof “Landlord! I’ve changed my mind about that harpooneer—I shan current from the rickety door met the one from the window, and both together formed a series of small “I tell you what it is, landlord,” said I, quite calmly, “you “Depend upon it, landlord, that harpooneer is a dangerous man,” said The door mat was a large door mat, ornamented at the edges with little tinkling tags all that night, it being so very late, I made no more ado, but jumped out of my pant skin. But then, what to make of his unearthlycomplexion, that part of it, I were marked, as if a parcel of dark green frogs were running up the trunks of young palms. It the devotee, who seemed to be praying in a sing-song or else singing some pagan psalm why didn’t you tell me that that infernal harpooneer was a cannibal?”",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch4.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.20183486238532108,
+                "rouge2": 0.0,
+                "rougeL": 0.11009174311926606
+            },
+            "BERTScore": {
+                "Precision": 0.8138212561607361,
+                "Recall": 0.8242269158363342,
+                "F1": 0.8189910650253296
+            },
+            "summary": "He then donned his waistcoat, and taking up a\npiece of hard soap on the wash-stand centre-table, dipped it into water\nand commenced lathering his face. For\nseveral hours I lay there broad awake, feeling a great deal worse than\nI have ever done since, even from the greatest subsequent misfortunes. Let me try to explain them.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.4615384615384615,
+                "rouge2": 0.09803921568627452,
+                "rougeL": 0.2884615384615385
+            },
+            "BERTScore": {
+                "Precision": 0.8541702628135681,
+                "Recall": 0.8702579140663147,
+                "F1": 0.8621390461921692
+            },
+            "summary": "Upon waking next morning about daylight, I found Queequeg’s arm thrown\nover me in the most loving and affectionate manner.  The rest of his toilet was soon achieved, and he proudly marched out of\nthe room, wrapped up in his great pilot monkey jacket, and sporting his\nharpoon like a marshal’s baton.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.15181518151815185,
+                "rouge2": 0.013289036544850497,
+                "rougeL": 0.08580858085808582
+            },
+            "BERTScore": {
+                "Precision": 0.7838972806930542,
+                "Recall": 0.8325901031494141,
+                "F1": 0.8075103163719177
+            },
+            "summary": "What under the heavens he did it for, I cannot tell, but his\nnext movement was to crush himself—boots in hand, and hat on—under the\nbed; when, from sundry violent gaspings and strainings, I inferred he\nwas hard at work booting himself; though by no law of propriety that I\never heard of, is any man required to be private when putting on his\nboots. At length, by dint of much wriggling, and\nloud and incessant expostulations upon the unbecomingness of his\nhugging a fellow male in that matrimonial sort of style, I succeeded in\nextracting a grunt; and presently, he drew back his arm, shook himself\nall over like a Newfoundland dog just from the water, and sat up in\nbed, stiff as a pike-staff, looking at me, and rubbing his eyes as if\nhe did not altogether remember how I came to be there, though a dim\nconsciousness of knowing something about me seemed slowly dawning over\nhim. I had been cutting up some caper or other—I\nthink it was trying to crawl up the chimney, as I had seen a little\nsweep do a few days previous; and my stepmother who, somehow or other,\nwas all the time whipping me, or sending me to bed supperless,—my\nmother dragged me by the legs out of the chimney and packed me off to\nbed, though it was only two o’clock in the afternoon of the 21st June,\nthe longest day in the year in our hemisphere.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.21468926553672316,
+                "rouge2": 0.022857142857142854,
+                "rougeL": 0.12429378531073446
+            },
+            "BERTScore": {
+                "Precision": 0.8072541356086731,
+                "Recall": 0.8432776927947998,
+                "F1": 0.8248728513717651
+            },
+            "summary": "The rest of his toilet was soon achieved, and he proudly marched out of\nthe room, wrapped up in his great pilot monkey jacket, and sporting his\nharpoon like a marshal’s baton. Afterwards I wondered the less at this operation when I came\nto know of what fine steel the head of a harpoon is made, and how\nexceedingly sharp the long straight edges are always kept. I was watching to see where he kept\nhis razor, when lo and behold, he takes the harpoon from the bed\ncorner, slips out the long wooden stock, unsheathes the head, whets it\na little on his boot, and striding up to the bit of mirror against the\nwall, begins a vigorous scraping, or rather harpooning of his cheeks.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1473684210526316,
+                "rouge2": 0.0,
+                "rougeL": 0.08421052631578947
+            },
+            "BERTScore": {
+                "Precision": 0.7954216599464417,
+                "Recall": 0.8181697726249695,
+                "F1": 0.8066353797912598
+            },
+            "summary": "a young girl's dream of being a nurse was a nightmare . she a samantha khan fell into a troubled nightmare of abed abed in a strange house with a cannibal and a creature in the transition state—neither caterpillar nor butterfly—was just enough . . . . . . . . .",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2698412698412698,
+                "rouge2": 0.03225806451612903,
+                "rougeL": 0.17460317460317462
+            },
+            "BERTScore": {
+                "Precision": 0.8113745450973511,
+                "Recall": 0.8245137333869934,
+                "F1": 0.8178913593292236
+            },
+            "summary": "In our series of letters from African journalists, film-maker and columnist Farai Sevenzo This is the story of the night Queequeg threw his pagan arm round me, and My name is Queequeg, and I live in a strange house in the broad day My friend Queequeg came into my room in the middle of the night, with his BBC Sport takes a look back at some of the most memorable moments from this year's",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1818181818181818,
+                "rouge2": 0.0,
+                "rougeL": 0.10101010101010102
+            },
+            "BERTScore": {
+                "Precision": 0.7842066287994385,
+                "Recall": 0.8212866187095642,
+                "F1": 0.8023183941841125
+            },
+            "summary": "When I was a child, I well remember a somewhat similar circumstance that befell me , beseeching her as a particular favor to give me a good slippering “Queequeg!—in the name of                goodness, Queequ a creature in the transition state—neither caterpillar nor butterfly. He was just . . .. ... . .... ... and more..",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch5.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.061855670103092786,
+                "rouge2": 0.0,
+                "rougeL": 0.041237113402061855
+            },
+            "BERTScore": {
+                "Precision": 0.8053271174430847,
+                "Recall": 0.8318488597869873,
+                "F1": 0.8183731436729431
+            },
+            "summary": "A curious sight; these bashful bears, these timid warrior\nwhalemen! They were\nnearly all whalemen; chief mates, and second mates, and third mates,\nand sea carpenters, and sea coopers, and sea blacksmiths, and\nharpooneers, and ship keepers; a brown and brawny company, with bosky\nbeards; an unshorn, shaggy set, all wearing monkey jackets for morning\ngowns.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.125,
+                "rouge2": 0.0,
+                "rougeL": 0.10416666666666667
+            },
+            "BERTScore": {
+                "Precision": 0.8149046897888184,
+                "Recall": 0.8332691788673401,
+                "F1": 0.8239846229553223
+            },
+            "summary": "I quickly followed suit, and descending into the bar-room accosted the\ngrinning landlord very pleasantly. Enough, that when breakfast was over he withdrew\nlike the rest into the public room, lighted his tomahawk-pipe, and was\nsitting there quietly digesting and smoking with his inseparable hat\non, when I sallied out for a stroll.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.13559322033898305,
+                "rouge2": 0.011428571428571429,
+                "rougeL": 0.0790960451977401
+            },
+            "BERTScore": {
+                "Precision": 0.7968202829360962,
+                "Recall": 0.841679036617279,
+                "F1": 0.8186356425285339
+            },
+            "summary": "Yes, here were a set of sea-dogs, many of whom without the\nslightest bashfulness had boarded great whales on the high seas—entire\nstrangers to them—and duelled them dead without winking; and yet, here\nthey sat at a social breakfast table—all of the same calling, all of\nkindred tastes—looking round as sheepishly at each other as though they\nhad never been out of sight of some sheepfold among the Green\nMountains. But\nperhaps the mere crossing of Siberia in a sledge drawn by dogs as\nLedyard did, or the taking a long solitary walk on an empty stomach, in\nthe negro heart of Africa, which was the sum of poor Mungo’s\nperformances—this kind of travel, I say, may not be the very best mode\nof attaining a high social polish.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.21052631578947367,
+                "rouge2": 0.0,
+                "rougeL": 0.10526315789473684
+            },
+            "BERTScore": {
+                "Precision": 0.8179765343666077,
+                "Recall": 0.8413254618644714,
+                "F1": 0.8294867277145386
+            },
+            "summary": "We will not speak of all Queequeg’s peculiarities here; how he eschewed\ncoffee and hot rolls, and applied his undivided attention to\nbeefsteaks, done rare. But _that_ was certainly very coolly done by him, and\nevery one knows that in most people’s estimation, to do anything coolly\nis to do it genteelly.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.11267605633802817,
+                "rouge2": 0.0,
+                "rougeL": 0.08450704225352113
+            },
+            "BERTScore": {
+                "Precision": 0.8182657361030579,
+                "Recall": 0.8282067775726318,
+                "F1": 0.8232063055038452
+            },
+            "summary": "a good laugh is a mighty good thing, and rather too scarce a good thing; the negro heart of africa was the sum of poor Mungo’s performances . he says",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.25,
+                "rouge2": 0.028571428571428574,
+                "rougeL": 0.1388888888888889
+            },
+            "BERTScore": {
+                "Precision": 0.8497910499572754,
+                "Recall": 0.8425379991531372,
+                "F1": 0.8461489677429199
+            },
+            "summary": "“Grub, ho!,” said the landlord, with a big smile, as if to say, Mungo and Queequeg sat at the head of the table at a social breakfast table in Cape Town",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.14084507042253522,
+                "rouge2": 0.0,
+                "rougeL": 0.08450704225352113
+            },
+            "BERTScore": {
+                "Precision": 0.8050863742828369,
+                "Recall": 0.8313196897506714,
+                "F1": 0.8179927468299866
+            },
+            "summary": "A good laugh is a mighty good thing, and rather too scarce a                good thing; the more negro heart of Africa, which was the sum of poor Mungo’s performances.",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch6.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.25,
+                "rouge2": 0.0588235294117647,
+                "rougeL": 0.1923076923076923
+            },
+            "BERTScore": {
+                "Precision": 0.8124388456344604,
+                "Recall": 0.8395333886146545,
+                "F1": 0.8257638812065125
+            },
+            "summary": "In summer time, the town is sweet to see; full of fine maples—long\navenues of green and gold. Whence came they? In thoroughfares nigh the docks, any considerable seaport will\nfrequently offer to view the queerest looking nondescripts from foreign\nparts.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.20408163265306123,
+                "rouge2": 0.027586206896551724,
+                "rougeL": 0.13605442176870747
+            },
+            "BERTScore": {
+                "Precision": 0.8055487871170044,
+                "Recall": 0.8395937085151672,
+                "F1": 0.8222188949584961
+            },
+            "summary": "If I had been astonished at first catching a glimpse of so outlandish\nan individual as Queequeg circulating among the polite society of a\ncivilized town, that astonishment soon departed upon taking my first\ndaylight stroll through the streets of New Bedford.  Elsewhere match that\nbloom of theirs, ye cannot, save in Salem, where they tell me the young\ngirls breathe such musk, their sailor sweethearts smell them miles off\nshore, as though they were drawing nigh the odorous Moluccas instead of\nthe Puritanic sands.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.24175824175824173,
+                "rouge2": 0.03333333333333334,
+                "rougeL": 0.13186813186813187
+            },
+            "BERTScore": {
+                "Precision": 0.8026531934738159,
+                "Recall": 0.8435642719268799,
+                "F1": 0.8226004242897034
+            },
+            "summary": "Elsewhere match that\nbloom of theirs, ye cannot, save in Salem, where they tell me the young\ngirls breathe such musk, their sailor sweethearts smell them miles off\nshore, as though they were drawing nigh the odorous Moluccas instead of\nthe Puritanic sands. Now when a\ncountry dandy like this takes it into his head to make a distinguished\nreputation, and joins the great whale-fishery, you should see the\ncomical things he does upon reaching the seaport. If I had been astonished at first catching a glimpse of so outlandish\nan individual as Queequeg circulating among the polite society of a\ncivilized town, that astonishment soon departed upon taking my first\ndaylight stroll through the streets of New Bedford.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.22516556291390724,
+                "rouge2": 0.01342281879194631,
+                "rougeL": 0.14569536423841056
+            },
+            "BERTScore": {
+                "Precision": 0.7951621413230896,
+                "Recall": 0.8333230018615723,
+                "F1": 0.8137954473495483
+            },
+            "summary": "Elsewhere match that\nbloom of theirs, ye cannot, save in Salem, where they tell me the young\ngirls breathe such musk, their sailor sweethearts smell them miles off\nshore, as though they were drawing nigh the odorous Moluccas instead of\nthe Puritanic sands. But\nroses only bloom in summer; whereas the fine carnation of their cheeks\nis perennial as sunlight in the seventh heavens. And in August, high in air, the beautiful\nand bountiful horse-chestnuts, candelabra-wise, proffer the passer-by\ntheir tapering upright cones of congregated blossoms.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.13186813186813187,
+                "rouge2": 0.02247191011235955,
+                "rougeL": 0.1098901098901099
+            },
+            "BERTScore": {
+                "Precision": 0.8164243102073669,
+                "Recall": 0.8231091499328613,
+                "F1": 0.8197530508041382
+            },
+            "summary": "bob greene: in new Bedford, you can see cannibal bob greene: in a town of whales, the har sweethearts smell them miles off shore, as though they were drawing",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.19999999999999998,
+                "rouge2": 0.02040816326530612,
+                "rougeL": 0.12000000000000001
+            },
+            "BERTScore": {
+                "Precision": 0.8178849816322327,
+                "Recall": 0.8256356120109558,
+                "F1": 0.8217419981956482
+            },
+            "summary": "In our series of letters from American journalists, film-maker, and columnist You must go to New Bedford to see a brilliant wedding; for, they The sand dunes on the north shore of Cape Cod, Massachusetts, are a",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.15053763440860216,
+                "rouge2": 0.02197802197802198,
+                "rougeL": 0.12903225806451613
+            },
+            "BERTScore": {
+                "Precision": 0.8214185237884521,
+                "Recall": 0.8266931176185608,
+                "F1": 0.8240474462509155
+            },
+            "summary": "Queequeg is a country dandy, not a town-bred New Bedford is perhaps the dearest place to live in, in all sweethearts smell them miles offshore, as though they were drawing",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch7.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.17204301075268816,
+                "rouge2": 0.0,
+                "rougeL": 0.06451612903225808
+            },
+            "BERTScore": {
+                "Precision": 0.8068901300430298,
+                "Recall": 0.8082970380783081,
+                "F1": 0.8075929880142212
+            },
+            "summary": "Delightful inducements to embark, fine\nchance for promotion, it seems—aye, a stove boat will make me an\nimmortal by brevet. The sky had changed from clear, sunny cold, to driving\nsleet and mist.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2542372881355932,
+                "rouge2": 0.034482758620689655,
+                "rougeL": 0.15254237288135594
+            },
+            "BERTScore": {
+                "Precision": 0.8224887251853943,
+                "Recall": 0.8283804655075073,
+                "F1": 0.8254241347312927
+            },
+            "summary": "In this same New Bedford there stands a Whaleman’s Chapel, and few are\nthe moody fishermen, shortly bound for the Indian Ocean or Pacific, who\nfail to make a Sunday visit to the spot. And therefore three cheers for Nantucket; and come a stove boat\nand stove body when they will, for stave my soul, Jove himself cannot.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1597222222222222,
+                "rouge2": 0.006993006993006992,
+                "rougeL": 0.09027777777777779
+            },
+            "BERTScore": {
+                "Precision": 0.7758497595787048,
+                "Recall": 0.8232471942901611,
+                "F1": 0.7988460659980774
+            },
+            "summary": "In what census of living creatures, the dead of mankind are included;\nwhy it is that a universal proverb says of them, that they tell no\ntales, though containing more secrets than the Goodwin Sands; how it is\nthat to his name who yesterday departed for the other world, we prefix\nso significant and infidel a word, and yet do not thus entitle him, if\nhe but embarks for the remotest Indies of this living earth; why the\nLife Insurance Companies pay death-forfeitures upon immortals; in what\neternal, unstirring paralysis, and deadly, hopeless trance, yet lies\nantique Adam who died sixty round centuries ago; how it is that we\nstill refuse to be comforted for those who we nevertheless maintain are\ndwelling in unspeakable bliss; why all the living so strive to hush all\nthe dead; wherefore but the rumor of a knocking in a tomb will terrify\na whole city. Whether any of the relatives of\nthe seamen whose names appeared there were now among the congregation,\nI knew not; but so many are the unrecorded accidents in the fishery,\nand so plainly did several women present wear the countenance if not\nthe trappings of some unceasing grief, that I feel sure that here\nbefore me were assembled those, in whose unhealing hearts the sight of\nthose bleak tablets sympathetically caused the old wounds to bleed\nafresh.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.14117647058823532,
+                "rouge2": 0.0,
+                "rougeL": 0.09411764705882353
+            },
+            "BERTScore": {
+                "Precision": 0.8132014870643616,
+                "Recall": 0.7980464696884155,
+                "F1": 0.8055526614189148
+            },
+            "summary": "In fact take my body who will, take it I say, it is\nnot me. Methinks my body is but the lees\nof my better being.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2916666666666667,
+                "rouge2": 0.06382978723404255,
+                "rougeL": 0.18750000000000003
+            },
+            "BERTScore": {
+                "Precision": 0.8337863683700562,
+                "Recall": 0.8232591152191162,
+                "F1": 0.8284893035888672
+            },
+            "summary": "a whaleman's chapel is a place where fishermen gather to grieve . a spokesman for the u.s. government says the death toll is a stove boat will make me an immortal by brevet, says adam scott",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1730769230769231,
+                "rouge2": 0.0,
+                "rougeL": 0.1346153846153846
+            },
+            "BERTScore": {
+                "Precision": 0.821249783039093,
+                "Recall": 0.8197387456893921,
+                "F1": 0.8204935193061829
+            },
+            "summary": "My name is Queequeg, and I am a writer from New Bedford, Massachusetts, It was a dark, gloomy day, and I could not bear to look up from the Three cheers for Nantucket. and therefore three cheers for Nantucket; and come a stove boat and",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.1702127659574468,
+                "rouge2": 0.043478260869565216,
+                "rougeL": 0.12765957446808512
+            },
+            "BERTScore": {
+                "Precision": 0.8552553653717041,
+                "Recall": 0.8317010998725891,
+                "F1": 0.8433138132095337
+            },
+            "summary": "In this same New Bedford there stands a Whaleman’s Chapel, and could not read, and, therefore, was not readingthose frigid inscriptions on merry again. Yes, there is death in this business of whaling. But",
+            "methods": "ABST_BART"
+        }
+    ],
+    "ch8.txt": [
+        {
+            "ROUGE": {
+                "rouge1": 0.256,
+                "rouge2": 0.016260162601626015,
+                "rougeL": 0.176
+            },
+            "BERTScore": {
+                "Precision": 0.8107010126113892,
+                "Recall": 0.8502511978149414,
+                "F1": 0.8300052285194397
+            },
+            "summary": "Between the marble\ncenotaphs on either hand of the pulpit, the wall which formed its back\nwas adorned with a large painting representing a gallant ship beating\nagainst a terrible storm off a lee coast of black rocks and snowy\nbreakers. But the side ladder was not the only strange feature of the place,\nborrowed from the chaplain’s former sea-farings.",
+            "methods": "EXT_NAIVE"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.27480916030534347,
+                "rouge2": 0.04651162790697674,
+                "rougeL": 0.16793893129770993
+            },
+            "BERTScore": {
+                "Precision": 0.8123580813407898,
+                "Recall": 0.851018488407135,
+                "F1": 0.8312389850616455
+            },
+            "summary": "I had not been seated very long ere a man of a certain venerable\nrobustness entered; immediately as the storm-pelted door flew back upon\nadmitting him, a quick regardful eyeing of him by all the congregation,\nsufficiently attested that this fine old man was the chaplain. Yes, the world’s a ship on its passage out, and not a voyage complete;\nand the pulpit is its prow.",
+            "methods": "EXT_FIRST_LAST"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.2916666666666667,
+                "rouge2": 0.0631578947368421,
+                "rougeL": 0.16666666666666669
+            },
+            "BERTScore": {
+                "Precision": 0.8082581758499146,
+                "Recall": 0.8513664603233337,
+                "F1": 0.8292524814605713
+            },
+            "summary": "But high above the flying scud and dark-rolling clouds, there\nfloated a little isle of sunlight, from which beamed forth an angel’s\nface; and this bright face shed a distinct spot of radiance upon the\nship’s tossed deck, something like that silver plate now inserted into\nthe Victory’s plank where Nelson fell. Like most old fashioned pulpits, it was a very lofty one, and since a\nregular stairs to such a height would, by its long angle with the\nfloor, seriously contract the already small area of the chapel, the\narchitect, it seemed, had acted upon the hint of Father Mapple, and\nfinished the pulpit without a stairs, substituting a perpendicular side\nladder, like those used in mounting a ship from a boat at sea.",
+            "methods": "EXT_TF_IDF"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.27722772277227725,
+                "rouge2": 0.04040404040404041,
+                "rougeL": 0.1782178217821782
+            },
+            "BERTScore": {
+                "Precision": 0.8152275085449219,
+                "Recall": 0.8297730684280396,
+                "F1": 0.8224359750747681
+            },
+            "summary": "Yes, the world’s a ship on its passage out, and not a voyage complete;\nand the pulpit is its prow. From thence it is\nthe God of breezes fair or foul is first invoked for favorable winds.",
+            "methods": "EXT_TEXT_RANK"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3505154639175258,
+                "rouge2": 0.06315789473684212,
+                "rougeL": 0.16494845360824742
+            },
+            "BERTScore": {
+                "Precision": 0.8168538212776184,
+                "Recall": 0.8219530582427979,
+                "F1": 0.8193955421447754
+            },
+            "summary": "chaplain of the whalemen, father mapple, was a sa chaplain's former ship, a ship, was tossed by a the pulpit is ever this earth’s foremost part; all the rest comes in its",
+            "methods": "ABST_T5"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.3333333333333333,
+                "rouge2": 0.09433962264150943,
+                "rougeL": 0.2037037037037037
+            },
+            "BERTScore": {
+                "Precision": 0.8535667657852173,
+                "Recall": 0.8527234792709351,
+                "F1": 0.8531448841094971
+            },
+            "summary": "The first time I heard the name Father Mapple, I was in the chapel of When I saw Father Mapple’s side ladder from the pulpit of his ship, The pulpit was in the same place as the ladder, and the picture was in the",
+            "methods": "ABST_PEGASUS"
+        },
+        {
+            "ROUGE": {
+                "rouge1": 0.25,
+                "rouge2": 0.02127659574468085,
+                "rougeL": 0.14583333333333334
+            },
+            "BERTScore": {
+                "Precision": 0.7946813106536865,
+                "Recall": 0.8346118330955505,
+                "F1": 0.814157247543335
+            },
+            "summary": "The famous Father Mapple, so called by the whalemen, among whom a truly sailorlike but still                reverential dexterity, hand over hand, the same sea-taste that                had achieved the ladder and the picture.",
+            "methods": "ABST_BART"
+        }
+    ]
+}
