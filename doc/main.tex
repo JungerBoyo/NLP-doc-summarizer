@@ -220,10 +220,10 @@ Po wprowadzeniu wszystkich wymaganych informacji, kliknij przycisk "Summarize", 
 
 \subsection{Tryb konsolowy}
 Aby uruchomić program w trybie konsolowym, należy użyć następującej składni:
-\begin{verbatim}
+\begin{lstlisting}
 python main.py -t <ścieżka_do_pliku_tekstowego> -m <ścieżka_do_modelu> -s <metoda> -p <procent> [-r <ścieżka_do_pliku_referencyjnego>] [-j <katalog_wyjściowy_JSON>]
 do wyświetlenia pomocy można użyć: python main.py -h
-\end{verbatim}
+\end{lstlisting}
 
 Gdzie:
 \begin{itemize}
@@ -237,13 +237,41 @@ Gdzie:
 
 
 Przykład:
-\begin{verbatim}
+\begin{lstlisting}
 python main.py -t tekst.txt -m model -s EXT_IF_IDF -p 20 -r referencja.txt -o wyniki.json
-\end{verbatim}
+\end{lstlisting}
 
 Po uruchomieniu programu w trybie konsolowym, wyniki zostaną wyświetlone w konsoli oraz zapisane w katalogu wyjściowym (jeśli podano).
 
 \section{Przykłady użycia programu (dane wejściowe i otrzymane wyniki)}
+Aby zademonstrować działanie programu przanalizowano 3 zbiory tekstów z różnych książek z \cite{gutenberg}.
+\begin{itemize}
+	\item \textit{War and peace}, którego podsumowania zostały wygenerowane z użyciem \textit{chatGPT}
+	\item \textit{Little prince}, którego podsumowania zostały wygenerowane z użyciem \textit{chatGPT}
+	\item \textit{Moby Dick}, którego podsumowania zostały zebrane ze strony zajmującej się tworzeniem podsumowań
+		książek \cite{sparknotes}
+\end{itemize}
+W każdym zbiorze znalazło się około 10 rozdziałów.\\\\
+
+\subsection{War and peace}
+Na rys. 1 widać wykresy pudełkowe dla każdej metody dla dwóch metryk, \textit{ROUGE score, ROUGE-L} oraz 
+\textit{BERTScore, F1}.
+\img[0.4]{war_and_peace.png}{Wykresy pudełkowe, z wyników na danych rozdziałach książki
+\textit{War and peace}. Po lewej \textit{ROUGE score, ROUGE-L}, po prawej \textit{BERTScore, F1}}
+
+\subsection{Little prince}
+Na rys. 2 widać wykresy pudełkowe dla każdej metody dla dwóch metryk, \textit{ROUGE score, ROUGE-L} oraz 
+\textit{BERTScore, F1}.
+\img[0.4]{little_prince.png}{Wykresy pudełkowe, z wyników na danych rozdziałach książki
+\textit{Little prince}. Po lewej \textit{ROUGE score, ROUGE-L}, po prawej \textit{BERTScore, F1}}
+
+\subsection{Moby dick}
+Na rys. 3 widać wykresy pudełkowe dla każdej metody dla dwóch metryk, \textit{ROUGE score, ROUGE-L} oraz 
+\textit{BERTScore, F1}.
+\img[0.4]{mobydick.png}{Wykresy pudełkowe, z wyników na danych rozdziałach książki
+\textit{Moby dick}. Po lewej \textit{ROUGE score, ROUGE-L}, po prawej \textit{BERTScore, F1}}
+
+\subsection{Wnioski}
 
 \bibliographystyle{plain}
 \bibliography{refs}
