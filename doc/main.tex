@@ -251,11 +251,14 @@ Aby zademonstrować działanie programu przanalizowano 3 zbiory tekstów z róż
 	\item \textit{Moby Dick}, którego podsumowania zostały zebrane ze strony zajmującej się tworzeniem podsumowań
 		książek \cite{sparknotes}
 \end{itemize}
-W każdym zbiorze znalazło się około 10 rozdziałów.\\\\
+W każdym zbiorze znalazło się około 10 rozdziałów. Podsumowania wzorcowe jak i podsumowania generowane
+przy użyciu różnych metod stanowią około 5\% tekstu oryginalnego.
 
 \subsection{War and peace}
-Na rys. 1 widać wykresy pudełkowe dla każdej metody dla dwóch metryk, \textit{ROUGE score, ROUGE-L} oraz 
-\textit{BERTScore, F1}.
+Na rys. 1 widać wykresy pudełkowe dla każdej metody dla dwóch metryk, \textit{ROUGE score, ROUGE-L, F1}
+oraz \textit{BERTScore, F1}. Wybrano metryki F1 z każdej metody oceny ponieważ zawierają one zarówno
+\textit{precision} jak i \textit{recall}.
+
 \img[0.4]{war_and_peace.png}{Wykresy pudełkowe, z wyników na danych rozdziałach książki
 \textit{War and peace}. Po lewej \textit{ROUGE score, ROUGE-L}, po prawej \textit{BERTScore, F1}}
 
@@ -272,6 +275,51 @@ Na rys. 3 widać wykresy pudełkowe dla każdej metody dla dwóch metryk, \texti
 \textit{Moby dick}. Po lewej \textit{ROUGE score, ROUGE-L}, po prawej \textit{BERTScore, F1}}
 
 \subsection{Wnioski}
+Na podstawie wyników z rys. 2, można stwierdzić, że podsumowania ekstrakcyjne
+mogą przynosić zadowalające rezultaty gdy teksty/dokumenty są krótkie (rozdziały w 
+książce \textit{Little Prince}, są najkrótsze spośród wybranych źródeł). \\
+
+Zaskakująco dobrze wypadła metoda \textit{FIRST LAST} czyli polegająca na wybraniu
+pierwszego i ostatniego zdania z tekstu. Możliwym wyjaśnieniem tych wyników
+jest to, że przy tej metodzie nie da się kontrolować objętości podsumowania. Oznacza
+to, że zazwyczaj ich długość jest mniejsza niż 5\% oryginalnego tekstu. Przy obliczaniu
+metryki F1 brana jest wartość \textit{precision}, która w mianowniku zawiera 
+długość wygenerowanego podsumowania, może to doprowadzić do sztucznego polepszenia wyniku.
+
+Na rys. 1, 3, wyłączając metodę ekstrakcyjną \textit{FIRST LAST}, widać, że podsumowania 
+abstrakcyjne są ogólnie lepsze od metod ekstrakcyjnych.
+Metoda \textit{Pegasus} otrzymała
+najwyższe wyniki, jedynym wyjątkiem jest BERTScore metody BERT przy podsumowaniach 
+\textit{War and peace}.\\
+
+Poniżej przedstawiono podsumowania wygenerowane metodą \textit{Pegasus}, \textit{FRIST LAST} oraz
+podsumowanie referencyjne. Podsumowanie \textit{FIRST LAST} uchwytuje słynne pierwsze zdanie,
+które zostało nawet zaznaczone w podsumowaniu referencyjnym (zdecydowanie szczególny przypadek).
+Podsumowanie \textit{Pegasus} uchwyciło na swój sposób czemu \textit{whaling voyage was welcome}
+czego zabrakło w podsumowaniu \textit{FIRST LAST}. Nie porządaną cechą podsumowań abstrakcyjnych 
+są powtarzające się słowa/frazy/zdania pojawiające się regularnie, np. poniżej fragment
+\textit{If you ever want to see the sea, go to the Isles of Scilly, to the Isles of Why do we go
+to sea so often, so often, so often, so often, so often?}
+\paragraph{FIRST LAST}
+\begin{center}
+\begin{lstlisting}
+Call me Ishmael.  By reason of these things, then, the whaling voyage was welcome; the great flood-gates of the wonder-world swung open, and in the wild conceits that swayed me to my purpose, two and two there floated into my inmost soul, endless processions of the whale, and, mid most of them all, one grand hooded phantom, like a snow hill in the air.
+\end{lstlisting}
+\end{center}
+\paragraph{Pegasus}
+\begin{center}
+\begin{lstlisting}
+In our series of letters from British journalists, film-maker and columnist John Humphrys reflects on If you ever want to see the sea, go to the Isles of Scilly, to the Isles of Why do we go to sea so often, so often, so often, so often, so often? I always go to sea as a sailor, because they make a point of paying me for my trouble, My dear readers, I would like to tell you a little bit about the Fates, and how they The whaling voyage was welcome; the great flood-gates of the wonder-world swung open
+\end{lstlisting}
+\end{center}
+\paragraph{Reference}
+\begin{center}
+\begin{lstlisting}
+The narrative of Moby-Dick begins with the famous brief sentence, ``Call me Ishmael.`` Ishmael, a sailor, describes a typical scene in New York City, with large groups of men gathering on their days off to contemplate the ocean and dream of a life at sea. He explains that he himself went to sea because, like these men, he was feeling a ``damp, drizzly November in [his] soul`` and craved adventure. Shunning anything too ``respectable`` (or expensive), he always ships as a common sailor rather than as a passenger.
+\end{lstlisting}
+\end{center}
+
+
 
 \bibliographystyle{plain}
 \bibliography{refs}
