@@ -14,19 +14,27 @@ if __name__ == '__main__':
         data = json.load(file)
 
     methods_results = []
-    for method in range(7):
+#    for method in range(7):
+    for method in range(12):
         method_results_rouge = []
         method_results_bert = []
         for value in data:
             print(f'{value} --- {method}')
+            
             method_results_rouge.append(data[value][method]['ROUGE']['rougeL'])
             method_results_bert.append(data[value][method]['BERTScore']['F1'])
         methods_results.append([method_results_rouge, method_results_bert])
 
-    fig, axes = plt.subplots(1, 2)
+    #fig, axes = plt.subplots(1, 2)
+    fig, axes = plt.subplots(2, 1)
     width = 0.1
-    colors = [ 'lightgreen', 'lightblue', 'salmon', 'palegoldenrod', 'lightpink', 'lightyellow', 'lightgray' ]
-    labels = [ 'Naive', 'First last', 'TF-IDF', 'Text Rank', 'T5', 'Pegasus', 'BART', ]
+#    colors = [ 'lightgreen', 'lightblue', 'salmon', 'palegoldenrod', 'lightpink', 'lightyellow', 'lightgray' ]
+#    labels = [ 'Naive', 'First last', 'TF-IDF', 'Text Rank', 'T5', 'Pegasus', 'BART', ]
+    colors = [ 
+        'lightgreen', 'lightblue', 'salmon', 'palegoldenrod', 'lightpink', 'lightyellow', 'lightgray', 'lavender', 'skyblue', 'peachpuff', 'khaki', 'plum' 
+    ]
+    labels = [ 'Naive', 'First last', 'TF-IDF', 'Text Rank', 'T5', 'Pegasus', 'BART', 'Text Rank+First Last', 'Text Rank+TF IDF+First Last', 'Text Rank+TF IDF',
+              'T5+Pegasus', 'Pegasus+Bart']
 
     handles = [Patch(facecolor=color, edgecolor='black', label=label) for color, label in zip(colors, labels)]
     handles.append(Patch(facecolor='purple', edgecolor='black', label='Mean'))
@@ -43,7 +51,12 @@ if __name__ == '__main__':
             methods_results[3][i],
             methods_results[4][i],
             methods_results[5][i],
-            methods_results[6][i]
+            methods_results[6][i], 
+            methods_results[7][i],
+            methods_results[8][i],
+            methods_results[9][i],
+            methods_results[10][i],
+            methods_results[11][i]
         ]
         print(methods_results[0][i])
         print(methods_results[1][i])
@@ -52,15 +65,25 @@ if __name__ == '__main__':
         print(methods_results[4][i])
         print(methods_results[5][i])
         print(methods_results[6][i])
+        print(methods_results[7][i])
+        print(methods_results[8][i])
+        print(methods_results[9][i])
+        print(methods_results[10][i])
+        print(methods_results[11][i])
 
         positions = [
+            1 - 5*width - width/2,
+            1 - 4*width - width/2,
+            1 - 3*width - width/2,
             1 - 2*width - width/2,
             1 - width - width/2,
             1 -         width/2,
             1 +         width/2, 
             1 + width + width/2,
             1 + 2*width + width/2,
-            1 + 3*width + width/2
+            1 + 3*width + width/2,
+            1 + 4*width + width/2,
+            1 + 5*width + width/2
         ]
 
         bxp = axis.boxplot(

@@ -3,8 +3,20 @@
 text_dir_path_patterns="$1"
 number_of_texts=$2
 out="$3"
-ext_methods=('EXT_NAIVE' 'EXT_FIRST_LAST' 'EXT_TF_IDF' 'EXT_TEXT_RANK')
-abst_methods=('ABST_T5' 'ABST_PEGASUS' 'ABST_BART')
+special=$4
+
+if [ $special -eq 1 ]; then
+	ext_methods=('EXT_TEXT_RANK|EXT_FIRST_LAST' 'EXT_TEXT_RANK|EXT_TF_IDF|EXT_FIRST_LAST' 'EXT_TEXT_RANK|EXT_TF_IDF')
+else
+	ext_methods=('EXT_NAIVE' 'EXT_FIRST_LAST' 'EXT_TF_IDF' 'EXT_TEXT_RANK')
+fi
+
+if [ $special -eq 1 ]; then
+	abst_methods=('ABST_T5|ABST_PEGASUS' 'ABST_PEGASUS|ABST_BART')
+else
+	abst_methods=('ABST_T5' 'ABST_PEGASUS' 'ABST_BART')
+fi
+
 t=0
 
 ext_methods_len=$((${#ext_methods[@]} - 1))
@@ -19,16 +31,16 @@ execute_app() {
 		--model "en_core_web_sm" \
 		--text_path "$text_path" \
 		--summary_methods "$summary_methods" \
-		--percentage 5 \
+		--percentage '20|5' \
 		--json_results_path "$json_path" \
 		--reference_path "$reference_path"
 }
 
-for t in $(seq 1 $number_of_texts); do
-	for m in $(seq 0 $ext_methods_len); do
-		execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[m]}" "$out"
-	done
-done
+#for t in $(seq 1 $number_of_texts); do
+#	for m in $(seq 0 $ext_methods_len); do
+#		execute_app "${text_dir_path_patterns}${t}.txt" "${text_dir_path_patterns}${t}_summary.txt" "${ext_methods[m]}" "$out"
+#	done
+#done
 
 for t in $(seq 1 $number_of_texts); do
 	for m in $(seq 0 $abst_methods_len); do
