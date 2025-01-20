@@ -25,7 +25,6 @@
 \begin{document}
 
 \begin{frame}
-    % Print the title page as the first slide
     \titlepage
 \end{frame}
 
@@ -64,10 +63,10 @@ Wyzwaniem było stworzenie podsumowania całego teksu metodą abstrakcyjną oraz
             \item TextRank \\~
         \end{itemize}
 
-        \textbf{Ekstrakcyjne}
+        \textbf{Ocena jakości podsumowań}
         \begin{itemize}
-            \item TF-IDF
-            \item TextRank
+            \item ROUGEscore
+            \item BARTscore
         \end{itemize}
 
         \column{.45\textwidth} % Right column and width
@@ -80,46 +79,76 @@ Wyzwaniem było stworzenie podsumowania całego teksu metodą abstrakcyjną oraz
     \end{columns}
 \end{frame}
 
-
 %------------------------------------------------
 
 \begin{frame}{Opis metodyki}
+    Omówienie kroków realizacji zadania:
+    \begin{itemize}
+        \item Przetwarzanie tekstu
+        \item wygenerowanie podsumowania
+        \item Ewaluacja
+    \end{itemize}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}{Wykorzystane narzędzia i biblioteki}
-
+    \begin{itemize}
+        \item \textbf{spacy}: segmentacja tekstu
+        \item \textbf{TextRank}: generowanie podsumowań ekstrakcyjnych
+        \item \textbf{sklearn}: TF-IDF
+        \item \textbf{transformers}: abstrakcyjne podsumowania, BART, Pegasus, T5
+        \item \textbf{rouge\_score}: ewaluacja podsumowania
+        \item \textbf{bert\_score}: ewaluacja podsumowania
+    \end{itemize}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}{Przykłady użycia programu}
-
+    \begin{figure}
+        \includegraphics[width=0.6\linewidth]{gui_example.PNG}
+        \end{figure}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}{Wyniki testów i ewaluacja}
-    
+    \begin{figure}
+    \includegraphics[width=0.8\linewidth]{war_and_peace.png}
+    \caption{Wykresy pudełkowe, z wyników na danych rozdziałach książki
+    \textit{War and peace}.}
+    \end{figure}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}{Problemy i rozwiązania}
-
+    \begin{itemize}
+        \item Problemy z jakością podsumowań abstrakcyjnych: powtarzające się słowa/frazy/zdania.
+    \end{itemize}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}{Możliwości rozwoju i ulepszenia}
-    
+    Propozycje rozszerzeń i ulepszeń projektu:
+    \begin{itemize}
+        \item Poprawa jakości podsumowań abstrakcyjnych.
+        \item Integracja z większą ilością metod oceny jakości podsumowań.
+        \item Rozszerzenie funkcjonalności GUI.
+    \end{itemize}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
 
 \begin{frame}{Podsumowanie i wnioski}
-
+    Krótkie podsumowanie kluczowych osiągnięć:
+    \begin{itemize}
+        \item Podsumowania ekstrakcyjne mogą przynosić zadowalające rezultaty dla krótkich tekstów.
+        \item Metody abstrakcyjne są ogólnie lepsze od metod ekstrakcyjnych.
+        \item Metoda \textit{Pegasus} otrzymała najwyższe wyniki.
+    \end{itemize}
 \end{frame}
 
 %------------------------------------------------
